@@ -12,6 +12,7 @@ nav:
   - Home:
     - Welcome: ./index.md
   - V-Control Pro: 'https://docs.neyrinck.com/v-control-pro/'
+  - V-Console: 'https://docs.neyrinck.com/v-console/'
   - Spill: 'https://docs.neyrinck.com/spill/'
 
 markdown_extensions:

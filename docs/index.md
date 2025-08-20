@@ -2,6 +2,9 @@
 ## V-Control Pro
 [User Guide](https://docs.neyrinck.com/v-control-pro/)
 
+## V-Console
+[User Guide](https://docs.neyrinck.com/v-console/)
+
 ## Spill
 [User Guide](https://docs.neyrinck.com/spill/)
 
