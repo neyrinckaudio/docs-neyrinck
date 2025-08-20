@@ -1,0 +1,27 @@
+site_name: Neyrinck User Guides
+site_description: User Guides For Neyrinck Products
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - toc.integrate
+plugins:
+  - include-markdown
+nav:
+  - Home:
+    - Welcome: ./index.md
+  - V-Control Pro: 'https://docs.neyrinck.com/v-control-pro/'
+  - Spill: 'https://docs.neyrinck.com/spill/'
+
+markdown_extensions:
+  - attr_list
+  - meta
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
