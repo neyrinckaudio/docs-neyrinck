@@ -11,7 +11,9 @@ jobs:
     - name: 📋 Copy subproject sites to build output
       run: |
         cp -r v-control-pro site/
-        
+        cp -r v-console site/
+        cp -r spill site/
+
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
