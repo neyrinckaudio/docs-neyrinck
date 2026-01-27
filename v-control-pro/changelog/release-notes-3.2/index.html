@@ -1,0 +1,2314 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="User Guide for V-Control Pro.">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Release notes 3.2 - V-Control Pro User Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#version-32-pre-release-for-faderport-816" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="V-Control Pro User Guide" class="md-header__button md-logo" aria-label="V-Control Pro User Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            V-Control Pro User Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Release notes 3.2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../important-info/" class="md-tabs__link">
+          
+  
+  
+  Getting started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../v-control-pro-licensing/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Licensing
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../controllers-overview/" class="md-tabs__link">
+          
+  
+  
+  Surface Setup
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../pro-tools/" class="md-tabs__link">
+          
+  
+  
+  DAW/Application Setup
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../midi-mode/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  MIDI Mode
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../v-window/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  V-Window
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../feature-charts/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Feature Charts
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../troubleshooting/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Troubleshooting
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../release-notes/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Release Notes
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="V-Control Pro User Guide" class="md-nav__button md-logo" aria-label="V-Control Pro User Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    V-Control Pro User Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome To V-Control Pro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-help/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Additional Resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../important-info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Important Information
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick-start-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Start Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../install-and-run-v-control-pro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Install And Run V-Control Pro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System Requirements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../v-control-pro-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Licensing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Surface Setup
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Surface Setup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../controllers-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ethernet-controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setting Up Ethernet Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../midi-controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setting Up MIDI Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../firewire-controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setting Up FireWire Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../d-command/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Avid D-Command
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../control-24/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Digidesign Control 24
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c24/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Avid/Digidesign C|24
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pro-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Digidesign ProControl
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../command8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Digidesign Command 8
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../digidesign-003/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Digidesign 003
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faderport-v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FaderPort V2 / ioStation 24c
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faderport-8-16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FaderPort 8 / 16
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../v-console/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    V-Console
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../v-control-pro-ipad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    V-Control Pro iPad App
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hui-device/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HUI Protocol Devices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    DAW/Application Setup
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            DAW/Application Setup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pro-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pro Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../logic-pro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Logic Pro X
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cubase-nuendo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cubase / Nuendo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Mackie Control DAWs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Mackie Control DAWs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mackie-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ableton-live/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ableton Live
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adobe-audition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Adobe Audition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../davinci-resolve/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DaVinci Resolve
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../digital-performer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Digital Performer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fl-studio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FL Studio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fmod-studio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FMOD Studio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../luna/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LUNA
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mio-console/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MIO Console
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mixbus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MixBus
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../premiere-pro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Premiere Pro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reaper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reaper
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reason/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reason
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sonar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sonar
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studio-one/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Studio One / Fender Studio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tracktion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tracktion
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wwise/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wwise
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../midi-mode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MIDI Mode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../v-window/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    V-Window
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feature-charts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Feature Charts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release Notes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Release notes 3.2</h1>
+
+<h2 id="version-32-pre-release-for-faderport-816">Version 3.2 Pre-release for FaderPort 8/16</h2>
+<div class="admonition warning">
+<p class="admonition-title">Version 3.2 Is For FaderPort 8/16 Only</p>
+<p>V-Control Pro 3.2 pre-release is <strong>incompatible</strong> with all other surfaces.</p>
+</div>
+<h3 id="32016-2025-09-08">[3.2.0.16] - 2025-09-08</h3>
+<h4 id="changed">Changed</h4>
+<ul>
+<li><code>Hot Locations</code> restore to new <code>home</code> memory location.</li>
+<li><code>Hot Locations home</code> is set by selecting a memory location in <code>Marker Mode</code></li>
+</ul>
+<h4 id="added">Added</h4>
+<ul>
+<li>Added <code>Master</code> button to <code>Hot Locations.</code> It will select a memory location named MASTER.</li>
+</ul>
+<h4 id="fixed">Fixed</h4>
+<ul>
+<li>Marker Mode - Shorten long names to be readable.</li>
+<li>Fixed incorrect selection issue.</li>
+<li>Fix <code>Bypass All Inserts</code></li>
+</ul>
+<h3 id="32012">[3.2.0.12]</h3>
+<h4 id="added_1">Added</h4>
+<ul>
+<li>Added <code>Plug-In Navigation</code> - <code>Select</code> focuses track. Additional <code>Select</code> changes to next insert.</li>
+<li>Added show/hide plug-in window</li>
+<li>Added plug-in <code>Bypass</code></li>
+<li>Added plug-in <code>Compare</code></li>
+<li>Added plug-in <code>Bypass All</code></li>
+<li>Added <code>Marker Mode</code> to browse and select memory locations</li>
+<li>Added <code>Hot Locations</code> - Audio, VI, Bus, VCA, and All buttons will select memory locations with the same name with all letter capitalized</li>
+<li>Added <code>Mix / Window Button</code> (Section Button)</li>
+</ul>
+<h3 id="3205">[3.2.0.5]</h3>
+<h4 id="added_2">Added</h4>
+<ul>
+<li>Added <code>Track Browser</code> to browse and auto-bank to selected track</li>
+<li>Added bright track colors to Select buttons</li>
+</ul>
+<h2 id="version-30">Version 3.0</h2>
+<h3 id="3024">[3.0.24]</h3>
+<p>Fender Studio</p>
+<ul>
+<li>Added support for Fender Studio.</li>
+</ul>
+<p>Windows</p>
+<ul>
+<li>Fixed BOME Midi installer to provide uninstaller.</li>
+<li>Fixed BOME Midi to create virtual ports with administrator privileges.</li>
+<li>Remapped surface modifier buttons to match Pro Tools incorrect mapping.</li>
+</ul>
+<p>D-Command</p>
+<ul>
+<li>Fixed Midi Mode to not always be active.</li>
+<li>Fixed scribble display errors for track names starting with “Bus”</li>
+</ul>
+<p>Command 8 With Pro Tools</p>
+<ul>
+<li>Added PlugIn Editing</li>
+<li>Added Flip Mode For Sends</li>
+</ul>
+<p>HUI Protocol Device</p>
+<ul>
+<li>Fixed one-way control with HUI devices used in parallel.</li>
+</ul>
+<h3 id="3023">[3.0.23]</h3>
+<p>C24</p>
+<ul>
+<li>Improved PlugIn editing with Pro Tools</li>
+<li>Fixed Logic Pro displays for plugin, sends, and channel editing</li>
+</ul>
+<p>Windows</p>
+<ul>
+<li>Fixed to be compatible with user account names using non-ascii characters.</li>
+</ul>
+<h3 id="3022">[3.0.22]</h3>
+<p>Logic Pro</p>
+<ul>
+<li>Change Logic Pro for more reliable control.</li>
+</ul>
+<p>Digital Performer</p>
+<ul>
+<li>Fix Control 24 to not be stuck in MIDI Mode</li>
+<li>Fix C24 to be able to switch to MIDI Mode</li>
+</ul>
+<p>Pro Control</p>
+<ul>
+<li>Change Midi Mode switch to Shift + Monø</li>
+</ul>
+<p>Windows</p>
+<ul>
+<li>installer security improved</li>
+<li>Fixed uninstaller to remove MIDI ports</li>
+</ul>
+<h3 id="3021">[3.0.21]</h3>
+<p>Reason</p>
+<ul>
+<li>Fixed mapping to various surfaces</li>
+</ul>
+<p>C24</p>
+<ul>
+<li>Fixed ‘Clear Clip’ button for Pro Tools</li>
+</ul>
+<h3 id="3020">[3.0.20]</h3>
+<h4 id="fixed_1">Fixed</h4>
+<ul>
+<li>Command 8 With Pro Tools<ul>
+<li>Fixed Bank, Nudge, Zoom mode </li>
+</ul>
+</li>
+</ul>
+<h3 id="3019">[3.0.19]</h3>
+<h4 id="added_3">Added</h4>
+<ul>
+<li>Sonar mapped to legacy hardware surfaces</li>
+<li>Added Troubleshooting Guide menu option</li>
+</ul>
+<h3 id="3018">[3.0.18]</h3>
+<ul>
+<li>ProControl</li>
+<li>Fixed the <code>mon/phase</code> button to not switch to MIDI Mode with Pro Tools  </li>
+<li>Function 1 button now switches to MIDI Mode</li>
+</ul>
+<h3 id="3017">[3.0.17]</h3>
+<p>ProControl</p>
+<ul>
+<li>Basic control for DaVinci Resolve</li>
+</ul>
+<h3 id="3016">[3.0.16]</h3>
+<p>Logic Pro</p>
+<ul>
+<li>Added a preference to use IPv6 protocol with Logic Pro. This preference helps users experiencing one-way control with Logic Pro. For more information see https://neyrinck.com/help/logic-pro-control-operates-one-way/</li>
+</ul>
+<h3 id="3015">[3.0.15]</h3>
+<p>C24</p>
+<ul>
+<li>Improved fader calibration for Logic and Pro Tools..</li>
+</ul>
+<h3 id="3014">[3.0.14]</h3>
+<p>ProControl Main</p>
+<ul>
+<li>Fixed fader 8 operation with Cubase/Nuendo when device was assigned to bank 2, 3, or 4.</li>
+</ul>
+<h3 id="3013">[3.0.13]</h3>
+<p>PreSonus FaderPort V2 / ioStation 24c</p>
+<ul>
+<li>Improved Link Mode so that when mouse moves back to its starting point, it does not affect the control being adjusted.</li>
+</ul>
+<h3 id="3012">[3.0.12]</h3>
+<p>RME TotalMix - fixed connection<br />
+MIDI Mode Improvements<br />
+    Added meter mappings for D-Command Main<br />
+Added meter mappings for ProControl Main</p>
+<h3 id="3011">[3.0.11]</h3>
+<p>MIDI Mode Fixes<br />
+    Missing scribbles on D-Command Main<br />
+    ProControl Fader Pack encoder scribble address was wrong</p>
+<h3 id="3010">[3.0.10]</h3>
+<p>Fixed detection of the DAW on Windows 11. WMIC no longer needs to be installed.</p>
+<h3 id="309">[3.0.9]</h3>
+<p>Fixed crash with Control 24 and Reaper.</p>
+<h3 id="308">[3.0.8]</h3>
+<p>Added info to install ‘Npcap’ for Windows 11</p>
+<h3 id="307">[3.0.7]</h3>
+<p>Added compatibility for Luna for Windows<br />
+Added compatibility for Luna and V-Control Pro 1 Legacy</p>
+<h3 id="306">[3.0.6]</h3>
+<p>Added compatibility for MixBus 10<br />
+Added compatibility for Ableton Live 12 Windows<br />
+Added compatibility for Cubase 13 and V-Control Pro 1 Legacy </p>
+<h3 id="305">[3.0.5]</h3>
+<p>Fixed D-Command send and pan mode switching with Pro Tools.</p>
+<h3 id="304">[3.0.4]</h3>
+<p>Improved D-Command metering with Pro Tools.</p>
+<h3 id="303">[3.0.3]</h3>
+<p>Fixed D-Command Main stability problems when used with Logic.<br />
+Improved D-Command metering speed.</p>
+<h3 id="302">[3.0.2]</h3>
+<p>Fixed D-Command Fader Pack scribble strips for Live and other Mackie Control based DAWs.<br />
+Improved MIDI Mode switching to switch all devices in a setup.<br />
+Added FL Studio support for C|24, Control|24, ProControl, Command|8<br />
+Added Adobe Audition support for C|24, Control|24, ProControl, Command|8</p>
+<h3 id="301">[3.0.1]</h3>
+<p>Fixed Transport Return To Zero (RTZ) for Studio One on all supported surfaces.<br />
+Fixed menu not updating if license status changes.<br />
+Fixed Activate License… menu option to look for all types of licenses.</p>
+<h3 id="30">[3.0]</h3>
+<p>Added support for FaderPort 8 / 16..</p>
+<h4 id="version-2114">Version 2.11.4</h4>
+<p>Fixed crashing that could happen with Studio One and C24.</p>
+<h4 id="version-2113">Version 2.11.3</h4>
+<p>Added MixBus 32C-9 Support.<br />
+Fixed mapping for ProControl Main and MixBus.</p>
+<h4 id="version-2112">Version 2.11.2</h4>
+<p>Not released.</p>
+<h4 id="version-2111">Version 2.11.1</h4>
+<p>Added a first-time launch message to help users locate the application menu.</p>
+<h4 id="version-211">Version 2.11</h4>
+<p>C24</p>
+<ul>
+<li>Added support for Pro Tools for use with Pro Tools on macOS Apple Silicon systems.</li>
+</ul>
+<p>Command 8</p>
+<ul>
+<li>Added support for Pro Tools for use with Pro Tools on macOS Apple Silicon systems.</li>
+</ul>
+<h4 id="version-2101">Version 2.10.1</h4>
+<p>macOS Ventura</p>
+<ul>
+<li>Fix OS version detection to allow Ethernet features</li>
+</ul>
+<p>Digidesign 003 Console</p>
+<ul>
+<li>Added compatibility for Automation Buttons  </li>
+<li>Logic Pro  </li>
+<li>Cubase/Nuendo  </li>
+<li>Studio One  </li>
+<li>Luna  </li>
+<li>MixBus  </li>
+<li>Fixes  </li>
+<li>Logic Pro Track Names and Display Mode  </li>
+<li>Console Mode Buttons</li>
+</ul>
+<h4 id="version-210">Version 2.10</h4>
+<p>Digidesign 003 Console</p>
+<ul>
+<li>Added support for Mac DAWs on Intel  </li>
+<li>Added support for Windows DAWs on Windows 10, 11</li>
+</ul>
+<p>C24</p>
+<ul>
+<li>Fixed Zoom Preset Buttons For Custom Commands With Cubase / Nuendo</li>
+</ul>
+<h4 id="version-297">Version 2.9.7</h4>
+<p>D-Command</p>
+<ul>
+<li>Added support for Pro Tools Studio</li>
+</ul>
+<p>RAVEN</p>
+<ul>
+<li>Fixed Logic Pro connection issue that started in 2.9.0</li>
+</ul>
+<h4 id="version-296">Version 2.9.6</h4>
+<p>Command|8</p>
+<ul>
+<li>Fixed Automapping with Reaper</li>
+</ul>
+<p>ProControl</p>
+<ul>
+<li>Fixed ProControl and Live automatic mapping.</li>
+</ul>
+<p>Steinberg</p>
+<ul>
+<li>Fixed issue where Cubase/Nuendo did not connect.</li>
+</ul>
+<p>V-Console</p>
+<ul>
+<li>Fixed issue where V-Console did not connect.</li>
+</ul>
+<h4 id="version-295">Version 2.9.5</h4>
+<p>C|24</p>
+<ul>
+<li>Fixed communication errors</li>
+</ul>
+<p>Command|8</p>
+<ul>
+<li>Fixed Automapping with Digital Performer</li>
+</ul>
+<p>FaderPort V2</p>
+<ul>
+<li>Added Redo Button for Pro Tools (Shift+Next)  </li>
+<li>Added Mix/Edit Window Toggle Button for Pro Tools (Shift+Master)</li>
+</ul>
+<p>MixBus 32C</p>
+<ul>
+<li>Added support for version 8 with V-Control Pro</li>
+</ul>
+<p>RAVEN, V-Control Pro 1.9 For iPad</p>
+<ul>
+<li>Fixed compatibility issue introduced in 2.9.4</li>
+</ul>
+<h4 id="version-294">Version 2.9.4</h4>
+<p>MIDI Mode Feature added</p>
+<ul>
+<li>ProControl  </li>
+<li>Control|24  </li>
+<li>D-Command  </li>
+<li>C|24</li>
+</ul>
+<p>Added V-Window mode for all DAWs</p>
+<ul>
+<li>ProControl  </li>
+<li>Control|24  </li>
+<li>D-Command  </li>
+<li>C|24  </li>
+<li>Command|8</li>
+</ul>
+<p>C|24</p>
+<ul>
+<li>Record Button fixed for Steinberg</li>
+</ul>
+<p>Merged v 2.8 fixes</p>
+<p>D-Command</p>
+<ul>
+<li>DAW Support for Logic, Steinberg, Mackie Control Compatible applications  </li>
+<li>Added D-Command Soft Keys section to MIDI Mode </li>
+</ul>
+<p>ProControl Main</p>
+<ul>
+<li>Fixes with Digital Performer</li>
+</ul>
+<h4 id="version-293">Version 2.9.3</h4>
+<p>ProControl Edit Pack</p>
+<ul>
+<li>Fixed crash</li>
+</ul>
+<p>ProControl Main</p>
+<ul>
+<li>Fixed matrix ordering with Pro Tools</li>
+</ul>
+<p>PreSonus FaderPort V2, ioStation 24c</p>
+<ul>
+<li>Changed foot switch to control Pro Tools Record</li>
+</ul>
+<h4 id="version-292">Version 2.9.2</h4>
+<p>D-Command</p>
+<ul>
+<li>Improved Cubase / Nuendo to access EQ (toggle with Inserts button on channel strip).  </li>
+<li>Added Resolve support. Use Resolve 17.4.6 or later. Connect with HUI. Features are very limited.</li>
+</ul>
+<p>ProControl with Pro Tools</p>
+<ul>
+<li>Fixed MIDI Mode on Fader Pack</li>
+</ul>
+<p>PreSonus FaderPort V2 ioStation 24c</p>
+<ul>
+<li>Implemented foot switch to control Pro Tools QuickPunch</li>
+</ul>
+<h4 id="version-291">Version 2.9.1</h4>
+<p>D-Command</p>
+<ul>
+<li>Fixed Logic notification message display</li>
+</ul>
+<h4 id="version-29">Version 2.9</h4>
+<p>MIDI Mode</p>
+<ul>
+<li>Added MIDI Mode feature for surfaces.</li>
+</ul>
+<p>V-Window</p>
+<ul>
+<li>Added V-Window feature for hardware surfaces.</li>
+</ul>
+<p>D-Command</p>
+<ul>
+<li>Added DAW support for D-Command Main and one Fader Module  </li>
+<li>Added MIDI Mode. Press “Midi Events List” to toggle MIDI Mode  </li>
+<li>Added V-Window mouse control for all supported DAWs  </li>
+<li>See <a href="https://neyrinck.com/vcpro-compatibility">Compatibility Chart</a> for supported DAWs  </li>
+<li>Learn more <a href="https://neyrinck.com/dcommand">HERE</a>.</li>
+</ul>
+<p>C24</p>
+<ul>
+<li>Improved fader accuracy for Pro Tools  </li>
+<li>Improved fader accuracy for Logic Pro  </li>
+<li>Added V-Window mouse control for all supported DAWs  </li>
+<li>Added MIDI Mode. Press “Focus” to toggle MIDI Mode.  </li>
+<li>See <a href="https://neyrinck.com/vcpro-compatibility">Compatibility Chart</a> for supported DAWs</li>
+</ul>
+<p>Control 24</p>
+<ul>
+<li>Improved fader accuracy for Pro Tools  </li>
+<li>Improved fader accuracy for Logic Pro  </li>
+<li>Command modifier for fine-mode encoder control  </li>
+<li>Added V-Window mouse control for all supported DAWs  </li>
+<li>Added MIDI Mode. Press “Mon 0” to toggle MIDI Mode.  </li>
+<li>See <a href="https://neyrinck.com/vcpro-compatibility">Compatibility Chart</a> for supported DAWs</li>
+</ul>
+<p>ProControl</p>
+<ul>
+<li>Improved fader accuracy for Pro Tools  </li>
+<li>Improved fader accuracy for Logic Pro  </li>
+<li>Added V-Window mouse control for all supported DAWs  </li>
+<li>Added MIDI Mode. Press “Mon 0” to toggle MIDI Mode.  </li>
+<li>See <a href="https://neyrinck.com/vcpro-compatibility">Compatibility Chart</a> for supported DAWs</li>
+</ul>
+<p>Command 8</p>
+<ul>
+<li>Added V-Window mouse control for all supported DAWs  </li>
+<li>See <a href="https://neyrinck.com/vcpro-compatibility">Compatibility Chart</a> for supported DAWs</li>
+</ul>
+<p>macOS</p>
+<ul>
+<li>Apple Silicon Native Compatibility</li>
+</ul>
+<h4 id="version-284">Version 2.8.4</h4>
+<p>Legacy V-Control Pro 1 for Cubase 12</p>
+<ul>
+<li>Added support V-Control Pro 1.9 on iPad for Cubase 12</li>
+</ul>
+<p>ProControl for Reaper</p>
+<ul>
+<li>Fixed LCDs on extender banks to show correct channel info.</li>
+</ul>
+<h4 id="version-283">Version 2.8.3</h4>
+<p>FaderPort For Pro Tools</p>
+<ul>
+<li>Fixed RTZ function when pressing rewind and fast forward buttons simultaneously.</li>
+</ul>
+<p>Digital Performer</p>
+<ul>
+<li>Basic control with C24</li>
+<li>Basic control with Control 24</li>
+<li>Basic control with ProControl</li>
+</ul>
+<p>Improved Support For Multiple HUI / Mackie Control Applications</p>
+<ul>
+<li>V-Control Pro now connects to the most recently launched HUI or Mackie Control-based DAW. And now there is a preference to select a preferred DAW to connect to.</li>
+</ul>
+<h4 id="version-282">Version 2.8.2</h4>
+<p>V-Window</p>
+<ul>
+<li>Fixed to support macOS Monterey and V-Console  </li>
+<li>Fixed issue where V-Window control from V-Console iPad did not control Pro Tools popup menus correctly.</li>
+</ul>
+<p>Windows OS</p>
+<ul>
+<li>Fixed issue where file named ‘ncontrol’ was appearing on the desktop</li>
+</ul>
+<h4 id="version-281">Version 2.8.1</h4>
+<p>LUNA</p>
+<ul>
+<li>Added LUNA Support  </li>
+<li>C24, Control 24, ProControl, Command 8, V-Console</li>
+</ul>
+<p>Control 24, C24, ProControl</p>
+<ul>
+<li>Added V-Window Fader Mode For Pro Tools  </li>
+<li>Control 24, C24, ProControl - Tap Master Fader</li>
+</ul>
+<p>FaderPort / ioStation24C</p>
+<ul>
+<li>Added Pan flip mode for FaderPort / ioStation24C.</li>
+</ul>
+<p>Logic Pro</p>
+<ul>
+<li>Fixed problem where Raven does not connect to Logic if computer has no Ethernet port and Wi-Fi is turned off.  </li>
+<li>Fixed problem where surface is not updated when connecting to Logic on M1 systems.</li>
+</ul>
+<h4 id="version-28">Version 2.8</h4>
+<p>PreSonus ioStation 24c</p>
+<ul>
+<li>Added direct support for PreSonus ioStation 24c</li>
+</ul>
+<p>FaderPort / ioStation 24c</p>
+<ul>
+<li>Added V-Window mode to control plugin parameters  </li>
+<li>Changed Send A-D select to use Master, Click, Section, Shift+Section</li>
+</ul>
+<h4 id="version-275-changes">Version 2.7.5 CHANGES</h4>
+<p>Added supercharging PreSonus FaderPort with Pro Tools. neyrinck.com/faderport</p>
+<p><strong>VERSION 2.7.4 CHANGES</strong></p>
+<p>Fixed Command8 for Logic Pro X to display status info at top correctly.<br />
+Fixed V-Console for Logic Pro X to display track names and other text.</p>
+<p>Compatibility added for Nuendo 11 legacy V-Control Pro 1.9 for iPad.</p>
+<p><strong>VERSION 2.7.3 CHANGES</strong></p>
+<p>Apple M1 systems now supported for Logic Pro X. Other DAWs probably probably will work, but Cubase/Nuendo will not.</p>
+<p>Logic Pro X users must delete their old surfaces in Control Surfaces / Setups… Logic Pro X 10.6 does not properly refresh a new control surface when it is added. Please close and re-open your project.</p>
+<p>V-Control Pro 2.7.3 is compatible with Logic Pro X 10.6 and later only. If you are using version 10.5 or earlier, please install V-Control Pro 2.7.2.</p>
+<p>For Logic Pro X, V-Control Pro 2.7.3 does not support multiple ProControl Fader Pack devices at this time. If you have multiple Fader Packs, you must use V-Control Pro 2.7.2, which will only work on Intel Macs. At this time, multiple Fader Pack units are not supported on Apple M1 Mac systems.</p>
+<p>Add support for Logic Pro X on Apple M1-based systems.<br />
+Fix hanging problem on Mac when computer name is long.</p>
+<p>Compatibility with Adobe Premiere Version 15.1</p>
+<p><strong>VERSION 2.7.2 CHANGES</strong></p>
+<p>Fix Zoom Preset and Function button for Control24 and Cubase/Nuendo.<br />
+Compatibility with Mixbus32C Version 7 .</p>
+<p><strong>VERSION 2.7.1 CHANGES</strong></p>
+<p>Basic Reaper Support for ProControl, Control24, C24, and Command 8.</p>
+<p><strong>VERSION 2.7.0 CHANGES</strong></p>
+<p>Digidesign Command 8 Support<br />
+    MixBus<br />
+    Logic Pro X<br />
+    Ableton Live<br />
+    PreSonus Studio One</p>
+<p>Issues Fixed<br />
+    Cubase hanging with C24<br />
+    Windows Uninstaller not removing virtual MIDI ports</p>
+<p><strong>VERSION 2.6.2 CHANGES</strong></p>
+<p>Cubase / Nuendo Improvements For ProControl / Control24, C24<br />
+    Master Fader Control<br />
+    Output Metering - Stereo and 5.1<br />
+    Auto-Bank Follow Function - Use Focus button for C24, Shuffle button for Control24, F1 button for ProControl<br />
+    F1 - F10 Programmable Buttons For Control24</p>
+<p><strong>VERSION 2.6.1 CHANGES</strong></p>
+<p>Added support for MixBus with ProControl / Control24, and C24</p>
+<p>Added support for Ableton Live with ProControl / Control24, and C24</p>
+<p>Improvements for Logic Pro X and ProControl / Control24, and C24.<br />
+    Assignable inserts<br />
+    Improved assignment of inputs, outputs, and sends<br />
+    Soft keys assignable in Logic Pro X controller assignments window.<br />
+    Stereo output metering</p>
+<p><strong>VERSION 2.6 CHANGES</strong></p>
+<p>Added support for ProControl Edit Pack with Pro Tools. </p>
+<p><strong>VERSION 2.5.6 CHANGES</strong></p>
+<p>Improved V-Window to be compatible with Catalina security and privacy settings. <br />
+Fixed intermittent bug where an Ethernet surface meters and counter freeze for a second.<br />
+Fixed zoom control of Cubase with cursor keys on ProControl, Control|24, and C|24.</p>
+<p><strong>VERSION 2.5.5 CHANGES</strong></p>
+<p>Fixed Control 24 fader touch messaging for strips 9-24.<br />
+Improved Mac Ethernet permissions handling for Catalina-level security.</p>
+<p><strong>VERSION 2.5.4 CHANGES</strong></p>
+<p>Added support for C|24 Auto Talkback feature.</p>
+<p><strong>VERSION 2.5.3 CHANGES</strong></p>
+<p>Added support for latest Adobe Audition on Windows named Audition.exe.</p>
+<p><strong>VERSION 2.5.2 CHANGES</strong></p>
+<p>Added support for Nuendo 10.0</p>
+<p><strong>VERSION 2.5.1 CHANGES</strong></p>
+<p>macOS installer improved to be compatible with Catalina Gatekeeper.<br />
+Control improvements for Logic Pro X, Cubase/Nuendo, and Studio One.</p>
+<p>Website Page Listings Of Control Features:<br />
+<a href="https://neyrinck.com/logic-pro-x-control-features/">Logic Pro X</a><br />
+<a href="https://neyrinck.com/steinberg-control-features/">Cubase / Nuendo</a><br />
+<a href="https://neyrinck.com/studio-one-control-features/">Studio One / Fender Studio</a></p>
+<p><strong>VERSION 2.5 CHANGES</strong></p>
+<p>Added support for the Digidesign C|24 control surface. Compatible DAWs are Logic Pro X, Cubase/Nuendo, and Studio One.</p>
+<p><strong>VERSION 2.4 CHANGES</strong></p>
+<p>Support for PreSonus Studio One on Control24 and ProControl.<br />
+Pro Tools plug-in editing on Control24.<br />
+Logic Pro X enhancements for Control24 and ProControl.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "toc.integrate"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../js/unsupported-browser.js"></script>
+      
+    
+  </body>
+</html>
