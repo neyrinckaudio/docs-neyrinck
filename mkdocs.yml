@@ -1,6 +1,9 @@
 site_name: Neyrinck User Guides
 site_description: User Guides For Neyrinck Products
 
+hooks:
+  - hooks.py
+
 theme:
   name: material
   features:
