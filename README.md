@@ -29,7 +29,7 @@ This repository contains:
 
 3. The `site/` directory now contains the complete website ready for deployment
 
-**Note**: The GitHub Actions workflow (`.github/workflows/main.yml`) automatically copies the subproject directories to the `site/` directory before deploying.
+**NOTE**: At this time CloudFlare Pages builds and deploys the site.
 
 ## Local Preview
 
