@@ -1,5 +1,6 @@
 site_name: Neyrinck User Guides
 site_description: User Guides For Neyrinck Products
+site_url: https://docs.neyrinck.com/
 
 hooks:
   - hooks.py
