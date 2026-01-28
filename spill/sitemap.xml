@@ -1,3 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://docs.neyrinck.com/spill/</loc>
+         <lastmod>2026-01-28</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.neyrinck.com/spill/install-and-setup/</loc>
+         <lastmod>2026-01-28</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.neyrinck.com/spill/licensing/</loc>
+         <lastmod>2026-01-28</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.neyrinck.com/spill/quick-start-guide/</loc>
+         <lastmod>2026-01-28</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.neyrinck.com/spill/usage/</loc>
+         <lastmod>2026-01-28</lastmod>
+    </url>
 </urlset>
