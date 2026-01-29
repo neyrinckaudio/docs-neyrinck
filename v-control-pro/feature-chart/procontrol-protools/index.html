@@ -1734,134 +1734,498 @@
 </div>
 <div class="admonition info">
 <p class="admonition-title">Important Insert Editing Information</p>
-<p>Pro Tools limits HUI device plug-in editing to the first eight channels of the surface. You can bank and scroll a track to the first eight channels and select a plug-in to edit. Thereafter, you can bank and scroll while editing the plug-in. </p>
+<p>Pro Tools limits HUI device plug-in editing to the first eight channels of the surface. You can bank and scroll a track to the first eight channels and select a plug-in to edit. Thereafter, you can bank and scroll while editing the plug-in.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:16"><input checked="checked" id="channel-strips" name="__tabbed_1" type="radio" /><input id="bank-mode" name="__tabbed_1" type="radio" /><input id="automation" name="__tabbed_1" type="radio" /><input id="transport" name="__tabbed_1" type="radio" /><input id="dsp-edit-section-for-procontrol" name="__tabbed_1" type="radio" /><input id="status-buttons-for-procontrol" name="__tabbed_1" type="radio" /><input id="channel-matrix-for-procontrol" name="__tabbed_1" type="radio" /><input id="group-buttons" name="__tabbed_1" type="radio" /><input id="utility" name="__tabbed_1" type="radio" /><input id="keypad-buttons" name="__tabbed_1" type="radio" /><input id="modifiers" name="__tabbed_1" type="radio" /><input id="navigation" name="__tabbed_1" type="radio" /><input id="window-buttons" name="__tabbed_1" type="radio" /><input id="edit" name="__tabbed_1" type="radio" /><input id="v-window-mode" name="__tabbed_1" type="radio" /><input id="midi-mode" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="channel-strips">Channel Strips</label><label for="bank-mode">Bank Mode</label><label for="automation">Automation</label><label for="transport">Transport</label><label for="dsp-edit-section-for-procontrol">DSP Edit Section for ProControl</label><label for="status-buttons-for-procontrol">Status Buttons for ProControl</label><label for="channel-matrix-for-procontrol">Channel Matrix for ProControl</label><label for="group-buttons">Group Buttons</label><label for="utility">Utility</label><label for="keypad-buttons">Keypad Buttons</label><label for="modifiers">Modifiers</label><label for="navigation">Navigation</label><label for="window-buttons">Window Buttons</label><label for="edit">Edit</label><label for="v-window-mode">V-Window Mode</label><label for="midi-mode">MIDI Mode</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:14"><input checked="checked" id="channel-strips" name="__tabbed_1" type="radio" /><input id="bank-modes" name="__tabbed_1" type="radio" /><input id="automation" name="__tabbed_1" type="radio" /><input id="transport" name="__tabbed_1" type="radio" /><input id="dsp-edit" name="__tabbed_1" type="radio" /><input id="matrix" name="__tabbed_1" type="radio" /><input id="group" name="__tabbed_1" type="radio" /><input id="utility" name="__tabbed_1" type="radio" /><input id="keypad" name="__tabbed_1" type="radio" /><input id="navigation" name="__tabbed_1" type="radio" /><input id="window" name="__tabbed_1" type="radio" /><input id="edit" name="__tabbed_1" type="radio" /><input id="v-window" name="__tabbed_1" type="radio" /><input id="midi-mode" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="channel-strips">Channel Strips</label><label for="bank-modes">Bank Modes</label><label for="automation">Automation</label><label for="transport">Transport</label><label for="dsp-edit">DSP Edit</label><label for="matrix">Matrix</label><label for="group">Group</label><label for="utility">Utility</label><label for="keypad">Keypad</label><label for="navigation">Navigation</label><label for="window">Window</label><label for="edit">Edit</label><label for="v-window">V-Window</label><label for="midi-mode">MIDI Mode</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <table>
 <thead>
 <tr>
-<th>Channel Strips</th>
+<th>Channel Strip</th>
+<th></th>
 <th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Record</td>
-<td>Arms the assigned audio track of the Channel.</td>
+<td><code>Record</code></td>
+<td></td>
+<td>Arms the assigned audio track of the Channel (LED flashes when record-ready, lit when recording).</td>
 </tr>
 <tr>
-<td>Insert</td>
+<td></td>
+<td><code>Option</code>+</td>
+<td>Record-enables all tracks (when pressed on non-enabled track).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Option</code>+</td>
+<td>Disables all tracks for recording (when pressed on enabled track).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Option</code>+<code>Shift</code>+</td>
+<td>Record-enables selected tracks only.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Alt</code>+</td>
+<td>Enables or clears Record Safe mode on channel (LED flashes briefly).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Option</code>+<code>Alt</code>+</td>
+<td>Enables or clears Record Safe on all channels.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+<code>Option</code>+<code>Alt</code>+</td>
+<td>Enables or clears Record Safe on selected channels only.</td>
+</tr>
+<tr>
+<td><code>Insert</code></td>
+<td></td>
 <td>Enables insert editor for selected Channel.</td>
 </tr>
 <tr>
-<td>Solo</td>
-<td>Solos the Channel.</td>
-</tr>
-<tr>
-<td>Mute</td>
-<td>Mutes the Channel.</td>
-</tr>
-<tr>
-<td>Auto</td>
-<td>Enables Automation selection. Hold down button to make selection using 2 different methods.</td>
+<td></td>
+<td>Double-click</td>
+<td>Directly accesses first assigned insert for editing.</td>
 </tr>
 <tr>
 <td></td>
-<td>With Auto on channelstrip held down. Select Automation mode from the Automation section.</td>
+<td>Multiple double-clicks</td>
+<td>Cycles through inserts on channel.</td>
 </tr>
 <tr>
 <td></td>
-<td>With Auto on channelstrip held down. Press channel select button to cycle through automation modes for channel.</td>
+<td><code>Bypass</code>+</td>
+<td>Bypasses or enables all plug-ins on all inserts for channel (when Bypass mode enabled).</td>
 </tr>
 <tr>
-<td>Select</td>
-<td>Sets the Channel to the Select state.</td>
+<td></td>
+<td><code>Bypass</code>+<code>Option</code>+</td>
+<td>Bypasses plug-ins on all channels (when Bypass mode enabled).</td>
 </tr>
 <tr>
-<td>Knob</td>
-<td>Changes the assigned parameter.</td>
+<td><code>Solo</code></td>
+<td></td>
+<td>Solos the Channel (LED lights when enabled).</td>
 </tr>
 <tr>
-<td>Knob Button</td>
-<td>Sets assign selection/Toggles insert parameters/Toggles prepost/Toggles Send Mute</td>
+<td></td>
+<td><code>Option</code>+</td>
+<td>Enables or clears solos on all channels.</td>
 </tr>
 <tr>
-<td>Master Record</td>
-<td>Record Enables all available channels.</td>
+<td></td>
+<td><code>Option</code>+<code>Shift</code>+</td>
+<td>Enables or clears solos on all selected channels.</td>
 </tr>
 <tr>
-<td>Track Meters</td>
-<td>Displays Stereo metering for tracks.</td>
+<td></td>
+<td><code>Alt</code>+</td>
+<td>Enables or clears Solo Safe mode on channel (LED flashes briefly).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Option</code>+<code>Alt</code>+</td>
+<td>Enables or clears Solo Safe on all channels.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+<code>Option</code>+<code>Alt</code>+</td>
+<td>Enables or clears Solo Safe on selected channels only.</td>
+</tr>
+<tr>
+<td><code>Mute</code></td>
+<td></td>
+<td>Mutes the Channel (LED lights when enabled).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Option</code>+</td>
+<td>Enables or clears mutes on all channels.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Option</code>+<code>Shift</code>+</td>
+<td>Enables or clears mutes on all selected channels.</td>
+</tr>
+<tr>
+<td><code>Auto</code></td>
+<td></td>
+<td>Press to see auto mode.</td>
+</tr>
+<tr>
+<td></td>
+<td>+<code>AUTOMATION MODES</code></td>
+<td>Hold down and select automation mode (WRITE, TOUCH, LATCH, TRIM, READ, OFF).</td>
+</tr>
+<tr>
+<td></td>
+<td>+<code>Select</code></td>
+<td>Hold down and press channel select button to cycle through automation modes.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Option</code>+<code>Automation mode</code></td>
+<td>Changes automation mode on all channels.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Option</code>+<code>Shift</code>+<code>Automation mode</code></td>
+<td>Changes automation mode on all selected channels.</td>
+</tr>
+<tr>
+<td><code>Select</code></td>
+<td></td>
+<td>Selects track (LED lights when selected).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Deselects single channel OR selects/deselects multiple channels.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Option</code>+</td>
+<td>Selects or deselects all channels.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Alt</code>+</td>
+<td>Changes SELECT state of channel and changes all others to opposite state (on lit switch).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Default</code>+</td>
+<td>Reset fader to 0 db.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Default</code>+<code>Option</code>+</td>
+<td>Reset all faders to 0 db.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Default</code>+<code>Option</code>+<code>Shift</code>+</td>
+<td>Reset all selected faders to 0 db.</td>
+</tr>
+<tr>
+<td><code>Knob</code></td>
+<td></td>
+<td>Adjust control assigned for bank mode.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Pan Mode - Adjust stereo pan for mono and stereo tracks.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Send A-E Modes - Adjust send volume.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Flip Send A-E Modes - Adjust send pan for mono/stereo sends.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Insert Edit Mode - Adjust plugin parameter for strips 1-8.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Cmd</code>+</td>
+<td>Fine mode (fine adjustments).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Alt</code>+</td>
+<td>Fine adjustments for Knob controls.</td>
+</tr>
+<tr>
+<td><code>Knob Button</code></td>
+<td><code>Default</code>+</td>
+<td>Pan Mode - Reset pan to default</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Send Mute Mode - Control send mute</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Pre/Post Mode - Control send pre/post.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Insert Select Mode - Select insert A-D, E for strips 1-4.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Insert Edit Mode - Adjust discrete parameter for strips 1-4.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Option</code>+</td>
+<td>Toggles send pre/post for all channels (in Send mode).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Option</code>+<code>Shift</code>+</td>
+<td>Toggles send pre/post for all selected channels (in Send mode).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Default</code>+</td>
+<td>Returns channel's send level or pan to default.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Default</code>+<code>Option</code>+</td>
+<td>Returns all channel send levels/pans to default.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Default</code>+<code>Option</code>+<code>Shift</code>+</td>
+<td>Returns all selected channel send levels/pans to default.</td>
+</tr>
+<tr>
+<td><code>Fader</code></td>
+<td></td>
+<td>Track volume control.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Ctrl</code>+</td>
+<td>Clutch mode - disengages faders from Mix groups while held.</td>
+</tr>
+<tr>
+<td><code>Master Record</code></td>
+<td></td>
+<td>Toggles all enabled REC/RDY switches on and off.</td>
+</tr>
+<tr>
+<td><code>Meters</code></td>
+<td></td>
+<td>Displays stereo metering for tracks.</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="tabbed-block">
+<p>Buttons are used to set a bank mode which assign controls to the Knobs.</p>
 <table>
 <thead>
 <tr>
-<th>Bank Mode</th>
+<th><code>PAN</code></th>
+<th></th>
 <th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>The assignment buttons are used to assign controls to the Knobs.</td>
+<td><code>PAN</code></td>
 <td></td>
+<td>Enables pan control on Knobs.</td>
 </tr>
 <tr>
-<td>Pan (Default)</td>
-<td>Assigns knobs to control pan position. For stereo tracks, press pan button again to access other side.</td>
+<td></td>
+<td>Press twice</td>
+<td>On stereo channels, edits right channel pan.</td>
 </tr>
 <tr>
-<td>Send A</td>
-<td>Assigns Send A to knobs.</td>
+<td><code>LCR</code>,<code>FrontRear</code>,<code>Rear</code>,<code>Divergence</code>,<code>Center</code>,<code>LFE</code>,<code>LR</code></td>
+<td></td>
+<td>Stereo Pan Mode for mono / stereo tracks</td>
 </tr>
 <tr>
-<td>Send B</td>
-<td>Assigns Send B to knobs.</td>
+<td></td>
+<td></td>
+<td>Toggle between Pan L and Pan R for stereo tracks</td>
 </tr>
 <tr>
-<td>Send C</td>
-<td>Assigns Send C to knobs.</td>
+<td></td>
+<td></td>
+<td>Toggle between Pan L and Pan R for stereo sends when in send mode</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>SENDS</code></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>A</code></td>
+<td></td>
+<td>Send A Mode - enables send level control on Knobs for Send A.</td>
 </tr>
 <tr>
-<td>Send D</td>
-<td>Assigns Send D to knobs.</td>
+<td></td>
+<td><code>Assign</code>+</td>
+<td>Enters assign mode for send routing.</td>
 </tr>
 <tr>
-<td>Send E</td>
-<td>Assigns Send E to knobs.</td>
+<td></td>
+<td><code>Insert</code>+</td>
+<td>Quick access to send level editing.</td>
 </tr>
 <tr>
-<td>Input</td>
-<td>Shows Channel Inputs across LCD when held down. Enter Assign mode first to change channel input with knobs.</td>
+<td><code>B</code></td>
+<td></td>
+<td>Send B Mode - enables send level control on Knobs for Send B.</td>
 </tr>
 <tr>
-<td>Output</td>
-<td>Shows Channel Outputs across LCD. Enter Assign mode first to change channel output with knobs.</td>
+<td><code>C</code></td>
+<td></td>
+<td>Send C Mode - enables send level control on Knobs for Send C.</td>
 </tr>
 <tr>
-<td>Assign</td>
-<td>Enables knobs to change assignment when in Sends, input, or output mode. Use knob button to confirm selection.</td>
+<td><code>D</code></td>
+<td></td>
+<td>Send D Mode - enables send level control on Knobs for Send D.</td>
 </tr>
 <tr>
-<td>PrePost</td>
-<td>Sets knob buttons to PrePost mode when in Sends Mode.</td>
+<td><code>E</code></td>
+<td></td>
+<td>Send E Mode - enables send level control on Knobs for Send E.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>Flip</code></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Flip</code></td>
+<td></td>
+<td>Enters Flip mode (LED flashes).</td>
 </tr>
 <tr>
-<td>Send Mute</td>
+<td></td>
+<td></td>
+<td>Send levels mapped to faders.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Send pan controls mapped to Knobs.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Send mutes mapped to MUTE switches.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>V-SEL controls send pre/post operation.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>SWITCH FUNCTIONS</code></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Pre/Post</code></td>
+<td></td>
+<td>Sets knob buttons to Pre/Post mode when in Sends Mode.</td>
+</tr>
+<tr>
+<td><code>Send Mute</code></td>
+<td></td>
 <td>Sets knob buttons to Send Mute mode when in Sends Mode.</td>
 </tr>
+</tbody>
+</table>
+<table>
+<thead>
 <tr>
-<td>Insert Bypass</td>
-<td>Enables Bypass mode. Bypass mode assigns Insert button on channel strip to bypass all inserts.</td>
+<th><code>ASSIGN</code></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Input</code></td>
+<td></td>
+<td>Enters assign mode for input routing.</td>
 </tr>
 <tr>
-<td>Flip</td>
-<td>Flips knobs to faders.</td>
+<td></td>
+<td><code>Assign</code>+</td>
+<td>Enters assign mode for input routing.</td>
+</tr>
+<tr>
+<td><code>Output</code></td>
+<td></td>
+<td>Enters assign mode for output routing.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Assign</code>+</td>
+<td>Enters assign mode for output routing.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Ctrl</code>+<code>Assign</code></td>
+<td>Confirms additional output assignment (during output assign).</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>INSERT BYPASS</code></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Insert Bypass</code></td>
+<td></td>
+<td>Enables Master Bypass mode (INSERT switches become bypass switches).</td>
+</tr>
+<tr>
+<td></td>
+<td>+<code>Insert</code></td>
+<td>Toggles bypass for all plug-ins on channel (when Bypass mode enabled).</td>
+</tr>
+<tr>
+<td></td>
+<td>+<code>Option</code>+<code>Insert</code></td>
+<td>Changes bypass status of all plug-ins on all channels (when Bypass mode enabled).</td>
+</tr>
+<tr>
+<td></td>
+<td>+<code>Option</code>+<code>Shift</code>+<code>Insert</code></td>
+<td>Changes bypass status on all selected channels (when Bypass mode enabled).</td>
 </tr>
 </tbody>
 </table>
@@ -1870,58 +2234,212 @@
 <table>
 <thead>
 <tr>
-<th>Automation</th>
+<th><code>AUTOMATION MODES</code></th>
+<th></th>
 <th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Hold down Auto button channel strip to select automation modes.</td>
 <td></td>
+<td></td>
+<td>Hold down channel strip <code>Auto</code> button to select automation modes.</td>
 </tr>
 <tr>
-<td>Read</td>
-<td>Sets selected Channel in to Read Mode</td>
+<td><code>Read</code></td>
+<td></td>
+<td>Sets selected Channel to Read Mode (AUTO LED green).</td>
 </tr>
 <tr>
-<td>Write</td>
-<td>Sets selected Channel to Write Mode</td>
+<td></td>
+<td><code>Option</code>+</td>
+<td>Arms all channels for Read mode.</td>
 </tr>
 <tr>
-<td>Touch</td>
-<td>Sets selected Channel to Touch Mode</td>
+<td></td>
+<td><code>Option</code>+<code>Shift</code>+</td>
+<td>Arms all selected channels for Read mode.</td>
 </tr>
 <tr>
-<td>Trim</td>
-<td>Enables Trim to selected Channel.</td>
+<td><code>Write</code></td>
+<td></td>
+<td>Sets selected Channel to Write Mode (AUTO LED red flashing/lit).</td>
 </tr>
 <tr>
-<td>Latch</td>
-<td>Sets selected Channel to Latch Mode</td>
+<td></td>
+<td><code>Option</code>+</td>
+<td>Arms all channels for Write mode.</td>
 </tr>
 <tr>
-<td>Off</td>
-<td>Sets selected Channel to Off Mode</td>
+<td></td>
+<td><code>Option</code>+<code>Shift</code>+</td>
+<td>Arms all selected channels for Write mode.</td>
 </tr>
 <tr>
-<td>Volume</td>
-<td>Toggles Enable for Volume Automation</td>
+<td><code>Touch</code></td>
+<td></td>
+<td>Sets selected Channel to Touch Mode (AUTO LED red flashing/lit).</td>
 </tr>
 <tr>
-<td>Pan</td>
-<td>Toggles Enable for Pan Automation</td>
+<td></td>
+<td><code>Option</code>+</td>
+<td>Arms all channels for Touch mode.</td>
 </tr>
 <tr>
-<td>Mute</td>
-<td>Toggles Enable for Mute Automation</td>
+<td></td>
+<td><code>Option</code>+<code>Shift</code>+</td>
+<td>Arms all selected channels for Touch mode.</td>
 </tr>
 <tr>
-<td>Send LvL</td>
-<td>Toggles Enable for Send Level Automation</td>
+<td><code>Latch</code></td>
+<td></td>
+<td>Sets selected Channel to Latch Mode (AUTO LED red flashing/lit).</td>
 </tr>
 <tr>
-<td>Plug-In</td>
-<td>Toggles Enable for Plug-In Automation</td>
+<td></td>
+<td><code>Option</code>+</td>
+<td>Arms all channels for Latch mode.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Option</code>+<code>Shift</code>+</td>
+<td>Arms all selected channels for Latch mode.</td>
+</tr>
+<tr>
+<td><code>Trim</code></td>
+<td></td>
+<td>Toggles TRIM mode on/off for track (TDM only).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Alt</code>+</td>
+<td>Displays trim delta value instead of absolute value (while adjusting).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Option</code>+</td>
+<td>Arms all channels for Trim mode.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Option</code>+<code>Shift</code>+</td>
+<td>Arms all selected channels for Trim mode.</td>
+</tr>
+<tr>
+<td><code>Off</code></td>
+<td></td>
+<td>Disables automation on channel (AUTO LED off).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Option</code>+</td>
+<td>Disables automation on all channels.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Option</code>+<code>Shift</code>+</td>
+<td>Disables automation on all selected channels.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>AUTO ENABLES</code></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Volume</code></td>
+<td></td>
+<td>Enables automation for fader.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Option</code>+</td>
+<td>Toggles all automation parameters to this state.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Alt</code>+</td>
+<td>Changes FADER state and sets other five to opposite.</td>
+</tr>
+<tr>
+<td><code>Pan</code></td>
+<td></td>
+<td>Enables automation for pan (enables both channel and send pan if both disabled).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Option</code>+</td>
+<td>Toggles all automation parameters to this state.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Alt</code>+</td>
+<td>Changes PAN state and sets other five to opposite.</td>
+</tr>
+<tr>
+<td><code>Mute</code></td>
+<td></td>
+<td>Enables automation for mute.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Option</code>+</td>
+<td>Toggles all automation parameters to this state.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Alt</code>+</td>
+<td>Changes MUTE state and sets other five to opposite.</td>
+</tr>
+<tr>
+<td><code>Send LvL</code></td>
+<td></td>
+<td>Enables automation for send.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Option</code>+</td>
+<td>Toggles all automation parameters to this state.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Alt</code>+</td>
+<td>Changes SEND state and sets other five to opposite.</td>
+</tr>
+<tr>
+<td><code>Plug-In</code></td>
+<td></td>
+<td>Enables automation for plug-ins.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Option</code>+</td>
+<td>Toggles all automation parameters to this state.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Alt</code>+</td>
+<td>Changes PLUG IN state and sets other five to opposite.</td>
+</tr>
+<tr>
+<td><code>Send Mute</code></td>
+<td></td>
+<td>Enables automation for send mute.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Option</code>+</td>
+<td>Toggles all automation parameters to this state.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Alt</code>+</td>
+<td>Changes SEND MUTE state and sets other five to opposite.</td>
 </tr>
 </tbody>
 </table>
@@ -1932,83 +2450,263 @@
 <tr>
 <th>Transport</th>
 <th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Play</td>
-<td>Starts playhead at current position in Timeline.</td>
+<td><code>Play</code></td>
+<td></td>
+<td>Begins playback from current cursor position.</td>
 </tr>
 <tr>
-<td>Stop</td>
-<td>Stops playhead at current position in Timeline.</td>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Initiates half-speed playback.</td>
 </tr>
 <tr>
-<td>Record</td>
-<td>Starts Record Mode for playhead</td>
+<td><code>Stop</code></td>
+<td></td>
+<td>Stops playback or recording.</td>
 </tr>
 <tr>
-<td>Rewind</td>
-<td>Move playhead backwards in Timeline.</td>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Aborts the current record pass.</td>
 </tr>
 <tr>
-<td>Fast Forward</td>
-<td>Moves playhead forward in Timeline.</td>
+<td><code>Record</code></td>
+<td></td>
+<td>Arms Pro Tools for recording (LED flashes).</td>
 </tr>
 <tr>
-<td>RTZ</td>
-<td>Returns playhead to beginning of Timeline.</td>
+<td></td>
+<td><code>Ctrl</code>+</td>
+<td>Cycles through record modes (normal, QuickPunch, Loop).</td>
 </tr>
 <tr>
-<td>GTE</td>
-<td>Sends playhead to end of Timeline.</td>
+<td><code>Rewind</code></td>
+<td></td>
+<td>Rewinds the session from current cursor position (incremental or continuous depending on preferences).</td>
 </tr>
 <tr>
-<td>Pre Roll</td>
-<td>Enables Pre Roll</td>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Return-to-Zero (same as RTZ button).</td>
 </tr>
 <tr>
-<td>Post Roll</td>
-<td>Enables Post Roll</td>
+<td><code>Fast Forward</code></td>
+<td></td>
+<td>Fast-forwards the session from current cursor position (incremental or continuous).</td>
 </tr>
 <tr>
-<td>Mark In</td>
-<td>Sets start point of selection in Timeline.</td>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Go-To-End (same as END button).</td>
 </tr>
 <tr>
-<td>Mark Out</td>
-<td>Sets end point of selection in Timeline.</td>
+<td><code>RTZ</code></td>
+<td></td>
+<td>Sets playback cursor to the beginning of the session.</td>
 </tr>
 <tr>
-<td>Loop Play</td>
-<td>Enables Loop playback.</td>
+<td></td>
+<td><code>Ctrl</code>+</td>
+<td>Write to Start (writes automation from insertion point backward to beginning).</td>
 </tr>
 <tr>
-<td>Loop Record</td>
+<td></td>
+<td><code>Ctrl</code>+<code>Shift</code>+</td>
+<td>Write to All (writes automation to entire selection/track).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Ctrl</code>+<code>Option</code>+</td>
+<td>Suppresses warning dialog for Write to Start.</td>
+</tr>
+<tr>
+<td><code>GTE</code></td>
+<td></td>
+<td>Sets playback cursor to the end of the session.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Ctrl</code>+</td>
+<td>Write to End (writes automation from insertion point forward to end).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Ctrl</code>+<code>Shift</code>+</td>
+<td>Write to All (writes automation to entire selection/track).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Ctrl</code>+<code>Option</code>+</td>
+<td>Suppresses warning dialog for Write to End.</td>
+</tr>
+<tr>
+<td><code>Pre Roll</code></td>
+<td></td>
+<td>Activates pre-roll.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Alt</code>+</td>
+<td>Enters pre-roll time value (numeric entry mode).</td>
+</tr>
+<tr>
+<td><code>Post Roll</code></td>
+<td></td>
+<td>Activates post-roll.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Alt</code>+</td>
+<td>Enters post-roll time value (numeric entry mode).</td>
+</tr>
+<tr>
+<td><code>Mark In</code></td>
+<td></td>
+<td>Marks In edit point during playback / Sets start point of selection in Timeline.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Alt</code>+</td>
+<td>Manually enters selection start time.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Option</code>+Left Arrow</td>
+<td>Centers left side of waveform selection in Edit Window.</td>
+</tr>
+<tr>
+<td><code>Mark Out</code></td>
+<td></td>
+<td>Marks Out edit point during playback / Sets end point of selection in Timeline.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Alt</code>+</td>
+<td>Manually enters selection end time.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Option</code>+Right Arrow</td>
+<td>Centers right side of waveform selection in Edit Window.</td>
+</tr>
+<tr>
+<td><code>Loop Play</code></td>
+<td></td>
+<td>Toggles Loop Playback mode (LED lit when enabled).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Ctrl</code>+</td>
+<td>Places Pro Tools into Loop Record mode.</td>
+</tr>
+<tr>
+<td><code>Loop Record</code></td>
+<td></td>
 <td>Enables Loop Record.</td>
 </tr>
 <tr>
-<td>Quick Punch</td>
-<td>Enables Punch Mode.</td>
+<td><code>Quick Punch</code></td>
+<td></td>
+<td>Toggles QuickPunch recording mode (LED lit when enabled).</td>
 </tr>
 <tr>
-<td>Audition</td>
-<td>Enables Audition Mode.</td>
+<td><code>Audition</code></td>
+<td></td>
+<td>Press with PRE/POST/IN/OUT to play audio; playback continues until pressed again.</td>
 </tr>
 <tr>
-<td>Online</td>
-<td>Enables Online Mode for transport.</td>
+<td></td>
+<td><code>Alt</code>+<code>Option</code>+PRE</td>
+<td>Plays audio from pre-roll point through selection start plus post-roll.</td>
 </tr>
 <tr>
-<td>Scrub</td>
-<td>Enables Scrub Mode for the Wheel</td>
+<td></td>
+<td><code>Alt</code>+<code>Option</code>+IN</td>
+<td>Plays audio from pre-roll point through selection start plus post-roll.</td>
 </tr>
 <tr>
-<td>Shuttle</td>
-<td>Enables Shuttle Mode for the Wheel</td>
+<td></td>
+<td><code>Alt</code>+<code>Option</code>+OUT</td>
+<td>Plays audio from before selection end (pre-roll) through selection end plus post-roll.</td>
 </tr>
 <tr>
-<td>Counter</td>
+<td></td>
+<td><code>Alt</code>+<code>Option</code>+POST</td>
+<td>Plays audio from before selection end (pre-roll) through selection end plus post-roll.</td>
+</tr>
+<tr>
+<td><code>Online</code></td>
+<td></td>
+<td>Places Pro Tools online or offline (LED lit when online).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Ctrl</code>+</td>
+<td>Cycles through available machine master choices (Pro Tools, Serial Machine, ADAT).</td>
+</tr>
+<tr>
+<td><code>Scrub</code></td>
+<td></td>
+<td>Enables Scrub mode (rotate wheel to scrub forward/backward).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Option</code>+</td>
+<td>Begins scrubbing from selection end point.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Alt</code>+</td>
+<td>Fixed "fine scrub" resolution regardless of zoom level (while scrubbing).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Creates selection using scrub wheel (starts at current position).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+<code>Option</code>+</td>
+<td>Modifies end of existing selection.</td>
+</tr>
+<tr>
+<td></td>
+<td>Left/Right Arrow</td>
+<td>Moves to selection start/end (during scrub).</td>
+</tr>
+<tr>
+<td><code>Shuttle</code></td>
+<td></td>
+<td>Enables Shuttle mode (rotate wheel to shuttle forward/backward).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Option</code>+</td>
+<td>Begins shuttling from selection end point.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Creates selection using shuttle wheel.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+<code>Option</code>+</td>
+<td>Modifies end of existing selection.</td>
+</tr>
+<tr>
+<td></td>
+<td>Left/Right Arrow</td>
+<td>Moves to selection start/end (during shuttle).</td>
+</tr>
+<tr>
+<td><code>Counter</code></td>
+<td></td>
 <td>Displays Counter for current session. Counter mode can be changed in DAW.</td>
 </tr>
 </tbody>
@@ -2018,34 +2716,51 @@
 <table>
 <thead>
 <tr>
-<th>DSP Edit Section for ProControl</th>
+<th>DSP Edit</th>
+<th></th>
 <th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Insert/Params</td>
-<td>Displays selected insert parameters. Press again to go back to insert selection for channel.</td>
+<td><code>Insert/Params</code></td>
+<td></td>
+<td>Toggles between Insert Display mode and Parameter mode.</td>
 </tr>
 <tr>
-<td>Assign 1-8</td>
-<td>Enables Assign for Inserts A-E. Use knobs in DSP Edit section change selection.</td>
+<td><code>Assign 1-8</code></td>
+<td></td>
+<td>Enables Assign for Inserts A-E. Use knobs in DSP Edit section to change selection.</td>
 </tr>
 <tr>
-<td>Select 1-8</td>
+<td><code>Select 1-8</code></td>
+<td></td>
 <td>Selects Insert A-E for editing. Toggles insert parameters.</td>
 </tr>
 <tr>
-<td>Bypass 1-8</td>
+<td><code>Bypass 1-8</code></td>
+<td></td>
 <td>Bypasses Inserts A-E.</td>
 </tr>
 <tr>
-<td>Compare</td>
-<td>Compares current plug-in setting with previous.</td>
+<td><code>Compare</code></td>
+<td></td>
+<td>Compares current plug-in setting with previous (must have plug-in visible on-screen).</td>
 </tr>
 <tr>
-<td>Master Bypass</td>
-<td>Bypass current plugin being edited</td>
+<td></td>
+<td><code>Default</code>+</td>
+<td>Returns plug-in to factory/user default setting.</td>
+</tr>
+<tr>
+<td><code>Master Bypass</code></td>
+<td></td>
+<td>Bypass selected plug-in on track.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>In Parameter mode: Engages Master Bypass for selected plug-in (LED lights).</td>
 </tr>
 </tbody>
 </table>
@@ -2054,7 +2769,34 @@
 <table>
 <thead>
 <tr>
-<th>Status Buttons for ProControl</th>
+<th>Channel Matrix</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Goto</td>
+<td></td>
+<td>Enables Marker Mode for Channel Matrix. Use Matrix 1-32 to jump to marker points.</td>
+</tr>
+<tr>
+<td>1/A</td>
+<td></td>
+<td>Use to scroll through pages for insert parameters.</td>
+</tr>
+<tr>
+<td>2/B</td>
+<td></td>
+<td>Use to scroll through pages for insert parameters.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th></th>
 <th></th>
 </tr>
 </thead>
@@ -2062,50 +2804,32 @@
 <tr>
 <td>The Status buttons change the assignment for the Channel Matrix.</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td>Select</td>
+<td></td>
 <td>Assigns the channel matrix buttons to Channel Strip select.</td>
 </tr>
 <tr>
 <td>Mute</td>
+<td></td>
 <td>Assigns the channel matrix buttons to Channel strip mute.</td>
 </tr>
 <tr>
 <td>Solo</td>
+<td></td>
 <td>Assigns the channel matrix buttons to Channel Strip solo.</td>
 </tr>
 <tr>
 <td>Rec/Rdy</td>
+<td></td>
 <td>Assigns the channel matrix buttons to Channel Strip Record Arm.</td>
 </tr>
 <tr>
 <td>Param/Pages</td>
+<td></td>
 <td>Assigns the channel matrix buttons 1 and 2 to scroll through insert parameter pages.</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="tabbed-block">
-<table>
-<thead>
-<tr>
-<th>Channel Matrix for ProControl</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Goto</td>
-<td>Enables Marker Mode for Channel Matrix. Use Matrix 1-32 to jump to marker points.</td>
-</tr>
-<tr>
-<td>1/A</td>
-<td>Use to scroll through pages for insert parameters.</td>
-</tr>
-<tr>
-<td>2/B</td>
-<td>Use to scroll through pages for insert parameters.</td>
 </tr>
 </tbody>
 </table>
@@ -2116,24 +2840,29 @@
 <tr>
 <th>Group Buttons</th>
 <th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Create</td>
-<td>Creates group of selected tracks.</td>
+<td><code>Create</code></td>
+<td></td>
+<td>Creates group from selected channels (use <code>Shift</code>+<code>Select</code> on multiple channels first).</td>
 </tr>
 <tr>
-<td>Status</td>
-<td>Displays Group Assignment.</td>
+<td><code>Suspend</code></td>
+<td></td>
+<td>Suspends all Mix groups temporarily (LED flashes when enabled).</td>
 </tr>
 <tr>
-<td>Select</td>
+<td><code>Status</code></td>
+<td></td>
+<td>Shows Group ID status.</td>
+</tr>
+<tr>
+<td><code>Select</code></td>
+<td></td>
 <td>Switches the DSP Section from DAW Mode to MIDI Mode.</td>
-</tr>
-<tr>
-<td>Suspend</td>
-<td>Suspends Group function.</td>
 </tr>
 </tbody>
 </table>
@@ -2144,27 +2873,38 @@
 <tr>
 <th>Utility</th>
 <th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Save</td>
-<td>Press the Save button to save.</td>
+<td><code>Save</code></td>
+<td></td>
+<td>Press once to arm save, press again to complete save (LED flashes when armed).</td>
 </tr>
 <tr>
 <td></td>
-<td>Press Shift + Save button to open the Save As dialog.</td>
+<td><code>Shift</code>+</td>
+<td>Opens Save As dialog.</td>
 </tr>
 <tr>
-<td>Undo</td>
-<td>Press to undo the last edit.</td>
+<td></td>
+<td>F8/ESC</td>
+<td>Aborts the save process.</td>
 </tr>
 <tr>
-<td>Cancel</td>
-<td>Cancel selection</td>
+<td><code>Undo</code></td>
+<td></td>
+<td>Undo or Redo last edit operation (LED lit when Undo available, flashes when Redo available).</td>
 </tr>
 <tr>
-<td>Solo Clear</td>
+<td><code>Cancel</code></td>
+<td></td>
+<td>Cancel selection / Serves as Escape to cancel any assignment mode or on-screen modal dialog.</td>
+</tr>
+<tr>
+<td><code>Solo Clear</code></td>
+<td></td>
 <td>Clears all Solos on Channel Strip.</td>
 </tr>
 </tbody>
@@ -2176,104 +2916,94 @@
 <tr>
 <th>Keypad Buttons</th>
 <th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>Start/Stop Playback</td>
-</tr>
-<tr>
-<td>1</td>
-<td>Rewind</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Fast Forward</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Record Enable</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Loop Playback</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Loop Record</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Quick Punch</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Click</td>
-</tr>
-<tr>
-<td>8</td>
-<td>Count Off</td>
-</tr>
-<tr>
-<td>9</td>
-<td>MIDI Merge</td>
-</tr>
-<tr>
-<td>.</td>
-<td>Inputs Decimal Point</td>
-</tr>
-<tr>
-<td>+</td>
-<td>Inputs Plus sign</td>
-</tr>
-<tr>
-<td>-</td>
-<td>Inputs Subtract</td>
-</tr>
-<tr>
-<td>*</td>
-<td>Inputs Asterisk</td>
-</tr>
-<tr>
-<td>/</td>
-<td>Inputs Divide</td>
-</tr>
-<tr>
-<td>Enter</td>
-<td>Creates Marker at current position</td>
-</tr>
-<tr>
-<td>Clr</td>
-<td>Clear numerical input.</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="tabbed-block">
-<table>
-<thead>
-<tr>
-<th>Modifiers</th>
 <th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Shift</td>
-<td>Enables Shift Modifier.</td>
+<td>0</td>
+<td></td>
+<td>Start/Stop Playback</td>
 </tr>
 <tr>
-<td>Option</td>
-<td>Enables Option Modifier.</td>
+<td>1</td>
+<td></td>
+<td>Rewind</td>
 </tr>
 <tr>
-<td>Control</td>
-<td>Enables Control Modifier. When held down, enables fine knob mode.</td>
+<td>2</td>
+<td></td>
+<td>Fast Forward</td>
 </tr>
 <tr>
-<td>Command</td>
-<td>Enables Command Modifier.</td>
+<td>3</td>
+<td></td>
+<td>Record Enable</td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td>Loop Playback</td>
+</tr>
+<tr>
+<td>5</td>
+<td></td>
+<td>Loop Record</td>
+</tr>
+<tr>
+<td>6</td>
+<td></td>
+<td>Quick Punch</td>
+</tr>
+<tr>
+<td>7</td>
+<td></td>
+<td>Click</td>
+</tr>
+<tr>
+<td>8</td>
+<td></td>
+<td>Count Off</td>
+</tr>
+<tr>
+<td>9</td>
+<td></td>
+<td>MIDI Merge</td>
+</tr>
+<tr>
+<td>.</td>
+<td></td>
+<td>Inputs Decimal Point</td>
+</tr>
+<tr>
+<td>+</td>
+<td></td>
+<td>Inputs Plus sign</td>
+</tr>
+<tr>
+<td>-</td>
+<td></td>
+<td>Inputs Subtract</td>
+</tr>
+<tr>
+<td>*</td>
+<td></td>
+<td>Inputs Asterisk</td>
+</tr>
+<tr>
+<td>/</td>
+<td></td>
+<td>Inputs Divide</td>
+</tr>
+<tr>
+<td>Enter</td>
+<td></td>
+<td>Creates Marker at current position</td>
+</tr>
+<tr>
+<td>Clr</td>
+<td></td>
+<td>Clear numerical input.</td>
 </tr>
 </tbody>
 </table>
@@ -2284,40 +3014,264 @@
 <tr>
 <th>Navigation</th>
 <th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Bank Left</td>
-<td>Banks tracks left/Scrolls 1 track left in Nudge mode</td>
+<td><code>Bank Left</code></td>
+<td></td>
+<td>Swaps channels left eight at a time.</td>
 </tr>
 <tr>
-<td>Bank Right</td>
-<td>Banks tracks right/Scrolls 1 track right in Nudge mode</td>
+<td></td>
+<td><code>Option</code>+</td>
+<td>Banks to far-left position in session.</td>
 </tr>
 <tr>
-<td>Nudge</td>
-<td>Toggles Nudge mode On/Off</td>
+<td><code>Bank Right</code></td>
+<td></td>
+<td>Swaps channels right eight at a time.</td>
 </tr>
 <tr>
-<td>Up</td>
-<td>Scrolls Up in Edit Window.</td>
+<td></td>
+<td><code>Option</code>+</td>
+<td>Banks to far-right position in session.</td>
 </tr>
 <tr>
-<td>Down</td>
-<td>Scrolls Down in Edit Window.</td>
+<td><code>Channel Left</code></td>
+<td></td>
+<td>Scrolls channels left one at a time.</td>
 </tr>
 <tr>
-<td>Left</td>
-<td>Scrolls Left in Edit Window.</td>
+<td></td>
+<td><code>Option</code>+</td>
+<td>Scrolls to far-left position.</td>
 </tr>
 <tr>
-<td>Right</td>
-<td>Scrolls Right in Edit Window.</td>
+<td><code>Channel Right</code></td>
+<td></td>
+<td>Scrolls channels right one at a time.</td>
 </tr>
 <tr>
-<td>Zoom</td>
-<td>Enables Zoom mode for the cursor keys. Left/Right zooms horizontal for the Edit window. Up/Down zooms vertical for the Edit window.</td>
+<td></td>
+<td><code>Option</code>+</td>
+<td>Scrolls to far-right position.</td>
+</tr>
+<tr>
+<td><code>Nudge</code></td>
+<td></td>
+<td>Toggles Nudge mode On/Off (Bank Left/Right scroll 1 track when enabled).</td>
+</tr>
+<tr>
+<td><code>Zoom</code></td>
+<td></td>
+<td>Cycles through three modes: Navigation (LED off), Zoom (LED lit), Selection (LED flashing).</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><strong>Navigation Mode (LED off):</strong></td>
+</tr>
+<tr>
+<td><code>Up</code></td>
+<td></td>
+<td>Moves edit cursor or selection to previous track (marks in/out).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Extends edit selection to previous track.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Alt</code>+</td>
+<td>Scrolls frontmost window upward.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Alt</code>+<code>Option</code>+</td>
+<td>Scrolls to top of session (Edit window).</td>
+</tr>
+<tr>
+<td><code>Down</code></td>
+<td></td>
+<td>Moves edit cursor or selection to next track (marks in/out).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Extends edit selection to next track.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Alt</code>+</td>
+<td>Scrolls frontmost window downward.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Alt</code>+<code>Option</code>+</td>
+<td>Scrolls to bottom of session (Edit window).</td>
+</tr>
+<tr>
+<td><code>Left</code></td>
+<td></td>
+<td>Moves edit cursor to previous region boundary or sync point.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Extends selection to preceding region boundary.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Option</code>+</td>
+<td>Centers left side of waveform selection in Edit Window.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Alt</code>+</td>
+<td>Scrolls frontmost window to the left (one page).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Alt</code>+<code>Option</code>+</td>
+<td>Scrolls to beginning of session (Edit window).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Ctrl</code>+</td>
+<td>Selects previous region.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Ctrl</code>+<code>Shift</code>+</td>
+<td>Extends selection to include previous region.</td>
+</tr>
+<tr>
+<td><code>Right</code></td>
+<td></td>
+<td>Moves edit cursor to next region boundary or sync point.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Extends selection to forward region boundary.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Option</code>+</td>
+<td>Centers right side of waveform selection in Edit Window.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Alt</code>+</td>
+<td>Scrolls frontmost window to the right (one page).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Alt</code>+<code>Option</code>+</td>
+<td>Scrolls to end of session (Edit window).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Ctrl</code>+</td>
+<td>Selects next region.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Ctrl</code>+<code>Shift</code>+</td>
+<td>Extends selection to include next region.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><strong>Zoom Mode (LED lit):</strong></td>
+</tr>
+<tr>
+<td><code>Left</code></td>
+<td></td>
+<td>Decreases horizontal zoom.</td>
+</tr>
+<tr>
+<td><code>Right</code></td>
+<td></td>
+<td>Increases horizontal zoom.</td>
+</tr>
+<tr>
+<td><code>Up</code></td>
+<td></td>
+<td>Increases vertical zoom.</td>
+</tr>
+<tr>
+<td><code>Down</code></td>
+<td></td>
+<td>Decreases vertical zoom.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><strong>Selection Mode (LED flashing):</strong></td>
+</tr>
+<tr>
+<td><code>Left</code></td>
+<td></td>
+<td>Adjusts selection in-point with Scrub/Shuttle wheel.</td>
+</tr>
+<tr>
+<td></td>
+<td>Double-click</td>
+<td>Positions cursor at selection's left edge.</td>
+</tr>
+<tr>
+<td></td>
+<td>+<code>Right</code>+Wheel</td>
+<td>Adjusts selection time position while retaining duration.</td>
+</tr>
+<tr>
+<td><code>Right</code></td>
+<td></td>
+<td>Adjusts selection out-point with Scrub/Shuttle wheel.</td>
+</tr>
+<tr>
+<td></td>
+<td>Double-click</td>
+<td>Positions cursor at selection's right edge.</td>
+</tr>
+<tr>
+<td></td>
+<td>+<code>Left</code>+Wheel</td>
+<td>Adjusts selection time position while retaining duration.</td>
+</tr>
+<tr>
+<td><code>Up</code></td>
+<td></td>
+<td>Moves selection to previous track.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Extends selection to previous track.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Option</code>+</td>
+<td>Removes selection from topmost track.</td>
+</tr>
+<tr>
+<td><code>Down</code></td>
+<td></td>
+<td>Moves selection to next track.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Extends selection to next track.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Option</code>+</td>
+<td>Removes selection from bottommost track.</td>
 </tr>
 </tbody>
 </table>
@@ -2328,32 +3282,39 @@
 <tr>
 <th>Window Buttons</th>
 <th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Mix</td>
-<td>Displays Mixer Window.</td>
+<td><code>Mix</code></td>
+<td></td>
+<td>Brings Mix window to foreground (LED lights when active).</td>
 </tr>
 <tr>
-<td>Edit</td>
-<td>Displays Edit Window.</td>
+<td><code>Edit</code></td>
+<td></td>
+<td>Brings Edit window to foreground (LED lights when active).</td>
 </tr>
 <tr>
-<td>MemLoc</td>
-<td>Displays Marker Window.</td>
+<td><code>MemLoc</code></td>
+<td></td>
+<td>Opens or closes the Memory Locations window.</td>
 </tr>
 <tr>
-<td>Transport</td>
-<td>Displays Transport Window.</td>
+<td><code>Transport</code></td>
+<td></td>
+<td>Opens or closes the Transport window.</td>
 </tr>
 <tr>
-<td>Plug-In</td>
-<td>Displays Plug-In Window.</td>
+<td><code>Plug-In</code></td>
+<td></td>
+<td>Opens or closes the floating window for currently selected plug-in.</td>
 </tr>
 <tr>
-<td>Status</td>
-<td>Displays Setup Window.</td>
+<td><code>Status</code></td>
+<td></td>
+<td>Opens or closes the Session Setup window.</td>
 </tr>
 </tbody>
 </table>
@@ -2364,64 +3325,104 @@
 <tr>
 <th>Edit</th>
 <th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Copy</td>
+<td><code>Copy</code></td>
+<td></td>
 <td>Copy selected region in Edit Window.</td>
 </tr>
 <tr>
-<td>Delete</td>
+<td><code>Delete</code></td>
+<td></td>
 <td>Deletes selected region in Edit Window.</td>
 </tr>
 <tr>
-<td>Cut</td>
+<td><code>Cut</code></td>
+<td></td>
 <td>Cuts selected region in Edit Window.</td>
 </tr>
 <tr>
-<td>Paste</td>
+<td><code>Paste</code></td>
+<td></td>
 <td>Pastes region in Edit Window.</td>
 </tr>
 <tr>
-<td>Capture</td>
-<td>Captures selected region.</td>
+<td><code>Capture</code></td>
+<td></td>
+<td>Executes capture region function.</td>
 </tr>
 <tr>
-<td>Separate</td>
-<td>Separates region at playhead.</td>
+<td><code>Separate</code></td>
+<td></td>
+<td>Executes separate region function / Separates region at playhead.</td>
 </tr>
 <tr>
-<td>Shuffle</td>
+<td><code>Shuffle</code></td>
+<td></td>
 <td>Enables Shuffle Mode in Edit Window.</td>
 </tr>
 <tr>
-<td>Slip</td>
+<td><code>Slip</code></td>
+<td></td>
 <td>Enables Slip Mode in Edit Window.</td>
 </tr>
 <tr>
-<td>Spot</td>
+<td><code>Spot</code></td>
+<td></td>
 <td>Enables Spot Mode in Edit Window.</td>
 </tr>
 <tr>
-<td>Grid</td>
+<td><code>Grid</code></td>
+<td></td>
 <td>Enables Grid Mode in Edit Window.</td>
 </tr>
 <tr>
-<td>Trim</td>
+<td><code>Edit Mode</code></td>
+<td></td>
+<td>Cycles through edit modes (Shuffle, Slip, Spot, Grid).</td>
+</tr>
+<tr>
+<td><code>Edit Tool</code></td>
+<td></td>
+<td>Cycles through main edit tools (Zoom, Trim, Select, Grabber, Smart Tool, Scrub, Pencil).</td>
+</tr>
+<tr>
+<td><code>Trim</code></td>
+<td></td>
 <td>Enables Trim Tool in Edit Window.</td>
 </tr>
 <tr>
-<td>Select</td>
+<td><code>Select</code></td>
+<td></td>
 <td>Enables Select Tool in Edit Window.</td>
 </tr>
 <tr>
-<td>Grab</td>
-<td>Enables Grab Tool in Edit Window.</td>
+<td><code>Grab</code></td>
+<td></td>
+<td>Enables Grabber Tool in Edit Window.</td>
 </tr>
 <tr>
-<td>Pencil</td>
+<td><code>Pencil</code></td>
+<td></td>
 <td>Enables Pencil Tool in Edit Window.</td>
+</tr>
+<tr>
+<td><code>Zoom</code></td>
+<td></td>
+<td>Enables Zoom tool.</td>
+</tr>
+<tr>
+<td><code>Scrub</code></td>
+<td></td>
+<td>Enables Scrub tool (see Transport section for Scrub wheel functions).</td>
+</tr>
+<tr>
+<td><code>Smart Tool</code></td>
+<td></td>
+<td>Enables Smart tool.</td>
 </tr>
 </tbody>
 </table>
@@ -2432,47 +3433,58 @@
 <tr>
 <th>V-Window Mode</th>
 <th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>With the V-Window feature, users can instantly control any plug-ins or controls on screen through their control surface's channel strip with a touch of a button.</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td>Master Fader</td>
+<td></td>
 <td>Press once to enable V-Window mode for the 8th channel fader. Press a 2nd time to cycle back to basic channel control.</td>
 </tr>
 <tr>
 <td>Mute</td>
+<td></td>
 <td>While in V-Window mode, the Mute button on the last channel strip will cycle through the various V-Window Modes which are listed below:</td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td>VButton: Use this mode to interact with button controls. The mouse will stay in its place and activate a button press when the fader is touched.</td>
 </tr>
 <tr>
 <td></td>
+<td></td>
 <td>VButtonSet: Use this mode to create and cycle through different button set points. With the mouse hovering above the on screen button's position press Shift+Solo on the control surface to set a Pin at that location. Using the fader in this mode will cylce between multiple Pins to use with VButton mode.</td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td>VWKnob: Use this mode when interacting with knob controls on the plug-ins GUI.</td>
 </tr>
 <tr>
 <td></td>
+<td></td>
 <td>VWHSlider: Use this mode when interacting with horizontal slider controls on the plug-ins GUI.</td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td>VWVSlider: Use this mode when interacting with vertically slider controls on the plug-ins GUI.</td>
 </tr>
 <tr>
 <td>Solo</td>
+<td></td>
 <td>While in V-Window Mode, pressing the Solo button will pin the mouse location and revert to that location any time the fader is touched. Once the fader is released, the mouse is also returned to that pin position. This way it is very easy to pin a parameter and instantly control it without having to worry with the mouse cursor is on the screen.</td>
 </tr>
 <tr>
 <td>Select</td>
+<td></td>
 <td>Use the Select button while in V-Window mode to reset the fader position.</td>
 </tr>
 </tbody>
@@ -2484,19 +3496,23 @@
 <tr>
 <th>MIDI Mode</th>
 <th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>MIDI Mode converts the surfaces faders, knobs, and buttons into assignable MIDI Controls that can be mapped in the DAW.</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td>Mon/0</td>
+<td></td>
 <td>Toggles surface between DAW Mode and MIDI Mode</td>
 </tr>
 <tr>
 <td>Select (Group Button)</td>
+<td></td>
 <td>Toggles the DSP Section between DAW Mode and MIDI Mode.</td>
 </tr>
 </tbody>
