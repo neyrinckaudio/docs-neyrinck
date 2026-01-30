@@ -1604,9 +1604,36 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#group-placement-for-16-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Group Placement For 16 Channels
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#24-channel-surfaces" class="md-nav__link">
     <span class="md-ellipsis">
       24 Channel Surfaces
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#group-placement-for-24-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Group Placement For 24 Channels
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-channel-surfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      32 Channel Surfaces
     </span>
   </a>
   
@@ -1809,8 +1836,9 @@
 
 
 <h1 id="studio-one-fender-studio">Studio One / Fender Studio</h1>
-<p>V-Control Pro must be set up in the External Devices window in the Studio One / Fender Studio Preferences.  Depending on how many banks are being used, the configuration will vary.</p>
+<p>V-Control Pro must be set up in the External Devices window in the Studio One / Fender Studio Preferences.  Depending on how many banks are being used, the configuration will vary. Each bank is 8 channels.</p>
 <h2 id="8-channel-surfaces">8 Channel Surfaces</h2>
+<p>If your surface is a Command 8, D-Command Main with no fader modules, a single Pro Control device, or other 8-channnel surface, you must add one Mackie Control bank as described here.</p>
 <ul>
 <li>Launch Studio One / Fender Studio</li>
 <li>In the Studio One / Fender Studio top menu bar select: Studio One-Fender Studio / Preferences...</li>
@@ -1824,6 +1852,7 @@
 </ul>
 <p><img alt="8 Channel Surfaces" src="../images/s1dev1.png" title="8 Channel Surfaces" /></p>
 <h2 id="16-channel-surfaces">16 Channel Surfaces</h2>
+<p>If your surface is two Pro Control devices or other 16-channnel surface, you must add two Mackie Control banks as described here.</p>
 <p>Follow instructions for 8 Channel setup, then add the following:</p>
 <ul>
 <li>Select “Add Device” and choose the following:<ul>
@@ -1834,12 +1863,23 @@
 </li>
 </ul>
 <p><img alt="16 Channel Surfaces" src="../images/s1dev2.png" title="16 Channel Surfaces" /></p>
-<p>(Optional) Rename the 2nd controller by selecting it and clicking on Edit…
-Click on Placement and drag the devices</p>
+<ul>
+<li>Rename the 2nd controller by selecting it and clicking on Edit…</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Ignore <code>Please select Mackie...</code> Instructions</p>
+<p>You can safely ignore the Studio One instructions to <code>Please select Mackie Control operating mode...</code> V-Control Pro will automatically use Mackie Control protocol.</p>
+</div>
 <p><img alt="16 Channel Surfaces" src="../images/s1name2.png" title="16 Channel Surfaces" /></p>
-<p>Click on Placement and drag the devices from the Ungrouped section to Grouped in the desired configuration:</p>
+<h2 id="group-placement-for-16-channels">Group Placement For 16 Channels</h2>
+<p>For a 16-channel surface you will have configured two Mackie banks above. But by default, Studio One will have placed them in separate <code>Groups.</code> You must configure them into one <code>Group</code> so that they will behave as a single, wide surface. This is done with Studio One's Placement configuration.</p>
+<ul>
+<li>Click <code>Placement</code></li>
+<li>Click <code>Group 2</code> then click and drag the Mackie MCU device to <code>Group 1.</code></li>
+</ul>
 <p><img alt="16 Channel Surfaces" src="../images/s1group2.png" title="16 Channel Surfaces" /></p>
 <h2 id="24-channel-surfaces">24 Channel Surfaces</h2>
+<p>If your surface is a Control 24, C24, D-Command Main + Fader Module, three Pro Control devices or other 24-channnel surface, you must add three Mackie Control banks as described here.</p>
 <p>Follow instructions for the 8 and 16 Channel setup, then add the following:</p>
 <ul>
 <li>Select "Add Device" and choose the following:</li>
@@ -1848,10 +1888,25 @@ Click on Placement and drag the devices</p>
 <li>Send To: V-Control XT3</li>
 </ul>
 <p><img alt="24 Channel Surfaces" src="../images/s1dev3.png" title="24 Channel Surfaces" /></p>
-<p>(Optional) Rename the 3rd controller by selecting it and clicking Edit..</p>
+<ul>
+<li>Rename the 3rd controller by selecting it and clicking Edit...</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Ignore <code>Please select Mackie...</code> Instructions</p>
+<p>You can safely ignore the Studio One instructions to <code>Please select Mackie Control operating mode...</code> V-Control Pro will automatically use Mackie Control protocol.</p>
+</div>
 <p><img alt="24 Channel Surfaces" src="../images/s1name2.png" title="24 Channel Surfaces" /></p>
-<p>Click on Placement and move the controllers from the Ungrouped section to the Grouped section in the desired configuration.</p>
-<p><img alt="24 Channel Surfaces" src="../images/s1group2.png" title="24 Channel Surfaces" /></p>
+<h2 id="group-placement-for-24-channels">Group Placement For 24 Channels</h2>
+<p>For a 24-channel surface you will have configured three Mackie devices above. But by default, Studio One will have placed them in separate <code>Groups.</code> You must configure them into one <code>Group</code> so that they will behave as a single, wide surface. This is done with Studio One's Placement configuration.</p>
+<ul>
+<li>Click <code>Placement</code></li>
+<li>Click <code>Group 2</code> then click and drag the Mackie MCU device to <code>Group 1.</code></li>
+<li>Click <code>Group 3</code> then click and drag the Mackie MCU device to <code>Group 1.</code></li>
+</ul>
+<p><img alt="24 Channel Surfaces" src="../images/s1group3.png" title="24 Channel Surfaces" /></p>
+<h2 id="32-channel-surfaces">32 Channel Surfaces</h2>
+<p>If your surface is four Pro Control devices or other 32-channnel surface, you must add four Mackie Control banks.</p>
+<p>Follow instructions for the 24 Channel setup and add a fourth device using the V-Control XT3 port.</p>
 
 
 
