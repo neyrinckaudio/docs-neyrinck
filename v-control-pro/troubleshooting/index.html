@@ -2215,13 +2215,13 @@
 <ol>
 <li>Launch V-Control Pro</li>
 <li>Open <code>Setups...</code> menu</li>
-<li>Look at the <code>Controllers</code> section (lower left)</li>
+<li>Look at the Controllers section (lower left)</li>
 <li><strong>Bold text</strong> = Connected ✓</li>
 <li><strong>Grayed out</strong> = Not connected ✗</li>
 </ol>
 <h4 id="add-a-new-surface">Add a New Surface:</h4>
 <ol>
-<li>Click <code>Add new...</code> button in Controllers section</li>
+<li>Click <code>Add new...</code> button in <code>Controllers</code> section</li>
 <li>Select your surface type</li>
 <li>Follow the setup prompts</li>
 <li>See <a href="../controllers-overview/">Controllers Overview</a> for detailed instructions</li>
@@ -2241,10 +2241,10 @@
 <div class="tabbed-block">
 <p>It is important that the Ethernet port is configured in System Settings -&gt; Network.</p>
 <ul>
-<li>Open System Settings → Network and locate the ethernet port you are using.</li>
+<li>Open <code>System Settings / Network</code> and locate the ethernet port you are using.</li>
 <li><strong>Red Ethernet port (Not Connected)</strong>: If the ethernet port is displayed in a red color and/or indicates that it is not connected, use a network switch between computer and surface as described in <a href="../ethernet-controllers/#ethernet-switches-not-hubs">Ethernet Switches</a></li>
 <li><strong>Self-assigned IP</strong>: This is normal and OK</li>
-<li><strong>Firewall</strong>: System Settings → Network → Firewall (disable to test)</li>
+<li><strong>Firewall</strong>: <code>System Settings / Network / Firewall</code> (disable to test)</li>
 </ul>
 </div>
 <div class="tabbed-block">
@@ -2303,9 +2303,9 @@
 <p>V-Control Pro may not launch correctly when set as a startup item.</p>
 <ol>
 <li>Open Task Manager (Ctrl+Shift+Esc)</li>
-<li>Select the <code>Startup</code> tab</li>
+<li>Select the Startup tab</li>
 <li>Look for V-Control Pro in the list</li>
-<li>If present, right-click it and select <code>Disable</code></li>
+<li>If present, right-click it and select Disable</li>
 <li>Restart your computer</li>
 <li>Launch V-Control Pro manually</li>
 </ol>
@@ -2325,7 +2325,7 @@
 <div class="tabbed-block">
 <ol>
 <li>Launch Task Manager (Ctrl+Shift+Esc)</li>
-<li>Select <code>More details</code> if the Processes tab is not showing</li>
+<li>Select <code>More details</code> if the <code>Processes</code> tab is not showing</li>
 <li>Look for "V-Control Pro" under Background processes</li>
 <li>If found, right-click it and select <code>Create dump file</code></li>
 <li>Send the generated .dmp file to <a href="mailto:support@neyrinck.com">support@neyrinck.com</a></li>
@@ -2342,8 +2342,8 @@
 </li>
 <li>Launch V-Control Pro and confirm it does not launch correctly</li>
 <li>Press <code>Windows+R</code> to open the Run dialog</li>
-<li>Enter: <code>%LOCALAPPDATA%</code> and press Enter</li>
-<li>Locate the <code>CrashDumps</code> folder</li>
+<li>Enter: <code>%LOCALAPPDATA%</code> and press <code>Enter</code></li>
+<li>Locate the CrashDumps folder</li>
 <li>Find the .dmp file for V-Control Pro (most recent file)</li>
 <li>Send the .dmp file to <a href="mailto:support@neyrinck.com">support@neyrinck.com</a></li>
 </ol>
@@ -2371,9 +2371,9 @@
 <p>Some users have seen a problem when V-Control Pro is set up to be automatically launched when the computer restarts. These steps will typically solve the problem.</p>
 <ol>
 <li>Remove V-Control Pro from Login Items<ul>
-<li>Open System Settings and select General</li>
+<li>Open <code>System Settings / General</code></li>
 <li>Select <code>Login Items</code></li>
-<li>Locate <code>V-Control Pro</code> and disable it as a login item</li>
+<li>Locate V-Control Pro and disable it as a login item</li>
 </ul>
 </li>
 <li>Restart computer</li>
@@ -2384,8 +2384,8 @@
 <ol>
 <li>Quit V-Control Pro and any DAW</li>
 <li>Open Finder</li>
-<li>Hold Alt/Option → Go menu → Library</li>
-<li>Navigate to Application Support</li>
+<li>Hold <code>Alt</code>/<code>Option</code> → <code>Go</code> menu → <code>Library</code></li>
+<li>Navigate to <code>Application Support</code></li>
 <li>Delete "V-Control Pro" folder</li>
 <li>Empty Trash</li>
 <li>Launch V-Control Pro and reconfigure</li>
@@ -2401,7 +2401,7 @@
 <p>Logic Pro has issues where its control assignments for a surface can get corrupted and control partially works, but does work in both directions. This can happen when a V-Control Pro update is installed or a different surface is added. Typically, this can be solved by "resetting" the control surface setup.</p>
 <ul>
 <li>Reset Logic Pro Control Surface Setup<ul>
-<li>Open Logic Pro Control Surfaces / Setup window</li>
+<li>Open <code>Logic Pro Control Surfaces / Setup</code> window</li>
 <li>Delete all surfaces</li>
 <li>Quit Logic Pro</li>
 <li>Launch Logic Pro and set up your surface as described in <a href="../logic-pro/">Logic Pro Setup</a> guide</li>
