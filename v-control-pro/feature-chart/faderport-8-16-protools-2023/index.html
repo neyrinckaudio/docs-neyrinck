@@ -1728,108 +1728,350 @@
 
 <h1 id="_1"></h1>
 <h3 id="faderport-816-pro-tools-2023">Faderport 8/16 - Pro Tools 2023+</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="bank-mode" name="__tabbed_1" type="radio" /><input id="channel-strips" name="__tabbed_1" type="radio" /><input id="memory-locations" name="__tabbed_1" type="radio" /><input id="navigation" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="bank-mode">Bank Mode</label><label for="channel-strips">Channel Strips</label><label for="memory-locations">Memory Locations</label><label for="navigation">Navigation</label></div>
+<p>V-Control Pro supercharges the Faderport 8/16 for pro features unavailable with standard HUI mode.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:8"><input checked="checked" id="bank-modes" name="__tabbed_1" type="radio" /><input id="track-browser" name="__tabbed_1" type="radio" /><input id="locations" name="__tabbed_1" type="radio" /><input id="hot-locations" name="__tabbed_1" type="radio" /><input id="plugins" name="__tabbed_1" type="radio" /><input id="navigation" name="__tabbed_1" type="radio" /><input id="utilities" name="__tabbed_1" type="radio" /><input id="transport" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="bank-modes">Bank Modes</label><label for="track-browser">Track Browser</label><label for="locations">Locations</label><label for="hot-locations">Hot Locations</label><label for="plugins">Plugins</label><label for="navigation">Navigation</label><label for="utilities">Utilities</label><label for="transport">Transport</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
+<p>Select a bank mode to edit track volume, mute, solo, pan, send volume, send mute, send pre/post, send pan, and plugins.</p>
 <table>
 <thead>
 <tr>
-<th>Bank Mode</th>
+<th><code>VOLUME</code></th>
 <th></th>
 <th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>Track</code> (Default)</td>
+<td><code>Track</code></td>
 <td></td>
-<td><code>Fader</code> controls track volume. <code>Pan/Param</code> controls track pan.</td>
+<td>Enable volume mode</td>
 </tr>
 <tr>
 <td></td>
 <td></td>
-<td>Press <code>Track</code> to toggle to Track Browser</td>
+<td>Toggle track browser</td>
 </tr>
 <tr>
 <td></td>
 <td><code>Shift</code>+</td>
-<td>Press <code>Shift + Track</code> to toggle time display</td>
+<td>Toggle time code display</td>
+</tr>
+<tr>
+<td><code>Pan/Param</code></td>
+<td></td>
+<td>Adjust pan for selected track</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Push</code></td>
+<td>Toggle between Pan L and Pan R for stereo tracks</td>
+</tr>
+<tr>
+<td><code>Fader</code></td>
+<td></td>
+<td>Track volume</td>
+</tr>
+<tr>
+<td><code>M</code></td>
+<td></td>
+<td>Track mute</td>
+</tr>
+<tr>
+<td><code>S</code></td>
+<td></td>
+<td>Track solo</td>
+</tr>
+<tr>
+<td><code>Select</code></td>
+<td></td>
+<td>Track select. Focus Plugin editor</td>
 </tr>
 <tr>
 <td></td>
 <td></td>
-<td>Push <code>Pan/Param</code> to toggle between Pan Left &amp; Pan Right control</td>
+<td>Cycle through inserts</td>
 </tr>
+<tr>
+<td></td>
+<td></td>
+<td>Color indicates Pro Tools track color</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>PAN</code></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td><code>Pan</code></td>
 <td></td>
-<td><code>Fader</code> controls track pan</td>
+<td>Enable pan mode.</td>
 </tr>
 <tr>
 <td></td>
 <td></td>
-<td>Press <code>Pan</code> to toggle between Pan Left &amp; Pan Right control</td>
+<td>Press again to toggle between Pan L and Pan R for stereo tracks.</td>
 </tr>
+<tr>
+<td><code>Fader</code></td>
+<td></td>
+<td>Track pan</td>
+</tr>
+<tr>
+<td><code>M</code></td>
+<td></td>
+<td>Track mute</td>
+</tr>
+<tr>
+<td><code>S</code></td>
+<td></td>
+<td>Track solo</td>
+</tr>
+<tr>
+<td><code>Select</code></td>
+<td></td>
+<td>Track select. Focus Plugin editor</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Cycle through inserts</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Color indicates Pro Tools track color</td>
+</tr>
+<tr>
+<td><code>Pan/Param</code></td>
+<td></td>
+<td>Adjust pan for selected track</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Push</code></td>
+<td>Toggle between Pan L and Pan R for stereo tracks</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>SENDS</code></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td><code>Sends</code></td>
 <td></td>
-<td>Coming soon</td>
+<td>Enable sends mode for all tracks.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Press again to cycle through sends A-E.</td>
+</tr>
+<tr>
+<td><code>Pan/Param</code></td>
+<td></td>
+<td>Adjust pan for selected track</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Push</code></td>
+<td>Toggle between Pan L and Pan R for stereo sends</td>
+</tr>
+<tr>
+<td><code>Fader</code></td>
+<td></td>
+<td>Send volume</td>
+</tr>
+<tr>
+<td><code>Select</code></td>
+<td></td>
+<td>Track select. Focus Plugin editor</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Cycle through inserts</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Toggle pre/post mode</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Color indicates Pro Tools track color</td>
+</tr>
+<tr>
+<td><code>M</code></td>
+<td></td>
+<td>Send mute</td>
+</tr>
+<tr>
+<td><code>S</code></td>
+<td></td>
+<td>Track solo</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>EDIT PLUGINS</code></th>
+<th>Faderport 8</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Edit Plugins</code></td>
+<td></td>
+<td>Enable edit insert mode</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Press again to cycle through inserts A-J</td>
+</tr>
+<tr>
+<td><code>Fader</code></td>
+<td></td>
+<td>Adjust continuous plugin parameter on line 2</td>
+</tr>
+<tr>
+<td><code>Select</code></td>
+<td></td>
+<td>Adjust discrete plugin parameter on line 1</td>
+</tr>
+<tr>
+<td><code>Prev</code></td>
+<td></td>
+<td>Change parameter page</td>
+</tr>
+<tr>
+<td><code>Next</code></td>
+<td></td>
+<td>Change parameter page</td>
+</tr>
+<tr>
+<td><code>Bypass</code></td>
+<td></td>
+<td>Toggle plugin Bypass</td>
+</tr>
+<tr>
+<td><code>Macro</code></td>
+<td></td>
+<td>Show/hide plugin window</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Toggle plugin Compare</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>EDIT PLUGINS</code></th>
+<th>Faderport 16</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Edit Plugins</code></td>
+<td></td>
+<td>Toggle edit plugin mode on right side</td>
+</tr>
+<tr>
+<td><code>Fader</code></td>
+<td></td>
+<td>Adjust continuous plugin parameter on line 2</td>
+</tr>
+<tr>
+<td><code>Select</code></td>
+<td></td>
+<td>Adjust discrete plugin parameter on line 1</td>
+</tr>
+<tr>
+<td><code>Prev</code></td>
+<td></td>
+<td>Change parameter page</td>
+</tr>
+<tr>
+<td><code>Next</code></td>
+<td></td>
+<td>Change parameter page</td>
+</tr>
+<tr>
+<td><code>Bypass</code></td>
+<td></td>
+<td>Toggle plugin Bypass</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Toggle Bypass for all plugins on track</td>
+</tr>
+<tr>
+<td><code>Macro</code></td>
+<td></td>
+<td>Show/hide plugin window</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Toggle plugin Compare</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>RECORD ARM</code></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ARM</code></td>
+<td></td>
+<td>Toggle track arm mode on/off</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Arm all tracks</td>
+</tr>
+<tr>
+<td><code>Select</code></td>
+<td></td>
+<td>Record arm on/off</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Color - Red</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="tabbed-block">
-<table>
-<thead>
-<tr>
-<th>Track Mode</th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Fader</code></td>
-<td></td>
-<td>Adjust track volume</td>
-</tr>
-<tr>
-<td><code>Select</code></td>
-<td></td>
-<td>Displays track color. Press to focus channel. Press for next insert A-J.</td>
-</tr>
-<tr>
-<td><code>Mute</code></td>
-<td></td>
-<td><code>Mute</code> controls track mute</td>
-</tr>
-<tr>
-<td><code>Solo</code></td>
-<td></td>
-<td><code>Solo</code> controls track solo</td>
-</tr>
-<tr>
-<td><code>Display</code></td>
-<td></td>
-<td>7-Character track name. Highlighted for focus channel.</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>Volume (dB)</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>Pan/Param Mode - 'Pan', 'Pan L', 'Pan R', or none</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>Bar Graph - Pan position</td>
-</tr>
-</tbody>
-</table>
+<p>The Track Browser lets you see all tracks and jump to any track.</p>
 <table>
 <thead>
 <tr>
@@ -1840,90 +2082,39 @@
 </thead>
 <tbody>
 <tr>
-<td><code>Select</code></td>
+<td><code>Track</code></td>
 <td></td>
-<td>Displays track color for browser row. Press to auto bank and focus.</td>
+<td>Toggle Track Browser Mode on and off</td>
 </tr>
 <tr>
 <td><code>Display</code></td>
 <td></td>
-<td>Six rows of 7-Character track names. Highlighted for browser row.</td>
+<td>Six rows of 7-Character track names.</td>
 </tr>
-</tbody>
-</table>
-<table>
-<thead>
 <tr>
-<th>Pan Mode</th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Fader</code></td>
+<td><code>Wheel</code></td>
 <td></td>
-<td>Adjust track pan</td>
+<td>Scroll through the track list by row</td>
 </tr>
 <tr>
 <td><code>Select</code></td>
 <td></td>
-<td>Displays track color. Press to focus channel. Press for next insert A-J.</td>
-</tr>
-<tr>
-<td><code>Mute</code></td>
-<td></td>
-<td><code>Mute</code> controls track mute</td>
-</tr>
-<tr>
-<td><code>Solo</code></td>
-<td></td>
-<td><code>Solo</code> controls track solo</td>
-</tr>
-<tr>
-<td><code>Display</code></td>
-<td></td>
-<td>7-Character track name. Highlighted for focus channel.</td>
+<td>Bank to the highlighted row track</td>
 </tr>
 <tr>
 <td></td>
 <td></td>
-<td>Volume (dB)</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>Pan Mode - <code>Pan</code>, <code>Pan L</code>, <code>Pan R</code>, or none</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>Bar Graph - Pan position</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Sends Mode</th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Coming Soon</td>
-<td></td>
-<td></td>
+<td>Color indicates Pro Tools track color</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="tabbed-block">
+<p>Use Locations Mode to browse, recall, and create memory locations.</p>
 <table>
 <thead>
 <tr>
-<th>Marker Mode</th>
+<th>Locations Mode</th>
 <th></th>
 <th></th>
 </tr>
@@ -1932,7 +2123,7 @@
 <tr>
 <td><code>Marker</code></td>
 <td></td>
-<td>Toggle Marker Mode on/off</td>
+<td>Toggle Locations Mode on/off</td>
 </tr>
 <tr>
 <td><code>Display</code></td>
@@ -1940,85 +2131,228 @@
 <td>Six rows of 7-Character location names. Highlighted for browser row.</td>
 </tr>
 <tr>
-<td><code>Select</code></td>
-<td></td>
-<td>Press to select browsed memory location.</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>Selected memory location becomes <code>home</code> location for <code>Hot Locations</code>.</td>
-</tr>
-<tr>
 <td><code>Wheel</code></td>
 <td></td>
-<td>Turn to browse rows of memory locations</td>
+<td>Scroll through memory locations by row</td>
+</tr>
+<tr>
+<td><code>Select</code></td>
+<td></td>
+<td>Recall the memory location in the highlighted row</td>
 </tr>
 <tr>
 <td></td>
+<td></td>
+<td>The memory location is the home location for Hot Locations</td>
+</tr>
+<tr>
+<td><code>Wheel Push</code></td>
 <td></td>
 <td>Push to create a new memory location</td>
 </tr>
+<tr>
+<td></td>
+<td><code>Prev</code></td>
+<td>Cancel new memory location</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Next</code></td>
+<td>Confirm new memory location</td>
+</tr>
 </tbody>
 </table>
+</div>
+<div class="tabbed-block">
+<p>Recall memory locations named to match dedicated hot buttons for custom workflows. For example, create a memory location named <code>VCA</code> that shows only VCA tracks. Press once to see just VCAs, press again to go back to your previous view.</p>
 <table>
 <thead>
 <tr>
 <th>Hot Locations</th>
 <th></th>
-<th>User programmable memory locations.</th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>Audio</code></td>
 <td></td>
-<td>Press to select <code>AUDIO</code> location. De-select for <code>home</code> location.</td>
+<td>Recall AUDIO location</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Recall INPUTS location</td>
 </tr>
 <tr>
 <td><code>VI</code></td>
 <td></td>
-<td>Press to select <code>VI</code> location. De-select for <code>home</code> location.</td>
+<td>Recall VI location</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Recall MIDI location</td>
 </tr>
 <tr>
 <td><code>Bus</code></td>
 <td></td>
-<td>Press to select <code>BUS</code> location. De-select for <code>home</code> location.</td>
+<td>Recall BUS location</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Recall OUTPUTS location</td>
 </tr>
 <tr>
 <td><code>VCA</code></td>
 <td></td>
-<td>Press to select <code>VCA</code> location. De-select for <code>home</code> location.</td>
+<td>Recall VCA location</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Recall FX location</td>
 </tr>
 <tr>
 <td><code>All</code></td>
 <td></td>
-<td>Press to select <code>ALL</code> location. De-select for <code>home</code> location.</td>
+<td>Recall ALL location</td>
 </tr>
 <tr>
-<td><code>Audio</code></td>
+<td></td>
 <td><code>Shift</code>+</td>
-<td>Press to select <code>INPUTS</code> location. De-select for <code>home</code> location.</td>
+<td>Recall USER location</td>
 </tr>
 <tr>
-<td><code>VI</code></td>
-<td><code>Shift</code>+</td>
-<td>Press to select <code>MIDI</code> location. De-select for <code>home</code> location.</td>
+<td><code>Master</code></td>
+<td></td>
+<td>Recall MASTER location</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<p>Edit inserts A-J, using 8 Faders and Selects to adjust pages of up to 8 continuous and 8 discrete parameters. The Faderport 16 splits into an 8 track controller on the left and plugin controller on the right.</p>
+<table>
+<thead>
+<tr>
+<th><code>EDIT PLUGINS</code></th>
+<th></th>
+<th>Faderport 8</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Edit Plugins</code></td>
+<td></td>
+<td>Enable edit insert mode</td>
 </tr>
 <tr>
-<td><code>Bus</code></td>
-<td><code>Shift</code>+</td>
-<td>Press to select <code>OUTPUTS</code> location. De-select for <code>home</code> location.</td>
+<td></td>
+<td></td>
+<td>Press again to cycle through inserts A-J</td>
 </tr>
 <tr>
-<td><code>VCA</code></td>
-<td><code>Shift</code>+</td>
-<td>Press to select <code>FX</code> location. De-select for <code>home</code> location.</td>
+<td><code>Fader 1-8</code></td>
+<td></td>
+<td>Adjust continuous plugin parameters on line 2</td>
 </tr>
 <tr>
-<td><code>All</code></td>
+<td><code>Select 1-8</code></td>
+<td></td>
+<td>Adjust discrete plugin parameters on line 1</td>
+</tr>
+<tr>
+<td><code>Prev</code></td>
+<td></td>
+<td>Change parameter page</td>
+</tr>
+<tr>
+<td><code>Next</code></td>
+<td></td>
+<td>Change parameter page</td>
+</tr>
+<tr>
+<td><code>Bypass</code></td>
+<td></td>
+<td>Toggle plugin Bypass</td>
+</tr>
+<tr>
+<td><code>Macro</code></td>
+<td></td>
+<td>Show/hide plugin window</td>
+</tr>
+<tr>
+<td></td>
 <td><code>Shift</code>+</td>
-<td>Press to select <code>USER</code> location. De-select for <code>home</code> location.</td>
+<td>Toggle plugin Compare</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>EDIT PLUGINS</code></th>
+<th></th>
+<th>Faderport 16</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Edit Plugins</code></td>
+<td></td>
+<td>Toggle edit plugin mode on right side</td>
+</tr>
+<tr>
+<td><code>Select 1-8</code></td>
+<td></td>
+<td>Select track for insert editing</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Cycle through inserts A-J</td>
+</tr>
+<tr>
+<td><code>Fader 9-16</code></td>
+<td></td>
+<td>Adjust continuous plugin parameters on line 2</td>
+</tr>
+<tr>
+<td><code>Select 9-16</code></td>
+<td></td>
+<td>Adjust discrete plugin parameters on line 1</td>
+</tr>
+<tr>
+<td><code>Prev</code></td>
+<td></td>
+<td>Change parameters page</td>
+</tr>
+<tr>
+<td><code>Next</code></td>
+<td></td>
+<td>Change parameters page</td>
+</tr>
+<tr>
+<td><code>Bypass</code></td>
+<td></td>
+<td>Toggle plugin Bypass</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Toggle Bypass for all plugins on track</td>
+</tr>
+<tr>
+<td><code>Macro</code></td>
+<td></td>
+<td>Show/hide plugin window</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Toggle plugin Compare</td>
 </tr>
 </tbody>
 </table>
@@ -2027,12 +2361,17 @@
 <table>
 <thead>
 <tr>
-<th>Bank Mode</th>
+<th>Track Bank</th>
 <th></th>
-<th><code>Bank</code> button to select</th>
+<th></th>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><code>Bank</code></td>
+<td></td>
+<td>Select Bank Mode</td>
+</tr>
 <tr>
 <td><code>Left Arrow</code></td>
 <td></td>
@@ -2053,12 +2392,17 @@
 <table>
 <thead>
 <tr>
-<th>Channel Mode</th>
+<th>Track Scroll</th>
 <th></th>
-<th><code>Channel</code> button to select</th>
+<th></th>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><code>Channel</code></td>
+<td></td>
+<td>Select Channel Mode</td>
+</tr>
 <tr>
 <td><code>Left Arrow</code></td>
 <td></td>
@@ -2079,38 +2423,63 @@
 <table>
 <thead>
 <tr>
-<th>Channel Mode</th>
+<th>Track Browse</th>
 <th></th>
-<th><code>Channel</code> button to select</th>
+<th>Browse, Select, And Auto Bank</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>Left Arrow</code></td>
+<td><code>Track</code></td>
 <td></td>
-<td>Scroll left by 1 track</td>
+<td>Toggle Track Browse Mode</td>
 </tr>
 <tr>
-<td><code>Right Arrow</code></td>
+<td><code>Display</code></td>
 <td></td>
-<td>Scroll right by 1 track</td>
+<td>Six rows of 7-Character track names. Highlighted for browser row.</td>
+</tr>
+<tr>
+<td><code>Select</code></td>
+<td></td>
+<td>Press to automatically bank to track and select it</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Color indicates Pro Tools track color</td>
 </tr>
 <tr>
 <td><code>Wheel</code></td>
 <td></td>
-<td>Scroll left/right by 1 track</td>
+<td>Turn to browse rows of memory locations</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Push to create a new memory location</td>
+</tr>
+<tr>
+<td><code>Marker</code></td>
+<td></td>
+<td>Return to previous mode</td>
 </tr>
 </tbody>
 </table>
 <table>
 <thead>
 <tr>
-<th>Marker Mode</th>
+<th>Memory Location Browse, Recall, Create</th>
 <th></th>
-<th><code>Marker</code> button to select</th>
+<th></th>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><code>Marker</code></td>
+<td></td>
+<td>Select Locations Mode</td>
+</tr>
 <tr>
 <td><code>Display</code></td>
 <td></td>
@@ -2140,6 +2509,154 @@
 <td><code>Marker</code></td>
 <td></td>
 <td>Return to previous mode</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Plugin Parameter Pages</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Edit Plugins</code></td>
+<td></td>
+<td>Select Plugin Edit Mode</td>
+</tr>
+<tr>
+<td><code>Left Arrow</code></td>
+<td></td>
+<td>Change parameter page</td>
+</tr>
+<tr>
+<td><code>Right Arrow</code></td>
+<td></td>
+<td>Change parameter page</td>
+</tr>
+<tr>
+<td><code>Bank</code></td>
+<td>Faderport 16</td>
+<td>Change to track banking for left side</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Windows</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Section</code></td>
+<td></td>
+<td>Toggle between Edit and Mix windows</td>
+</tr>
+<tr>
+<td><code>Macro</code></td>
+<td></td>
+<td>Show / hide plugin window</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Session</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Latch</code></td>
+<td><code>Shift</code>+</td>
+<td>Save</td>
+</tr>
+<tr>
+<td><code>Off</code></td>
+<td><code>Shift</code>+</td>
+<td>Undo</td>
+</tr>
+<tr>
+<td><code>Solo Clear</code></td>
+<td></td>
+<td>Clear solos</td>
+</tr>
+<tr>
+<td><code>Mute Clear</code></td>
+<td></td>
+<td>Clear mutes</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Transport</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Play</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>Stop</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>Record</code></td>
+<td></td>
+<td>Arm transport for recording</td>
+</tr>
+<tr>
+<td><code>Loop</code></td>
+<td></td>
+<td>Toggle loop mode</td>
+</tr>
+<tr>
+<td><code>&lt;&lt;</code></td>
+<td><code>Hold</code></td>
+<td>Rewind</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Tap</code></td>
+<td>Back one bar/second/frame</td>
+</tr>
+<tr>
+<td></td>
+<td>+<code>&gt;&gt;</code></td>
+<td>Return to zero</td>
+</tr>
+<tr>
+<td><code>&gt;&gt;</code></td>
+<td><code>Hold</code></td>
+<td>Fast Forward</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Tap</code></td>
+<td>Forward one bar/second/frame</td>
+</tr>
+<tr>
+<td><code>Track</code></td>
+<td><code>Shift</code>+</td>
+<td>Toggle time code display</td>
 </tr>
 </tbody>
 </table>

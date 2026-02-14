@@ -19078,108 +19078,350 @@
 <div class="tabbed-block">
 <h1 id="_35"></h1>
 <h3 id="faderport-816-pro-tools-2023">Faderport 8/16 - Pro Tools 2023+</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="36:4"><input checked="checked" id="bank-mode_21" name="__tabbed_36" type="radio" /><input id="channel-strips_29" name="__tabbed_36" type="radio" /><input id="memory-locations" name="__tabbed_36" type="radio" /><input id="navigation_29" name="__tabbed_36" type="radio" /><div class="tabbed-labels"><label for="bank-mode_21">Bank Mode</label><label for="channel-strips_29">Channel Strips</label><label for="memory-locations">Memory Locations</label><label for="navigation_29">Navigation</label></div>
+<p>V-Control Pro supercharges the Faderport 8/16 for pro features unavailable with standard HUI mode.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="36:8"><input checked="checked" id="bank-modes_3" name="__tabbed_36" type="radio" /><input id="track-browser" name="__tabbed_36" type="radio" /><input id="locations" name="__tabbed_36" type="radio" /><input id="hot-locations" name="__tabbed_36" type="radio" /><input id="plugins" name="__tabbed_36" type="radio" /><input id="navigation_29" name="__tabbed_36" type="radio" /><input id="utilities" name="__tabbed_36" type="radio" /><input id="transport_29" name="__tabbed_36" type="radio" /><div class="tabbed-labels"><label for="bank-modes_3">Bank Modes</label><label for="track-browser">Track Browser</label><label for="locations">Locations</label><label for="hot-locations">Hot Locations</label><label for="plugins">Plugins</label><label for="navigation_29">Navigation</label><label for="utilities">Utilities</label><label for="transport_29">Transport</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
+<p>Select a bank mode to edit track volume, mute, solo, pan, send volume, send mute, send pre/post, send pan, and plugins.</p>
 <table>
 <thead>
 <tr>
-<th>Bank Mode</th>
+<th><code>VOLUME</code></th>
 <th></th>
 <th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>Track</code> (Default)</td>
+<td><code>Track</code></td>
 <td></td>
-<td><code>Fader</code> controls track volume. <code>Pan/Param</code> controls track pan.</td>
+<td>Enable volume mode</td>
 </tr>
 <tr>
 <td></td>
 <td></td>
-<td>Press <code>Track</code> to toggle to Track Browser</td>
+<td>Toggle track browser</td>
 </tr>
 <tr>
 <td></td>
 <td><code>Shift</code>+</td>
-<td>Press <code>Shift + Track</code> to toggle time display</td>
+<td>Toggle time code display</td>
+</tr>
+<tr>
+<td><code>Pan/Param</code></td>
+<td></td>
+<td>Adjust pan for selected track</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Push</code></td>
+<td>Toggle between Pan L and Pan R for stereo tracks</td>
+</tr>
+<tr>
+<td><code>Fader</code></td>
+<td></td>
+<td>Track volume</td>
+</tr>
+<tr>
+<td><code>M</code></td>
+<td></td>
+<td>Track mute</td>
+</tr>
+<tr>
+<td><code>S</code></td>
+<td></td>
+<td>Track solo</td>
+</tr>
+<tr>
+<td><code>Select</code></td>
+<td></td>
+<td>Track select. Focus Plugin editor</td>
 </tr>
 <tr>
 <td></td>
 <td></td>
-<td>Push <code>Pan/Param</code> to toggle between Pan Left &amp; Pan Right control</td>
+<td>Cycle through inserts</td>
 </tr>
+<tr>
+<td></td>
+<td></td>
+<td>Color indicates Pro Tools track color</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>PAN</code></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td><code>Pan</code></td>
 <td></td>
-<td><code>Fader</code> controls track pan</td>
+<td>Enable pan mode.</td>
 </tr>
 <tr>
 <td></td>
 <td></td>
-<td>Press <code>Pan</code> to toggle between Pan Left &amp; Pan Right control</td>
+<td>Press again to toggle between Pan L and Pan R for stereo tracks.</td>
 </tr>
+<tr>
+<td><code>Fader</code></td>
+<td></td>
+<td>Track pan</td>
+</tr>
+<tr>
+<td><code>M</code></td>
+<td></td>
+<td>Track mute</td>
+</tr>
+<tr>
+<td><code>S</code></td>
+<td></td>
+<td>Track solo</td>
+</tr>
+<tr>
+<td><code>Select</code></td>
+<td></td>
+<td>Track select. Focus Plugin editor</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Cycle through inserts</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Color indicates Pro Tools track color</td>
+</tr>
+<tr>
+<td><code>Pan/Param</code></td>
+<td></td>
+<td>Adjust pan for selected track</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Push</code></td>
+<td>Toggle between Pan L and Pan R for stereo tracks</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>SENDS</code></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td><code>Sends</code></td>
 <td></td>
-<td>Coming soon</td>
+<td>Enable sends mode for all tracks.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Press again to cycle through sends A-E.</td>
+</tr>
+<tr>
+<td><code>Pan/Param</code></td>
+<td></td>
+<td>Adjust pan for selected track</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Push</code></td>
+<td>Toggle between Pan L and Pan R for stereo sends</td>
+</tr>
+<tr>
+<td><code>Fader</code></td>
+<td></td>
+<td>Send volume</td>
+</tr>
+<tr>
+<td><code>Select</code></td>
+<td></td>
+<td>Track select. Focus Plugin editor</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Cycle through inserts</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Toggle pre/post mode</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Color indicates Pro Tools track color</td>
+</tr>
+<tr>
+<td><code>M</code></td>
+<td></td>
+<td>Send mute</td>
+</tr>
+<tr>
+<td><code>S</code></td>
+<td></td>
+<td>Track solo</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>EDIT PLUGINS</code></th>
+<th>Faderport 8</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Edit Plugins</code></td>
+<td></td>
+<td>Enable edit insert mode</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Press again to cycle through inserts A-J</td>
+</tr>
+<tr>
+<td><code>Fader</code></td>
+<td></td>
+<td>Adjust continuous plugin parameter on line 2</td>
+</tr>
+<tr>
+<td><code>Select</code></td>
+<td></td>
+<td>Adjust discrete plugin parameter on line 1</td>
+</tr>
+<tr>
+<td><code>Prev</code></td>
+<td></td>
+<td>Change parameter page</td>
+</tr>
+<tr>
+<td><code>Next</code></td>
+<td></td>
+<td>Change parameter page</td>
+</tr>
+<tr>
+<td><code>Bypass</code></td>
+<td></td>
+<td>Toggle plugin Bypass</td>
+</tr>
+<tr>
+<td><code>Macro</code></td>
+<td></td>
+<td>Show/hide plugin window</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Toggle plugin Compare</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>EDIT PLUGINS</code></th>
+<th>Faderport 16</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Edit Plugins</code></td>
+<td></td>
+<td>Toggle edit plugin mode on right side</td>
+</tr>
+<tr>
+<td><code>Fader</code></td>
+<td></td>
+<td>Adjust continuous plugin parameter on line 2</td>
+</tr>
+<tr>
+<td><code>Select</code></td>
+<td></td>
+<td>Adjust discrete plugin parameter on line 1</td>
+</tr>
+<tr>
+<td><code>Prev</code></td>
+<td></td>
+<td>Change parameter page</td>
+</tr>
+<tr>
+<td><code>Next</code></td>
+<td></td>
+<td>Change parameter page</td>
+</tr>
+<tr>
+<td><code>Bypass</code></td>
+<td></td>
+<td>Toggle plugin Bypass</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Toggle Bypass for all plugins on track</td>
+</tr>
+<tr>
+<td><code>Macro</code></td>
+<td></td>
+<td>Show/hide plugin window</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Toggle plugin Compare</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>RECORD ARM</code></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ARM</code></td>
+<td></td>
+<td>Toggle track arm mode on/off</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Arm all tracks</td>
+</tr>
+<tr>
+<td><code>Select</code></td>
+<td></td>
+<td>Record arm on/off</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Color - Red</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="tabbed-block">
-<table>
-<thead>
-<tr>
-<th>Track Mode</th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Fader</code></td>
-<td></td>
-<td>Adjust track volume</td>
-</tr>
-<tr>
-<td><code>Select</code></td>
-<td></td>
-<td>Displays track color. Press to focus channel. Press for next insert A-J.</td>
-</tr>
-<tr>
-<td><code>Mute</code></td>
-<td></td>
-<td><code>Mute</code> controls track mute</td>
-</tr>
-<tr>
-<td><code>Solo</code></td>
-<td></td>
-<td><code>Solo</code> controls track solo</td>
-</tr>
-<tr>
-<td><code>Display</code></td>
-<td></td>
-<td>7-Character track name. Highlighted for focus channel.</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>Volume (dB)</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>Pan/Param Mode - 'Pan', 'Pan L', 'Pan R', or none</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>Bar Graph - Pan position</td>
-</tr>
-</tbody>
-</table>
+<p>The Track Browser lets you see all tracks and jump to any track.</p>
 <table>
 <thead>
 <tr>
@@ -19190,90 +19432,39 @@
 </thead>
 <tbody>
 <tr>
-<td><code>Select</code></td>
+<td><code>Track</code></td>
 <td></td>
-<td>Displays track color for browser row. Press to auto bank and focus.</td>
+<td>Toggle Track Browser Mode on and off</td>
 </tr>
 <tr>
 <td><code>Display</code></td>
 <td></td>
-<td>Six rows of 7-Character track names. Highlighted for browser row.</td>
+<td>Six rows of 7-Character track names.</td>
 </tr>
-</tbody>
-</table>
-<table>
-<thead>
 <tr>
-<th>Pan Mode</th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Fader</code></td>
+<td><code>Wheel</code></td>
 <td></td>
-<td>Adjust track pan</td>
+<td>Scroll through the track list by row</td>
 </tr>
 <tr>
 <td><code>Select</code></td>
 <td></td>
-<td>Displays track color. Press to focus channel. Press for next insert A-J.</td>
-</tr>
-<tr>
-<td><code>Mute</code></td>
-<td></td>
-<td><code>Mute</code> controls track mute</td>
-</tr>
-<tr>
-<td><code>Solo</code></td>
-<td></td>
-<td><code>Solo</code> controls track solo</td>
-</tr>
-<tr>
-<td><code>Display</code></td>
-<td></td>
-<td>7-Character track name. Highlighted for focus channel.</td>
+<td>Bank to the highlighted row track</td>
 </tr>
 <tr>
 <td></td>
 <td></td>
-<td>Volume (dB)</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>Pan Mode - <code>Pan</code>, <code>Pan L</code>, <code>Pan R</code>, or none</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>Bar Graph - Pan position</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Sends Mode</th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Coming Soon</td>
-<td></td>
-<td></td>
+<td>Color indicates Pro Tools track color</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="tabbed-block">
+<p>Use Locations Mode to browse, recall, and create memory locations.</p>
 <table>
 <thead>
 <tr>
-<th>Marker Mode</th>
+<th>Locations Mode</th>
 <th></th>
 <th></th>
 </tr>
@@ -19282,7 +19473,7 @@
 <tr>
 <td><code>Marker</code></td>
 <td></td>
-<td>Toggle Marker Mode on/off</td>
+<td>Toggle Locations Mode on/off</td>
 </tr>
 <tr>
 <td><code>Display</code></td>
@@ -19290,85 +19481,228 @@
 <td>Six rows of 7-Character location names. Highlighted for browser row.</td>
 </tr>
 <tr>
-<td><code>Select</code></td>
-<td></td>
-<td>Press to select browsed memory location.</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>Selected memory location becomes <code>home</code> location for <code>Hot Locations</code>.</td>
-</tr>
-<tr>
 <td><code>Wheel</code></td>
 <td></td>
-<td>Turn to browse rows of memory locations</td>
+<td>Scroll through memory locations by row</td>
+</tr>
+<tr>
+<td><code>Select</code></td>
+<td></td>
+<td>Recall the memory location in the highlighted row</td>
 </tr>
 <tr>
 <td></td>
+<td></td>
+<td>The memory location is the home location for Hot Locations</td>
+</tr>
+<tr>
+<td><code>Wheel Push</code></td>
 <td></td>
 <td>Push to create a new memory location</td>
 </tr>
+<tr>
+<td></td>
+<td><code>Prev</code></td>
+<td>Cancel new memory location</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Next</code></td>
+<td>Confirm new memory location</td>
+</tr>
 </tbody>
 </table>
+</div>
+<div class="tabbed-block">
+<p>Recall memory locations named to match dedicated hot buttons for custom workflows. For example, create a memory location named <code>VCA</code> that shows only VCA tracks. Press once to see just VCAs, press again to go back to your previous view.</p>
 <table>
 <thead>
 <tr>
 <th>Hot Locations</th>
 <th></th>
-<th>User programmable memory locations.</th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>Audio</code></td>
 <td></td>
-<td>Press to select <code>AUDIO</code> location. De-select for <code>home</code> location.</td>
+<td>Recall AUDIO location</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Recall INPUTS location</td>
 </tr>
 <tr>
 <td><code>VI</code></td>
 <td></td>
-<td>Press to select <code>VI</code> location. De-select for <code>home</code> location.</td>
+<td>Recall VI location</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Recall MIDI location</td>
 </tr>
 <tr>
 <td><code>Bus</code></td>
 <td></td>
-<td>Press to select <code>BUS</code> location. De-select for <code>home</code> location.</td>
+<td>Recall BUS location</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Recall OUTPUTS location</td>
 </tr>
 <tr>
 <td><code>VCA</code></td>
 <td></td>
-<td>Press to select <code>VCA</code> location. De-select for <code>home</code> location.</td>
+<td>Recall VCA location</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Recall FX location</td>
 </tr>
 <tr>
 <td><code>All</code></td>
 <td></td>
-<td>Press to select <code>ALL</code> location. De-select for <code>home</code> location.</td>
+<td>Recall ALL location</td>
 </tr>
 <tr>
-<td><code>Audio</code></td>
+<td></td>
 <td><code>Shift</code>+</td>
-<td>Press to select <code>INPUTS</code> location. De-select for <code>home</code> location.</td>
+<td>Recall USER location</td>
 </tr>
 <tr>
-<td><code>VI</code></td>
-<td><code>Shift</code>+</td>
-<td>Press to select <code>MIDI</code> location. De-select for <code>home</code> location.</td>
+<td><code>Master</code></td>
+<td></td>
+<td>Recall MASTER location</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<p>Edit inserts A-J, using 8 Faders and Selects to adjust pages of up to 8 continuous and 8 discrete parameters. The Faderport 16 splits into an 8 track controller on the left and plugin controller on the right.</p>
+<table>
+<thead>
+<tr>
+<th><code>EDIT PLUGINS</code></th>
+<th></th>
+<th>Faderport 8</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Edit Plugins</code></td>
+<td></td>
+<td>Enable edit insert mode</td>
 </tr>
 <tr>
-<td><code>Bus</code></td>
-<td><code>Shift</code>+</td>
-<td>Press to select <code>OUTPUTS</code> location. De-select for <code>home</code> location.</td>
+<td></td>
+<td></td>
+<td>Press again to cycle through inserts A-J</td>
 </tr>
 <tr>
-<td><code>VCA</code></td>
-<td><code>Shift</code>+</td>
-<td>Press to select <code>FX</code> location. De-select for <code>home</code> location.</td>
+<td><code>Fader 1-8</code></td>
+<td></td>
+<td>Adjust continuous plugin parameters on line 2</td>
 </tr>
 <tr>
-<td><code>All</code></td>
+<td><code>Select 1-8</code></td>
+<td></td>
+<td>Adjust discrete plugin parameters on line 1</td>
+</tr>
+<tr>
+<td><code>Prev</code></td>
+<td></td>
+<td>Change parameter page</td>
+</tr>
+<tr>
+<td><code>Next</code></td>
+<td></td>
+<td>Change parameter page</td>
+</tr>
+<tr>
+<td><code>Bypass</code></td>
+<td></td>
+<td>Toggle plugin Bypass</td>
+</tr>
+<tr>
+<td><code>Macro</code></td>
+<td></td>
+<td>Show/hide plugin window</td>
+</tr>
+<tr>
+<td></td>
 <td><code>Shift</code>+</td>
-<td>Press to select <code>USER</code> location. De-select for <code>home</code> location.</td>
+<td>Toggle plugin Compare</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>EDIT PLUGINS</code></th>
+<th></th>
+<th>Faderport 16</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Edit Plugins</code></td>
+<td></td>
+<td>Toggle edit plugin mode on right side</td>
+</tr>
+<tr>
+<td><code>Select 1-8</code></td>
+<td></td>
+<td>Select track for insert editing</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Cycle through inserts A-J</td>
+</tr>
+<tr>
+<td><code>Fader 9-16</code></td>
+<td></td>
+<td>Adjust continuous plugin parameters on line 2</td>
+</tr>
+<tr>
+<td><code>Select 9-16</code></td>
+<td></td>
+<td>Adjust discrete plugin parameters on line 1</td>
+</tr>
+<tr>
+<td><code>Prev</code></td>
+<td></td>
+<td>Change parameters page</td>
+</tr>
+<tr>
+<td><code>Next</code></td>
+<td></td>
+<td>Change parameters page</td>
+</tr>
+<tr>
+<td><code>Bypass</code></td>
+<td></td>
+<td>Toggle plugin Bypass</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Toggle Bypass for all plugins on track</td>
+</tr>
+<tr>
+<td><code>Macro</code></td>
+<td></td>
+<td>Show/hide plugin window</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Shift</code>+</td>
+<td>Toggle plugin Compare</td>
 </tr>
 </tbody>
 </table>
@@ -19377,12 +19711,17 @@
 <table>
 <thead>
 <tr>
-<th>Bank Mode</th>
+<th>Track Bank</th>
 <th></th>
-<th><code>Bank</code> button to select</th>
+<th></th>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><code>Bank</code></td>
+<td></td>
+<td>Select Bank Mode</td>
+</tr>
 <tr>
 <td><code>Left Arrow</code></td>
 <td></td>
@@ -19403,12 +19742,17 @@
 <table>
 <thead>
 <tr>
-<th>Channel Mode</th>
+<th>Track Scroll</th>
 <th></th>
-<th><code>Channel</code> button to select</th>
+<th></th>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><code>Channel</code></td>
+<td></td>
+<td>Select Channel Mode</td>
+</tr>
 <tr>
 <td><code>Left Arrow</code></td>
 <td></td>
@@ -19429,38 +19773,63 @@
 <table>
 <thead>
 <tr>
-<th>Channel Mode</th>
+<th>Track Browse</th>
 <th></th>
-<th><code>Channel</code> button to select</th>
+<th>Browse, Select, And Auto Bank</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>Left Arrow</code></td>
+<td><code>Track</code></td>
 <td></td>
-<td>Scroll left by 1 track</td>
+<td>Toggle Track Browse Mode</td>
 </tr>
 <tr>
-<td><code>Right Arrow</code></td>
+<td><code>Display</code></td>
 <td></td>
-<td>Scroll right by 1 track</td>
+<td>Six rows of 7-Character track names. Highlighted for browser row.</td>
+</tr>
+<tr>
+<td><code>Select</code></td>
+<td></td>
+<td>Press to automatically bank to track and select it</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Color indicates Pro Tools track color</td>
 </tr>
 <tr>
 <td><code>Wheel</code></td>
 <td></td>
-<td>Scroll left/right by 1 track</td>
+<td>Turn to browse rows of memory locations</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Push to create a new memory location</td>
+</tr>
+<tr>
+<td><code>Marker</code></td>
+<td></td>
+<td>Return to previous mode</td>
 </tr>
 </tbody>
 </table>
 <table>
 <thead>
 <tr>
-<th>Marker Mode</th>
+<th>Memory Location Browse, Recall, Create</th>
 <th></th>
-<th><code>Marker</code> button to select</th>
+<th></th>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><code>Marker</code></td>
+<td></td>
+<td>Select Locations Mode</td>
+</tr>
 <tr>
 <td><code>Display</code></td>
 <td></td>
@@ -19493,6 +19862,154 @@
 </tr>
 </tbody>
 </table>
+<table>
+<thead>
+<tr>
+<th>Plugin Parameter Pages</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Edit Plugins</code></td>
+<td></td>
+<td>Select Plugin Edit Mode</td>
+</tr>
+<tr>
+<td><code>Left Arrow</code></td>
+<td></td>
+<td>Change parameter page</td>
+</tr>
+<tr>
+<td><code>Right Arrow</code></td>
+<td></td>
+<td>Change parameter page</td>
+</tr>
+<tr>
+<td><code>Bank</code></td>
+<td>Faderport 16</td>
+<td>Change to track banking for left side</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Windows</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Section</code></td>
+<td></td>
+<td>Toggle between Edit and Mix windows</td>
+</tr>
+<tr>
+<td><code>Macro</code></td>
+<td></td>
+<td>Show / hide plugin window</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Session</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Latch</code></td>
+<td><code>Shift</code>+</td>
+<td>Save</td>
+</tr>
+<tr>
+<td><code>Off</code></td>
+<td><code>Shift</code>+</td>
+<td>Undo</td>
+</tr>
+<tr>
+<td><code>Solo Clear</code></td>
+<td></td>
+<td>Clear solos</td>
+</tr>
+<tr>
+<td><code>Mute Clear</code></td>
+<td></td>
+<td>Clear mutes</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Transport</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Play</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>Stop</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>Record</code></td>
+<td></td>
+<td>Arm transport for recording</td>
+</tr>
+<tr>
+<td><code>Loop</code></td>
+<td></td>
+<td>Toggle loop mode</td>
+</tr>
+<tr>
+<td><code>&lt;&lt;</code></td>
+<td><code>Hold</code></td>
+<td>Rewind</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Tap</code></td>
+<td>Back one bar/second/frame</td>
+</tr>
+<tr>
+<td></td>
+<td>+<code>&gt;&gt;</code></td>
+<td>Return to zero</td>
+</tr>
+<tr>
+<td><code>&gt;&gt;</code></td>
+<td><code>Hold</code></td>
+<td>Fast Forward</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Tap</code></td>
+<td>Forward one bar/second/frame</td>
+</tr>
+<tr>
+<td><code>Track</code></td>
+<td><code>Shift</code>+</td>
+<td>Toggle time code display</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -19506,7 +20023,7 @@
 <div class="tabbed-block">
 <h1 id="_36"></h1>
 <h3 id="faderport-v2-pro-tools">FaderPort V2 - Pro Tools</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="37:8"><input checked="checked" id="channel-strip" name="__tabbed_37" type="radio" /><input id="automation_25" name="__tabbed_37" type="radio" /><input id="bank-mode-with-fader-flip" name="__tabbed_37" type="radio" /><input id="fast-focus-and-refocus" name="__tabbed_37" type="radio" /><input id="transport_29" name="__tabbed_37" type="radio" /><input id="utility_29" name="__tabbed_37" type="radio" /><input id="dialog-buttons" name="__tabbed_37" type="radio" /><input id="v-window-mode_28" name="__tabbed_37" type="radio" /><div class="tabbed-labels"><label for="channel-strip">Channel Strip</label><label for="automation_25">Automation</label><label for="bank-mode-with-fader-flip">Bank Mode With Fader Flip</label><label for="fast-focus-and-refocus">Fast Focus and Refocus</label><label for="transport_29">Transport</label><label for="utility_29">Utility</label><label for="dialog-buttons">Dialog Buttons</label><label for="v-window-mode_28">V-Window Mode</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="37:8"><input checked="checked" id="channel-strip" name="__tabbed_37" type="radio" /><input id="automation_25" name="__tabbed_37" type="radio" /><input id="bank-mode-with-fader-flip" name="__tabbed_37" type="radio" /><input id="fast-focus-and-refocus" name="__tabbed_37" type="radio" /><input id="transport_30" name="__tabbed_37" type="radio" /><input id="utility_29" name="__tabbed_37" type="radio" /><input id="dialog-buttons" name="__tabbed_37" type="radio" /><input id="v-window-mode_28" name="__tabbed_37" type="radio" /><div class="tabbed-labels"><label for="channel-strip">Channel Strip</label><label for="automation_25">Automation</label><label for="bank-mode-with-fader-flip">Bank Mode With Fader Flip</label><label for="fast-focus-and-refocus">Fast Focus and Refocus</label><label for="transport_30">Transport</label><label for="utility_29">Utility</label><label for="dialog-buttons">Dialog Buttons</label><label for="v-window-mode_28">V-Window Mode</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <table>
@@ -19852,7 +20369,7 @@
 <div class="tabbed-block">
 <h1 id="_38"></h1>
 <h3 id="command-8-pro-tools">Command 8 - Pro Tools</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="39:9"><input checked="checked" id="channel-strips_30" name="__tabbed_39" type="radio" /><input id="bank-modes_3" name="__tabbed_39" type="radio" /><input id="transport_30" name="__tabbed_39" type="radio" /><input id="display" name="__tabbed_39" type="radio" /><input id="memory-locations_1" name="__tabbed_39" type="radio" /><input id="utility_30" name="__tabbed_39" type="radio" /><input id="modifiers_6" name="__tabbed_39" type="radio" /><input id="navigation_30" name="__tabbed_39" type="radio" /><input id="v-window-mode_29" name="__tabbed_39" type="radio" /><div class="tabbed-labels"><label for="channel-strips_30">Channel Strips</label><label for="bank-modes_3">Bank Modes</label><label for="transport_30">Transport</label><label for="display">Display</label><label for="memory-locations_1">Memory Locations</label><label for="utility_30">Utility</label><label for="modifiers_6">Modifiers</label><label for="navigation_30">Navigation</label><label for="v-window-mode_29">V-Window Mode</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="39:9"><input checked="checked" id="channel-strips_29" name="__tabbed_39" type="radio" /><input id="bank-modes_4" name="__tabbed_39" type="radio" /><input id="transport_31" name="__tabbed_39" type="radio" /><input id="display" name="__tabbed_39" type="radio" /><input id="memory-locations" name="__tabbed_39" type="radio" /><input id="utility_30" name="__tabbed_39" type="radio" /><input id="modifiers_6" name="__tabbed_39" type="radio" /><input id="navigation_30" name="__tabbed_39" type="radio" /><input id="v-window-mode_29" name="__tabbed_39" type="radio" /><div class="tabbed-labels"><label for="channel-strips_29">Channel Strips</label><label for="bank-modes_4">Bank Modes</label><label for="transport_31">Transport</label><label for="display">Display</label><label for="memory-locations">Memory Locations</label><label for="utility_30">Utility</label><label for="modifiers_6">Modifiers</label><label for="navigation_30">Navigation</label><label for="v-window-mode_29">V-Window Mode</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <table>
@@ -20352,7 +20869,7 @@
 <div class="tabbed-block">
 <h1 id="_39"></h1>
 <h3 id="command8-logic-pro">Command8 - Logic Pro</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="40:7"><input checked="checked" id="channel-strips_31" name="__tabbed_40" type="radio" /><input id="bank-mode_22" name="__tabbed_40" type="radio" /><input id="transport_31" name="__tabbed_40" type="radio" /><input id="utility_31" name="__tabbed_40" type="radio" /><input id="navigation_31" name="__tabbed_40" type="radio" /><input id="window-buttons_12" name="__tabbed_40" type="radio" /><input id="modifiers_7" name="__tabbed_40" type="radio" /><div class="tabbed-labels"><label for="channel-strips_31">Channel Strips</label><label for="bank-mode_22">Bank Mode</label><label for="transport_31">Transport</label><label for="utility_31">Utility</label><label for="navigation_31">Navigation</label><label for="window-buttons_12">Window Buttons</label><label for="modifiers_7">Modifiers</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="40:7"><input checked="checked" id="channel-strips_30" name="__tabbed_40" type="radio" /><input id="bank-mode_21" name="__tabbed_40" type="radio" /><input id="transport_32" name="__tabbed_40" type="radio" /><input id="utility_31" name="__tabbed_40" type="radio" /><input id="navigation_31" name="__tabbed_40" type="radio" /><input id="window-buttons_12" name="__tabbed_40" type="radio" /><input id="modifiers_7" name="__tabbed_40" type="radio" /><div class="tabbed-labels"><label for="channel-strips_30">Channel Strips</label><label for="bank-mode_21">Bank Mode</label><label for="transport_32">Transport</label><label for="utility_31">Utility</label><label for="navigation_31">Navigation</label><label for="window-buttons_12">Window Buttons</label><label for="modifiers_7">Modifiers</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <table>
@@ -20636,7 +21153,7 @@
 <div class="tabbed-block">
 <h1 id="_40"></h1>
 <h3 id="command8-ableton-live">Command8 - Ableton Live</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="41:9"><input checked="checked" id="channel-strips_32" name="__tabbed_41" type="radio" /><input id="bank-mode_23" name="__tabbed_41" type="radio" /><input id="transport_32" name="__tabbed_41" type="radio" /><input id="utility_32" name="__tabbed_41" type="radio" /><input id="group-buttons_8" name="__tabbed_41" type="radio" /><input id="navigation_32" name="__tabbed_41" type="radio" /><input id="window-buttons_13" name="__tabbed_41" type="radio" /><input id="edit_10" name="__tabbed_41" type="radio" /><input id="modifiers_8" name="__tabbed_41" type="radio" /><div class="tabbed-labels"><label for="channel-strips_32">Channel Strips</label><label for="bank-mode_23">Bank Mode</label><label for="transport_32">Transport</label><label for="utility_32">Utility</label><label for="group-buttons_8">Group Buttons</label><label for="navigation_32">Navigation</label><label for="window-buttons_13">Window Buttons</label><label for="edit_10">Edit</label><label for="modifiers_8">Modifiers</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="41:9"><input checked="checked" id="channel-strips_31" name="__tabbed_41" type="radio" /><input id="bank-mode_22" name="__tabbed_41" type="radio" /><input id="transport_33" name="__tabbed_41" type="radio" /><input id="utility_32" name="__tabbed_41" type="radio" /><input id="group-buttons_8" name="__tabbed_41" type="radio" /><input id="navigation_32" name="__tabbed_41" type="radio" /><input id="window-buttons_13" name="__tabbed_41" type="radio" /><input id="edit_10" name="__tabbed_41" type="radio" /><input id="modifiers_8" name="__tabbed_41" type="radio" /><div class="tabbed-labels"><label for="channel-strips_31">Channel Strips</label><label for="bank-mode_22">Bank Mode</label><label for="transport_33">Transport</label><label for="utility_32">Utility</label><label for="group-buttons_8">Group Buttons</label><label for="navigation_32">Navigation</label><label for="window-buttons_13">Window Buttons</label><label for="edit_10">Edit</label><label for="modifiers_8">Modifiers</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <table>
@@ -21044,7 +21561,7 @@
 <div class="tabbed-block">
 <h1 id="_41"></h1>
 <h3 id="command-8-studio-one-fender-studio">Command 8 - Studio One / Fender Studio</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="42:9"><input checked="checked" id="channel-strips_33" name="__tabbed_42" type="radio" /><input id="bank-mode_24" name="__tabbed_42" type="radio" /><input id="channel-type-selection-mode" name="__tabbed_42" type="radio" /><input id="automation-mode" name="__tabbed_42" type="radio" /><input id="soft-keys-mode" name="__tabbed_42" type="radio" /><input id="transport_33" name="__tabbed_42" type="radio" /><input id="navigation_33" name="__tabbed_42" type="radio" /><input id="utility_33" name="__tabbed_42" type="radio" /><input id="v-window-mode_30" name="__tabbed_42" type="radio" /><div class="tabbed-labels"><label for="channel-strips_33">Channel Strips</label><label for="bank-mode_24">Bank Mode</label><label for="channel-type-selection-mode">Channel Type Selection Mode</label><label for="automation-mode">Automation Mode</label><label for="soft-keys-mode">Soft Keys Mode</label><label for="transport_33">Transport</label><label for="navigation_33">Navigation</label><label for="utility_33">Utility</label><label for="v-window-mode_30">V-Window Mode</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="42:9"><input checked="checked" id="channel-strips_32" name="__tabbed_42" type="radio" /><input id="bank-mode_23" name="__tabbed_42" type="radio" /><input id="channel-type-selection-mode" name="__tabbed_42" type="radio" /><input id="automation-mode" name="__tabbed_42" type="radio" /><input id="soft-keys-mode" name="__tabbed_42" type="radio" /><input id="transport_34" name="__tabbed_42" type="radio" /><input id="navigation_33" name="__tabbed_42" type="radio" /><input id="utility_33" name="__tabbed_42" type="radio" /><input id="v-window-mode_30" name="__tabbed_42" type="radio" /><div class="tabbed-labels"><label for="channel-strips_32">Channel Strips</label><label for="bank-mode_23">Bank Mode</label><label for="channel-type-selection-mode">Channel Type Selection Mode</label><label for="automation-mode">Automation Mode</label><label for="soft-keys-mode">Soft Keys Mode</label><label for="transport_34">Transport</label><label for="navigation_33">Navigation</label><label for="utility_33">Utility</label><label for="v-window-mode_30">V-Window Mode</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <table>
@@ -21460,7 +21977,7 @@
 <div class="tabbed-block">
 <h1 id="_42"></h1>
 <h3 id="command8-cubasenuendo">Command8 - Cubase/Nuendo</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="43:6"><input checked="checked" id="channel-strips_34" name="__tabbed_43" type="radio" /><input id="bank-mode_25" name="__tabbed_43" type="radio" /><input id="transport_34" name="__tabbed_43" type="radio" /><input id="utility_34" name="__tabbed_43" type="radio" /><input id="window-buttons_14" name="__tabbed_43" type="radio" /><input id="navigation_34" name="__tabbed_43" type="radio" /><div class="tabbed-labels"><label for="channel-strips_34">Channel Strips</label><label for="bank-mode_25">Bank Mode</label><label for="transport_34">Transport</label><label for="utility_34">Utility</label><label for="window-buttons_14">Window Buttons</label><label for="navigation_34">Navigation</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="43:6"><input checked="checked" id="channel-strips_33" name="__tabbed_43" type="radio" /><input id="bank-mode_24" name="__tabbed_43" type="radio" /><input id="transport_35" name="__tabbed_43" type="radio" /><input id="utility_34" name="__tabbed_43" type="radio" /><input id="window-buttons_14" name="__tabbed_43" type="radio" /><input id="navigation_34" name="__tabbed_43" type="radio" /><div class="tabbed-labels"><label for="channel-strips_33">Channel Strips</label><label for="bank-mode_24">Bank Mode</label><label for="transport_35">Transport</label><label for="utility_34">Utility</label><label for="window-buttons_14">Window Buttons</label><label for="navigation_34">Navigation</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <table>
@@ -21740,7 +22257,7 @@
 <div class="tabbed-block">
 <h1 id="_43"></h1>
 <h3 id="command8-luna">Command8 - LUNA</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="44:7"><input checked="checked" id="bank-mode_26" name="__tabbed_44" type="radio" /><input id="channel-strips_35" name="__tabbed_44" type="radio" /><input id="track-view" name="__tabbed_44" type="radio" /><input id="transport_35" name="__tabbed_44" type="radio" /><input id="navigation_35" name="__tabbed_44" type="radio" /><input id="utility_35" name="__tabbed_44" type="radio" /><input id="v-window-mode_31" name="__tabbed_44" type="radio" /><div class="tabbed-labels"><label for="bank-mode_26">Bank Mode</label><label for="channel-strips_35">Channel Strips</label><label for="track-view">Track View</label><label for="transport_35">Transport</label><label for="navigation_35">Navigation</label><label for="utility_35">Utility</label><label for="v-window-mode_31">V-Window Mode</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="44:7"><input checked="checked" id="bank-mode_25" name="__tabbed_44" type="radio" /><input id="channel-strips_34" name="__tabbed_44" type="radio" /><input id="track-view" name="__tabbed_44" type="radio" /><input id="transport_36" name="__tabbed_44" type="radio" /><input id="navigation_35" name="__tabbed_44" type="radio" /><input id="utility_35" name="__tabbed_44" type="radio" /><input id="v-window-mode_31" name="__tabbed_44" type="radio" /><div class="tabbed-labels"><label for="bank-mode_25">Bank Mode</label><label for="channel-strips_34">Channel Strips</label><label for="track-view">Track View</label><label for="transport_36">Transport</label><label for="navigation_35">Navigation</label><label for="utility_35">Utility</label><label for="v-window-mode_31">V-Window Mode</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <table>
@@ -22019,7 +22536,7 @@
 <div class="tabbed-block">
 <h1 id="_45"></h1>
 <h3 id="003-logic-pro">003 - Logic Pro</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="46:8"><input checked="checked" id="channel-strips_36" name="__tabbed_46" type="radio" /><input id="bank-mode_27" name="__tabbed_46" type="radio" /><input id="transport_36" name="__tabbed_46" type="radio" /><input id="utility_36" name="__tabbed_46" type="radio" /><input id="navigation_36" name="__tabbed_46" type="radio" /><input id="automation_26" name="__tabbed_46" type="radio" /><input id="window-buttons_15" name="__tabbed_46" type="radio" /><input id="modifiers_9" name="__tabbed_46" type="radio" /><div class="tabbed-labels"><label for="channel-strips_36">Channel Strips</label><label for="bank-mode_27">Bank Mode</label><label for="transport_36">Transport</label><label for="utility_36">Utility</label><label for="navigation_36">Navigation</label><label for="automation_26">Automation</label><label for="window-buttons_15">Window Buttons</label><label for="modifiers_9">Modifiers</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="46:8"><input checked="checked" id="channel-strips_35" name="__tabbed_46" type="radio" /><input id="bank-mode_26" name="__tabbed_46" type="radio" /><input id="transport_37" name="__tabbed_46" type="radio" /><input id="utility_36" name="__tabbed_46" type="radio" /><input id="navigation_36" name="__tabbed_46" type="radio" /><input id="automation_26" name="__tabbed_46" type="radio" /><input id="window-buttons_15" name="__tabbed_46" type="radio" /><input id="modifiers_9" name="__tabbed_46" type="radio" /><div class="tabbed-labels"><label for="channel-strips_35">Channel Strips</label><label for="bank-mode_26">Bank Mode</label><label for="transport_37">Transport</label><label for="utility_36">Utility</label><label for="navigation_36">Navigation</label><label for="automation_26">Automation</label><label for="window-buttons_15">Window Buttons</label><label for="modifiers_9">Modifiers</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <table>
@@ -22343,7 +22860,7 @@
 <div class="tabbed-block">
 <h1 id="_46"></h1>
 <h3 id="003-ableton-live">003 - Ableton Live</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="47:9"><input checked="checked" id="channel-strips_37" name="__tabbed_47" type="radio" /><input id="bank-mode_28" name="__tabbed_47" type="radio" /><input id="transport_37" name="__tabbed_47" type="radio" /><input id="utility_37" name="__tabbed_47" type="radio" /><input id="group-buttons_9" name="__tabbed_47" type="radio" /><input id="navigation_37" name="__tabbed_47" type="radio" /><input id="window-buttons_16" name="__tabbed_47" type="radio" /><input id="edit_11" name="__tabbed_47" type="radio" /><input id="modifiers_10" name="__tabbed_47" type="radio" /><div class="tabbed-labels"><label for="channel-strips_37">Channel Strips</label><label for="bank-mode_28">Bank Mode</label><label for="transport_37">Transport</label><label for="utility_37">Utility</label><label for="group-buttons_9">Group Buttons</label><label for="navigation_37">Navigation</label><label for="window-buttons_16">Window Buttons</label><label for="edit_11">Edit</label><label for="modifiers_10">Modifiers</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="47:9"><input checked="checked" id="channel-strips_36" name="__tabbed_47" type="radio" /><input id="bank-mode_27" name="__tabbed_47" type="radio" /><input id="transport_38" name="__tabbed_47" type="radio" /><input id="utility_37" name="__tabbed_47" type="radio" /><input id="group-buttons_9" name="__tabbed_47" type="radio" /><input id="navigation_37" name="__tabbed_47" type="radio" /><input id="window-buttons_16" name="__tabbed_47" type="radio" /><input id="edit_11" name="__tabbed_47" type="radio" /><input id="modifiers_10" name="__tabbed_47" type="radio" /><div class="tabbed-labels"><label for="channel-strips_36">Channel Strips</label><label for="bank-mode_27">Bank Mode</label><label for="transport_38">Transport</label><label for="utility_37">Utility</label><label for="group-buttons_9">Group Buttons</label><label for="navigation_37">Navigation</label><label for="window-buttons_16">Window Buttons</label><label for="edit_11">Edit</label><label for="modifiers_10">Modifiers</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <table>
@@ -22751,7 +23268,7 @@
 <div class="tabbed-block">
 <h1 id="_47"></h1>
 <h3 id="003-studio-one-fender-studio">003 - Studio One / Fender Studio</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="48:7"><input checked="checked" id="channel-strips_38" name="__tabbed_48" type="radio" /><input id="bank-mode_29" name="__tabbed_48" type="radio" /><input id="automation_27" name="__tabbed_48" type="radio" /><input id="transport_38" name="__tabbed_48" type="radio" /><input id="navigation_38" name="__tabbed_48" type="radio" /><input id="utility_38" name="__tabbed_48" type="radio" /><input id="v-window-mode_32" name="__tabbed_48" type="radio" /><div class="tabbed-labels"><label for="channel-strips_38">Channel Strips</label><label for="bank-mode_29">Bank Mode</label><label for="automation_27">Automation</label><label for="transport_38">Transport</label><label for="navigation_38">Navigation</label><label for="utility_38">Utility</label><label for="v-window-mode_32">V-Window Mode</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="48:7"><input checked="checked" id="channel-strips_37" name="__tabbed_48" type="radio" /><input id="bank-mode_28" name="__tabbed_48" type="radio" /><input id="automation_27" name="__tabbed_48" type="radio" /><input id="transport_39" name="__tabbed_48" type="radio" /><input id="navigation_38" name="__tabbed_48" type="radio" /><input id="utility_38" name="__tabbed_48" type="radio" /><input id="v-window-mode_32" name="__tabbed_48" type="radio" /><div class="tabbed-labels"><label for="channel-strips_37">Channel Strips</label><label for="bank-mode_28">Bank Mode</label><label for="automation_27">Automation</label><label for="transport_39">Transport</label><label for="navigation_38">Navigation</label><label for="utility_38">Utility</label><label for="v-window-mode_32">V-Window Mode</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <table>
@@ -23079,7 +23596,7 @@
 <div class="tabbed-block">
 <h1 id="_48"></h1>
 <h3 id="003-cubasenuendo">003 - Cubase/Nuendo</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="49:7"><input checked="checked" id="channel-strips_39" name="__tabbed_49" type="radio" /><input id="bank-mode_30" name="__tabbed_49" type="radio" /><input id="automation_28" name="__tabbed_49" type="radio" /><input id="transport_39" name="__tabbed_49" type="radio" /><input id="utility_39" name="__tabbed_49" type="radio" /><input id="window-buttons_17" name="__tabbed_49" type="radio" /><input id="navigation_39" name="__tabbed_49" type="radio" /><div class="tabbed-labels"><label for="channel-strips_39">Channel Strips</label><label for="bank-mode_30">Bank Mode</label><label for="automation_28">Automation</label><label for="transport_39">Transport</label><label for="utility_39">Utility</label><label for="window-buttons_17">Window Buttons</label><label for="navigation_39">Navigation</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="49:7"><input checked="checked" id="channel-strips_38" name="__tabbed_49" type="radio" /><input id="bank-mode_29" name="__tabbed_49" type="radio" /><input id="automation_28" name="__tabbed_49" type="radio" /><input id="transport_40" name="__tabbed_49" type="radio" /><input id="utility_39" name="__tabbed_49" type="radio" /><input id="window-buttons_17" name="__tabbed_49" type="radio" /><input id="navigation_39" name="__tabbed_49" type="radio" /><div class="tabbed-labels"><label for="channel-strips_38">Channel Strips</label><label for="bank-mode_29">Bank Mode</label><label for="automation_28">Automation</label><label for="transport_40">Transport</label><label for="utility_39">Utility</label><label for="window-buttons_17">Window Buttons</label><label for="navigation_39">Navigation</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <table>
@@ -23395,7 +23912,7 @@
 <div class="tabbed-block">
 <h1 id="_49"></h1>
 <h3 id="003-luna">003 - LUNA</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="50:7"><input checked="checked" id="bank-mode_31" name="__tabbed_50" type="radio" /><input id="track-buttons" name="__tabbed_50" type="radio" /><input id="automation-buttons" name="__tabbed_50" type="radio" /><input id="transport_40" name="__tabbed_50" type="radio" /><input id="cursor-buttons" name="__tabbed_50" type="radio" /><input id="utility_40" name="__tabbed_50" type="radio" /><input id="v-window-mode_33" name="__tabbed_50" type="radio" /><div class="tabbed-labels"><label for="bank-mode_31">Bank Mode</label><label for="track-buttons">Track Buttons</label><label for="automation-buttons">Automation Buttons</label><label for="transport_40">Transport</label><label for="cursor-buttons">Cursor Buttons</label><label for="utility_40">Utility</label><label for="v-window-mode_33">V-Window Mode</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="50:7"><input checked="checked" id="bank-mode_30" name="__tabbed_50" type="radio" /><input id="track-buttons" name="__tabbed_50" type="radio" /><input id="automation-buttons" name="__tabbed_50" type="radio" /><input id="transport_41" name="__tabbed_50" type="radio" /><input id="cursor-buttons" name="__tabbed_50" type="radio" /><input id="utility_40" name="__tabbed_50" type="radio" /><input id="v-window-mode_33" name="__tabbed_50" type="radio" /><div class="tabbed-labels"><label for="bank-mode_30">Bank Mode</label><label for="track-buttons">Track Buttons</label><label for="automation-buttons">Automation Buttons</label><label for="transport_41">Transport</label><label for="cursor-buttons">Cursor Buttons</label><label for="utility_40">Utility</label><label for="v-window-mode_33">V-Window Mode</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <table>
