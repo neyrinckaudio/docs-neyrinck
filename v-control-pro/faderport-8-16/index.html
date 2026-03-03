@@ -1040,13 +1040,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#version-32-prerelease-for-faderport-816" class="md-nav__link">
+  <a href="#version-32-for-faderport-816" class="md-nav__link">
     <span class="md-ellipsis">
-      Version 3.2 Prerelease For FaderPort 8/16
+      Version 3.2 For FaderPort 8/16
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Version 3.2 Prerelease For FaderPort 8/16">
+    <nav class="md-nav" aria-label="Version 3.2 For FaderPort 8/16">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1086,9 +1086,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#setup_1" class="md-nav__link">
+  <a href="#hot-locations" class="md-nav__link">
     <span class="md-ellipsis">
-      Setup
+      Hot Locations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-native-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure Native Mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-a-single-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup A Single Device
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-multiple-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup Multiple Devices
     </span>
   </a>
   
@@ -1888,7 +1915,7 @@
 </div>
 <div class="admonition info">
 <p class="admonition-title">Control Features For Pro Tools 2022 And Earlier</p>
-<p>Please see the FaderPort 8/16 feature charts online at <a href="../feature-charts/#faderport-8--16">Feature Charts</a>.</p>
+<p>Please see the FaderPort 8/16 feature charts online at <a href="../feature-charts/#faderport-8-16">Feature Charts</a>.</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Control Features For Pro Tools 2023 And Later</p>
@@ -1926,18 +1953,8 @@
 </li>
 </ul>
 <p><a id="faderport-beta"></a></p>
-<h4 id="version-32-prerelease-for-faderport-816">Version 3.2 Prerelease For FaderPort 8/16</h4>
+<h4 id="version-32-for-faderport-816">Version 3.2 For FaderPort 8/16</h4>
 <p>Pro Tools removed the M-Audio Keyboard Protocol which was previously required for FaderPort 8/16 to be supercharged by V-Control Pro for Pro Tools 2022 and earlier. Version 3.2 features a new supercharged implementation for FaderPort 8/16 with Pro Tools 2023 and later.</p>
-<p>Version History</p>
-<ul>
-<li>Version 3.2.0.5<ul>
-<li>New feature - Bright Select button color the same as Pro Tools track colors. </li>
-<li>New Feature - Track browser.</li>
-</ul>
-</li>
-<li>Version 3.2.0.3 - New feature - Select button color the same as Pro Tools track colors. </li>
-<li>Version 3.2.0.1 - initial prelim version that does not yet provide sends and plugin control.</li>
-</ul>
 <h5 id="track-browser">Track Browser</h5>
 <p>The new Track Browser makes it fast and easy to bank to any track in your Pro Tools session. No more hunting and pecking. Patent pending.</p>
 <p>Tired of banking through dozens of channels to find that one vocal track? The Track Browser puts your entire Pro Tools session at your fingertips. Instead of endless button pressing to hunt down tracks, you get a smart overview that lets you jump directly to any track in seconds.</p>
@@ -1964,8 +1981,8 @@
 <li>Use the faders to edit the pan. Use the Pan button to toggle between pan left/right. Note that channels will display Pan L / Pan R if they are stereo, mono channels will display Pan only, and non-pannable channels will not display anything.</li>
 </ul>
 </li>
-<li>Sends Mode - Not yet implemented</li>
-<li>Edit Plugins Mode - Not yet implemented</li>
+<li>Sends Mode</li>
+<li>Edit Plugins Mode</li>
 </ul>
 <h5 id="memory-locations">Memory Locations</h5>
 <p>Now you can access all locations by name from a list displayed on FaderPort. I encourage you to create Show/Hide locations that let you quickly see groups of tracks.</p>
@@ -1974,8 +1991,18 @@
 <li>Use the right-side knob/encoder to scroll through the list.</li>
 <li>Press the right-side knob/encoder to select the location.</li>
 </ul>
-<h5 id="setup_1">Setup</h5>
+<h5 id="hot-locations">Hot Locations</h5>
+<p>The <code>Audio</code>, <code>VI</code>, <code>Bus</code>, <code>VCA</code>, <code>All</code>, and <code>Master</code> buttons are programmed to select certain memory locations. This lets you implement custom workflows. Pro Tools memory locations can be configured to change track visibility, for example, so you can instantly show and hide tracks.</p>
+<ul>
+<li>You will need to have at least one memory location that you want to be your <em>HOME</em> location to return to when exiting a hot location. Any location can be used as <em>HOME</em>.</li>
+<li>Create a memory location that is named to match the button, but all capitalized. <em>AUDIO</em>, for example, that shows just audio tracks.</li>
+<li>Press the <code>Markers</code> button to enter the Location Browser and select your <em>HOME</em> location.</li>
+<li>Now press any hot location button to activate it.</li>
+<li>Press the active hot location to return to the <em>HOME</em> location.</li>
+</ul>
+<h5 id="configure-native-mode">Configure Native Mode</h5>
 <p>The FaderPort 8/16 device must be configured for “native” mode. To set the mode, press and hold the Select buttons of channel 1 and 2, and then power on the device.</p>
+<h5 id="setup-a-single-device">Setup A Single Device</h5>
 <p>You must configure Pro Tools MIDI Peripherals for one (FaderPort 8) or two (FaderPort 16) HUI devices.</p>
 <ul>
 <li>
@@ -1992,6 +2019,54 @@
 <li>Type:HUI</li>
 <li>Receive From: V-Control XT2</li>
 <li>Send To: V-Control XT2</li>
+</ul>
+</li>
+</ul>
+<h5 id="setup-multiple-devices">Setup Multiple Devices</h5>
+<p>You can configure Pro Tools MIDI Peripherals for up to 32 channels (four HUI banks of 8).</p>
+<p>When setting up multiple FaderPorts, add up the number of banks: one per FaderPort 8 and two per FaderPort 16.</p>
+<p>Then configure MIDI Peripiherals:</p>
+<ul>
+<li>
+<p>Bank 1</p>
+<ul>
+<li>Type:HUI</li>
+<li>Receive From: V-Control</li>
+<li>Send To: V-Control</li>
+</ul>
+</li>
+<li>
+<p>Bank 2</p>
+<ul>
+<li>Type:HUI</li>
+<li>Receive From: V-Control XT2</li>
+<li>Send To: V-Control XT2</li>
+</ul>
+</li>
+<li>
+<p>Bank 3</p>
+<ul>
+<li>Type:HUI</li>
+<li>Receive From: V-Control XT2</li>
+<li>Send To: V-Control XT2</li>
+</ul>
+</li>
+<li>
+<p>Bank 4</p>
+<ul>
+<li>Type:HUI</li>
+<li>Receive From: V-Control XT3</li>
+<li>Send To: V-Control XT3</li>
+</ul>
+</li>
+</ul>
+<p>Then you must configure the layout in V-Control Pro Setups window.</p>
+<ul>
+<li>Configure V-Control Pro Setups<ul>
+<li>Open V-Control Pro Setups window</li>
+<li>Select each FaderPort surface that is set up with Pro Tools.</li>
+<li>Click the Bank dropdown menu.</li>
+<li>Select the bank layout for teh device.</li>
 </ul>
 </li>
 </ul>

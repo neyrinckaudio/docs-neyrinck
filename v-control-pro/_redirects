@@ -1,0 +1,6 @@
+# Redirect malformed/truncated URLs to correct pages
+/feature-charts/ /v-control-pro/feature-charts/ 301
+/feature-charts /v-control-pro/feature-charts/ 301
+/v-control-pro/feature- /v-control-pro/feature-charts/ 301
+/v-control- /v-control-pro/ 301
+/v-control-pro /v-control-pro/ 301
