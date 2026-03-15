@@ -1728,7 +1728,7 @@
 
 <h1 id="faderport-816-pro-tools-2023">Faderport 8/16 - Pro Tools 2023+</h1>
 <p>V-Control Pro supercharges the Faderport 8/16 for pro features unavailable with standard HUI mode.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:8"><input checked="checked" id="bank-modes" name="__tabbed_1" type="radio" /><input id="track-browser" name="__tabbed_1" type="radio" /><input id="locations" name="__tabbed_1" type="radio" /><input id="hot-locations" name="__tabbed_1" type="radio" /><input id="plugins" name="__tabbed_1" type="radio" /><input id="navigation" name="__tabbed_1" type="radio" /><input id="utilities" name="__tabbed_1" type="radio" /><input id="transport" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="bank-modes">Bank Modes</label><label for="track-browser">Track Browser</label><label for="locations">Locations</label><label for="hot-locations">Hot Locations</label><label for="plugins">Plugins</label><label for="navigation">Navigation</label><label for="utilities">Utilities</label><label for="transport">Transport</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:9"><input checked="checked" id="bank-modes" name="__tabbed_1" type="radio" /><input id="track-browser" name="__tabbed_1" type="radio" /><input id="locations" name="__tabbed_1" type="radio" /><input id="hot-locations" name="__tabbed_1" type="radio" /><input id="plugins" name="__tabbed_1" type="radio" /><input id="navigation" name="__tabbed_1" type="radio" /><input id="utilities" name="__tabbed_1" type="radio" /><input id="transport" name="__tabbed_1" type="radio" /><input id="automation" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="bank-modes">Bank Modes</label><label for="track-browser">Track Browser</label><label for="locations">Locations</label><label for="hot-locations">Hot Locations</label><label for="plugins">Plugins</label><label for="navigation">Navigation</label><label for="utilities">Utilities</label><label for="transport">Transport</label><label for="automation">Automation</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Select a bank mode to edit track volume, mute, solo, pan, send volume, send mute, send pre/post, send pan, and plugins.</p>
@@ -2667,6 +2667,36 @@
 <td><code>Track</code></td>
 <td><code>Shift</code>+</td>
 <td>Toggle time code display</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<p>In Pro Tools you can write current automation values from any insertion point forward (or backward) to the end (or beginning) of a selection or track, or to an entire selection or track during an automation pass. You can also write trim delta values in the same way.</p>
+<p>Automation can only be written while Pro Tools is in play or half-speed play or record. You can- not write automation while Pro Tools is stopped, fast forwarding or rewinding.</p>
+<table>
+<thead>
+<tr>
+<th>Automation Write To Start, End, All</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Touch</code></td>
+<td><code>Shift</code>+</td>
+<td>Write To Start</td>
+</tr>
+<tr>
+<td><code>Write</code></td>
+<td><code>Shift</code>+</td>
+<td>Write To All</td>
+</tr>
+<tr>
+<td><code>Read</code></td>
+<td><code>Shift</code>+</td>
+<td>Write To End</td>
 </tr>
 </tbody>
 </table>
