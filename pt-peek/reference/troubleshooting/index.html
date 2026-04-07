@@ -803,17 +803,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#debug-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Debug Commands
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -911,17 +900,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#debug-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Debug Commands
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -957,26 +935,25 @@
 <p><strong>Symptom:</strong> The app shows "License not found" even though you have a valid license.</p>
 <p><strong>Solutions:</strong></p>
 <ol>
-<li><strong>Check the helper</strong> — open Activity Monitor and search for "PT Peek Helper". It should be running. If not:<ul>
+<li>
+<p><strong>Check that iLok License Manager is installed</strong> — PT Peek requires iLok License Manager to verify your license. If it is not installed, download it from <a href="https://www.ilok.com">ilok.com</a> and install it.</p>
+</li>
+<li>
+<p><strong>Make sure iLok License Manager is running</strong> — open Activity Monitor and search for "iLok". The iLok License Manager service should be running. If not, launch iLok License Manager from your Applications folder.</p>
+</li>
+<li>
+<p><strong>Verify your license is activated</strong> — open iLok License Manager and confirm that your PT Peek license appears and is activated to your computer (not just deposited to your iLok account).</p>
+</li>
+<li>
+<p><strong>Check the PT Peek helper</strong> — open Activity Monitor and search for "PT Peek Helper". It should be running. If not:</p>
+<ul>
 <li>Go to <strong>System Settings → General → Login Items</strong></li>
 <li>Ensure PT Peek is enabled</li>
 <li>Quit and relaunch PT Peek</li>
 </ul>
 </li>
-<li><strong>Reset background task management</strong> — if the helper won't start:
-   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>sfltool<span class="w"> </span>resetbtm
-</code></pre></div>
-   Then quit and relaunch PT Peek.</li>
-<li><strong>Check Keychain</strong> — run from Terminal:
-   <div class="highlight"><pre><span></span><code><span class="s2">&quot;/Applications/PT Peek.app/Contents/MacOS/PT Peek&quot;</span><span class="w"> </span>--check-keychain
-</code></pre></div>
-   This shows whether the secret key and token are present.</li>
-<li><strong>Clear and restart</strong> — if all else fails:
-   <div class="highlight"><pre><span></span><code><span class="s2">&quot;/Applications/PT Peek.app/Contents/MacOS/PT Peek&quot;</span><span class="w"> </span>--clear-keychain
-<span class="s2">&quot;/Applications/PT Peek.app/Contents/MacOS/PT Peek&quot;</span><span class="w"> </span>--unregister-helper
-</code></pre></div>
-   Then relaunch PT Peek.</li>
 </ol>
+<p>If the issue persists, visit <a href="https://neyrinck.com/support">neyrinck.com/support</a> for further assistance.</p>
 <h2 id="import-to-pro-tools-fails">Import to Pro Tools Fails</h2>
 <p><strong>"Cannot connect to Pro Tools"</strong></p>
 <ul>
@@ -1014,24 +991,8 @@
 <ol>
 <li>Force quit: <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-option">Option</kbd><span>+</span><kbd class="key-escape">Esc</kbd></span> → select PT Peek → Force Quit</li>
 <li>Check Console.app for crash logs under PT Peek</li>
-<li>Report the issue with the crash log</li>
+<li>Report the issue with the crash log at <a href="https://neyrinck.com/support">neyrinck.com/support</a></li>
 </ol>
-<h2 id="debug-commands">Debug Commands</h2>
-<p>These can be run from Terminal for advanced troubleshooting:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">APP</span><span class="o">=</span><span class="s2">&quot;/Applications/PT Peek.app/Contents/MacOS/PT Peek&quot;</span>
-
-<span class="c1"># Check license token status</span>
-<span class="s2">&quot;</span><span class="nv">$APP</span><span class="s2">&quot;</span><span class="w"> </span>--check-keychain
-
-<span class="c1"># Delete token file (keeps secret key)</span>
-<span class="s2">&quot;</span><span class="nv">$APP</span><span class="s2">&quot;</span><span class="w"> </span>--delete-token
-
-<span class="c1"># Delete both secret key and token</span>
-<span class="s2">&quot;</span><span class="nv">$APP</span><span class="s2">&quot;</span><span class="w"> </span>--clear-keychain
-
-<span class="c1"># Unregister the background helper</span>
-<span class="s2">&quot;</span><span class="nv">$APP</span><span class="s2">&quot;</span><span class="w"> </span>--unregister-helper
-</code></pre></div>
 
 
 

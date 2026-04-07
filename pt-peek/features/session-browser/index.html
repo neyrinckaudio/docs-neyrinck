@@ -567,17 +567,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#plugins" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Plugins
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#audio-files" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -599,6 +588,28 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plugins
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory-locations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memory Locations
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -609,17 +620,6 @@
     <span class="md-ellipsis">
       
         Selection
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#audio-output-device" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Audio Output Device
       
     </span>
   </a>
@@ -943,17 +943,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#plugins" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Plugins
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#audio-files" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -975,6 +964,28 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plugins
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory-locations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memory Locations
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -985,17 +996,6 @@
     <span class="md-ellipsis">
       
         Selection
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#audio-output-device" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Audio Output Device
       
     </span>
   </a>
@@ -1020,30 +1020,35 @@
 
 
 <h1 id="session-browser">Session Browser</h1>
-<p>When you open a <code>.ptx</code> file with PT Peek (via Open With, double-click, or File → Open), you get the full session browser. This provides the same information as the Quick Look preview, plus interactive features.</p>
+<p>When you open one or more <code>.ptx</code> files in PT Peek windows (via Open With, double-click, File → Open, or drag to dock), you get the full session browser. This provides the same information as the Quick Look preview, plus interactive features for playing audio files and clips and importing to Pro Tools.</p>
 <h2 id="sections">Sections</h2>
 <h3 id="session-setup">Session Setup</h3>
 <p>A grid showing session parameters, similar to the Pro Tools Session Setup window:</p>
 <ul>
 <li>Sample Rate, Bit Depth, Audio Format</li>
 <li>Session Start, Length</li>
-<li>Tempo and Meter (including change indicators)</li>
 </ul>
 <h3 id="overview">Overview</h3>
-<p>A miniature timeline view showing all tracks and their clips. Each clip is drawn as a colored rectangle matching its Pro Tools color. Tracks are stacked vertically.</p>
+<p>This represents the top are of the timeline:</p>
+<ul>
+<li>
+<p>A miniature timeline view similar to the Pro Tools universe view. Each clip is drawn as a colored rectangle matching its Pro Tools color. Tracks are stacked vertically.</p>
+</li>
+<li>
+<p>Tempo and Meter (including change indicators)</p>
+</li>
+</ul>
 <h3 id="tracks">Tracks</h3>
 <p>A detailed list of every track in the session:</p>
 <ul>
 <li><strong>Color swatch</strong> — matches the Pro Tools track color</li>
 <li><strong>Name</strong> — track name</li>
 <li><strong>Type</strong> — Audio, Aux, Master Fader, VCA, MIDI, Instrument</li>
-<li><strong>Format</strong> — Mono, Stereo, LCR, Quad, 5.0, 5.1, 7.1, 7.1.2, 7.1.4, and more</li>
+<li><strong>Format</strong> — Mono, Stereo, LCR, Quad, 5.0, 5.1, 7.1, etc.</li>
 <li><strong>Inserts</strong> — plugin insert slots (A through J), hover for details</li>
 <li><strong>Comments</strong> — track comments</li>
 </ul>
 <p>Click a track to select it. Expand a track to see its clips.</p>
-<h3 id="plugins">Plugins</h3>
-<p>Lists all plugins used in the session, separated into Active and Inactive groups.</p>
 <h3 id="audio-files">Audio Files</h3>
 <p>All audio files referenced by the session:</p>
 <ul>
@@ -1054,6 +1059,10 @@
 </ul>
 <h3 id="clips">Clips</h3>
 <p>All clips in the session with their source audio files. Clips from multi-mono tracks are grouped together.</p>
+<h3 id="plugins">Plugins</h3>
+<p>Lists all plugins used in the session, separated into Active and Inactive groups.</p>
+<h3 id="memory-locations">Memory Locations</h3>
+<p>Lists all locations with name and color.</p>
 <h2 id="selection">Selection</h2>
 <p>PT Peek supports Finder-style multi-selection:</p>
 <ul>
@@ -1063,8 +1072,6 @@
 <li><strong>Arrow keys</strong> — navigate up/down within a section</li>
 </ul>
 <p>Selection is scoped to one section at a time. Clicking in a different section clears the previous selection.</p>
-<h2 id="audio-output-device">Audio Output Device</h2>
-<p>The session browser includes a device picker in the header bar. Select any audio output device on your system to route playback to it.</p>
 
 
 
