@@ -2,46 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://neyrinck.com/ptpeek/docs/</loc>
-         <lastmod>2026-04-26</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://neyrinck.com/ptpeek/docs/features/activation/</loc>
-         <lastmod>2026-04-26</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://neyrinck.com/ptpeek/docs/features/audio-playback/</loc>
-         <lastmod>2026-04-26</lastmod>
+         <lastmod>2026-04-28</lastmod>
+    </url>
+    <url>
+         <loc>https://neyrinck.com/ptpeek/docs/features/export-report/</loc>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://neyrinck.com/ptpeek/docs/features/import/</loc>
-         <lastmod>2026-04-26</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://neyrinck.com/ptpeek/docs/features/session-browser/</loc>
-         <lastmod>2026-04-26</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://neyrinck.com/ptpeek/docs/getting-started/first-launch/</loc>
-         <lastmod>2026-04-26</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://neyrinck.com/ptpeek/docs/getting-started/installation/</loc>
-         <lastmod>2026-04-26</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://neyrinck.com/ptpeek/docs/getting-started/quick-look/</loc>
-         <lastmod>2026-04-26</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://neyrinck.com/ptpeek/docs/reference/formats/</loc>
-         <lastmod>2026-04-26</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://neyrinck.com/ptpeek/docs/reference/shortcuts/</loc>
-         <lastmod>2026-04-26</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://neyrinck.com/ptpeek/docs/reference/troubleshooting/</loc>
-         <lastmod>2026-04-26</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
 </urlset>
