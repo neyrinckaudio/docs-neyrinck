@@ -578,6 +578,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#using-pt-peek-with-pro-tools-import" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using PT Peek with Pro Tools Import
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#requirements" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -965,6 +976,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#using-pt-peek-with-pro-tools-import" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using PT Peek with Pro Tools Import
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#requirements" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1132,6 +1154,32 @@
 <li><strong>Audio Files</strong> - Optionally copied. Optionally sample rate converted.</li>
 <li><strong>Clips</strong> - Individual clips, not organized as region groups.</li>
 </ol>
+<div class="admonition warning">
+<p class="admonition-title">Import is intentionally limited</p>
+<p>PT Peek's Import to Pro Tools is <strong>basic by design</strong> — it is constrained by what the Pro Tools scripting API exposes. Many things that Pro Tools' own <strong>File → Import Session Data…</strong> can do are simply not available to third-party tools. In particular, PT Peek import does <strong>not</strong> transfer:</p>
+<ul>
+<li>Plugins, plugin settings, or insert order</li>
+<li>Sends, busing, I/O assignments, or routing folder relationships</li>
+<li>Automation (volume, pan, plugin parameters, mute)</li>
+<li>Track groups, VCA assignments, or hidden/inactive states</li>
+<li>Region groups, clip gain, fades, or crossfades</li>
+<li>Memory locations, markers, tempo/meter maps</li>
+<li>MIDI data and Instrument track parameters</li>
+<li>Mix window state, comments, or color groupings beyond track color</li>
+</ul>
+<p>If you need any of the above, see <a href="#using-pt-peek-with-pro-tools-import">Using PT Peek with Pro Tools Import</a> below.</p>
+</div>
+<h2 id="using-pt-peek-with-pro-tools-import">Using PT Peek with Pro Tools Import</h2>
+<p>PT Peek is most powerful when you use it as a <strong>session browser</strong> to find what you want before doing a full-featured import inside Pro Tools itself. A typical workflow:</p>
+<ol>
+<li><strong>Browse with PT Peek</strong> — open the source <code>.ptx</code> in PT Peek to see all of its tracks, clips, plugins, and audio files at a glance, without launching Pro Tools.</li>
+<li><strong>Audition</strong> — play back audio files and clips inline to confirm you've found the right material.</li>
+<li><strong>Locate files</strong> — right-click any audio file or clip and choose <strong>Reveal in Finder</strong> to see exactly where it lives on disk.</li>
+<li><strong>Note the tracks you want</strong> — write down (or remember) the track names you need to bring across.</li>
+<li><strong>Switch to Pro Tools</strong> — in your destination session, choose <strong>File → Import → Session Data…</strong> and point it at the same source <code>.ptx</code>.</li>
+<li><strong>Cherry-pick in Pro Tools' import dialog</strong> — check only the tracks you identified in PT Peek, and choose exactly which elements to import (plugins, sends, automation, groups, markers, tempo map, and so on).</li>
+</ol>
+<p>This combination gives you PT Peek's fast browsing and listening with Pro Tools' full-featured import.</p>
 <h2 id="requirements">Requirements</h2>
 <ul>
 <li><strong>Pro Tools 2025.6 or later</strong> must be running</li>
