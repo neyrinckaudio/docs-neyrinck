@@ -9,6 +9,12 @@ echo "Injecting product manuals..."
 if [ -d "v-control-pro" ]; then
     cp -r v-control-pro site/
 fi
+if [ -d "pt-peek" ]; then
+    cp -r pt-peek site/
+fi
+if [ -d "soundcode-dolby-e" ]; then
+    cp -r soundcode-dolby-e site/
+fi
 
 echo "Serving at http://localhost:8001"
 echo "Note that hot builds will not happen. Use mkdocs serve without sub projects for that."

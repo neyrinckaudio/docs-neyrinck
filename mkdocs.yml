@@ -9,6 +9,8 @@ exclude_docs: |
   v-control-pro/
   v-console/
   spill/
+  pt-peek/
+  soundcode-dolby-e/
 
 theme:
   name: material
@@ -23,6 +25,8 @@ nav:
   - V-Control Pro: 'https://docs.neyrinck.com/v-control-pro/'
   - V-Console: 'https://docs.neyrinck.com/v-console/'
   - Spill: 'https://docs.neyrinck.com/spill/'
+  - PT Peek: 'https://docs.neyrinck.com/pt-peek/'
+  - SoundCode For Dolby E: 'https://docs.neyrinck.com/soundcode-dolby-e/'
 
 markdown_extensions:
   - attr_list

@@ -12,6 +12,8 @@ This repository contains:
   - `v-control-pro/` - V-Control Pro documentation
   - `v-console/` - V-Console documentation
   - `spill/` - Spill documentation
+  - `pt-peek/` - PT Peek documentation
+  - `soundcode-dolby-e/` - SoundCode For Dolby E documentation
 
 ## Building and Deploying
 
