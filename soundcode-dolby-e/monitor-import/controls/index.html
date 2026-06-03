@@ -728,9 +728,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sync-to-rtas" class="md-nav__link">
+  <a href="#sync-to-aax-native" class="md-nav__link">
     <span class="md-ellipsis">
-      Sync To (RTAS)
+      Sync To (AAX Native)
     </span>
   </a>
   
@@ -746,9 +746,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#counter-rtas" class="md-nav__link">
+  <a href="#counter-aax-native" class="md-nav__link">
     <span class="md-ellipsis">
-      Counter (RTAS)
+      Counter (AAX Native)
     </span>
   </a>
   
@@ -880,9 +880,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dolby-e-hardware-mode-rtas-only" class="md-nav__link">
+  <a href="#dolby-e-hardware-mode-aax-native-only" class="md-nav__link">
     <span class="md-ellipsis">
-      Dolby E Hardware Mode (RTAS only)
+      Dolby E Hardware Mode (AAX Native only)
     </span>
   </a>
   
@@ -1135,9 +1135,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sync-to-rtas" class="md-nav__link">
+  <a href="#sync-to-aax-native" class="md-nav__link">
     <span class="md-ellipsis">
-      Sync To (RTAS)
+      Sync To (AAX Native)
     </span>
   </a>
   
@@ -1153,9 +1153,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#counter-rtas" class="md-nav__link">
+  <a href="#counter-aax-native" class="md-nav__link">
     <span class="md-ellipsis">
-      Counter (RTAS)
+      Counter (AAX Native)
     </span>
   </a>
   
@@ -1287,9 +1287,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dolby-e-hardware-mode-rtas-only" class="md-nav__link">
+  <a href="#dolby-e-hardware-mode-aax-native-only" class="md-nav__link">
     <span class="md-ellipsis">
-      Dolby E Hardware Mode (RTAS only)
+      Dolby E Hardware Mode (AAX Native only)
     </span>
   </a>
   
@@ -1313,15 +1313,15 @@
 
 <h1 id="monitor-import-controls-reference">Monitor / Import Controls Reference</h1>
 <h2 id="input-controls">INPUT Controls</h2>
-<p>The INPUT section controls the source BWF file to be imported (AudioSuite / Standalone) or played (RTAS). These settings cannot be saved as Pro Tools presets — they are persistent and saved in a preferences file that is read when the plug-in window opens.</p>
+<p>The INPUT section controls the source BWF file to be imported (AudioSuite / Standalone) or played (AAX Native). These settings cannot be saved as Pro Tools presets — they are persistent and saved in a preferences file that is read when the plug-in window opens.</p>
 <h3 id="source">Source</h3>
 <p>Selects whether a WAV file is the source audio, a live audio stream is the source audio, or <strong>off</strong> to output only zeros.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Bypassing the plug-in via the Pro Tools bypass control allows the track audio to pass through in the RTAS version.</p>
+<p>Bypassing the plug-in via the Pro Tools bypass control allows the track audio to pass through in the AAX Native version.</p>
 </div>
 <h3 id="browse">Browse</h3>
-<p>Launches a dialog to browse the file system and choose a WAV file for subsequent importing (AudioSuite) or playback (RTAS).</p>
+<p>Launches a dialog to browse the file system and choose a WAV file for subsequent importing (AudioSuite) or playback (AAX Native).</p>
 <h3 id="spot-to-audiosuite">Spot To (AudioSuite)</h3>
 <p>Controls how the audio from the WAV file is located when imported into the Pro Tools timeline:</p>
 <ul>
@@ -1329,7 +1329,7 @@
 <li><strong>Timecode</strong> — located at the time code start of the WAV file (available if the file has embedded time code).</li>
 <li><strong>Session Start</strong> — located to the start of the Pro Tools timeline (available if the file has no embedded time code).</li>
 </ul>
-<h3 id="sync-to-rtas">Sync To (RTAS)</h3>
+<h3 id="sync-to-aax-native">Sync To (AAX Native)</h3>
 <p>Controls the timing for playing back the WAV file audio:</p>
 <ul>
 <li><strong>Session Start</strong> — the start of the file is aligned with the start of the timeline.</li>
@@ -1341,7 +1341,7 @@
 <li><strong>Entire</strong> — the entire WAV file plays no matter what length is selected in the timeline.</li>
 <li><strong>Partial</strong> — the length of the timeline selection determines how much of the file plays.</li>
 </ul>
-<h3 id="counter-rtas">Counter (RTAS)</h3>
+<h3 id="counter-aax-native">Counter (AAX Native)</h3>
 <p>Shows the running timecode counter when playback is engaged. Shows <strong>waiting</strong> when the timecode has not yet reached the start of the file (if the file did not start at the beginning of the timeline), and <strong>finished</strong> if the running timecode has gone beyond the end time of the file.</p>
 <h3 id="play-standalone">Play (Standalone)</h3>
 <p>Plays back the selected WAV file. Adjust the slider position to change the playback location.</p>
@@ -1349,7 +1349,7 @@
 <h3 id="configuration">Configuration</h3>
 <p>Selects the audio channel layout of the BWF file. If the file already contains layout information, this is set automatically. For files that do not specify a channel layout, this control lets you set it (as <strong>5.1 + Stereo</strong>, for example).</p>
 <h3 id="program">Program</h3>
-<p>Selects the audio program to be imported (AudioSuite) or played (RTAS). If the file contains more than one audio program, each program is shown as a choice here, including <strong>all programs</strong> at the end of the list.</p>
+<p>Selects the audio program to be imported (AudioSuite) or played (AAX Native). If the file contains more than one audio program, each program is shown as a choice here, including <strong>all programs</strong> at the end of the list.</p>
 <h3 id="dolby-e-decode-enable">Dolby E Decode Enable</h3>
 <p>Enables the Dolby E decoder.</p>
 <h3 id="dolby-e-decode-pcm-pass-thru">Dolby E Decode PCM Pass Thru</h3>
@@ -1373,9 +1373,9 @@
 <p>Displays the Dolby E metadata associated with the audio being monitored.</p>
 <h3 id="prog1prog8-status-items">Prog1…Prog8 STATUS items</h3>
 <p>Each page displays detailed metadata information for each audio program being monitored. Refer to <strong>Dolby Encoding Guidelines.pdf</strong> for more information about these values.</p>
-<h2 id="dolby-e-hardware-mode-rtas-only">Dolby E Hardware Mode (RTAS only)</h2>
-<p>The RTAS Dolby E Monitor features an additional control called <strong>hw mode</strong>. It is enabled when the Pro Tools system is used as a standalone Dolby E decoder decoding a live Dolby E stream being monitored. It is only available when the <strong>Input Source</strong> is set to <strong>Track Stream</strong>.</p>
-<p>When enabled, the Dolby E decode latency is one video frame. To operate correctly, the <strong>RTAS buffer size must be set to 256</strong> in the Playback Engine dialog.</p>
+<h2 id="dolby-e-hardware-mode-aax-native-only">Dolby E Hardware Mode (AAX Native only)</h2>
+<p>The AAX Native Dolby E Monitor features an additional control called <strong>hw mode</strong>. It is enabled when the Pro Tools system is used as a standalone Dolby E decoder decoding a live Dolby E stream being monitored. It is only available when the <strong>Input Source</strong> is set to <strong>Track Stream</strong>.</p>
+<p>When enabled, the Dolby E decode latency is one video frame. To operate correctly, the <strong>AAX Native buffer size must be set to 256</strong> in the Playback Engine dialog.</p>
 
 
 

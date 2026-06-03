@@ -678,9 +678,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#rtas-window" class="md-nav__link">
+  <a href="#aax-native-window" class="md-nav__link">
     <span class="md-ellipsis">
-      RTAS Window
+      AAX Native Window
     </span>
   </a>
   
@@ -961,9 +961,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#rtas-window" class="md-nav__link">
+  <a href="#aax-native-window" class="md-nav__link">
     <span class="md-ellipsis">
-      RTAS Window
+      AAX Native Window
     </span>
   </a>
   
@@ -1018,22 +1018,22 @@
 
 
 <h1 id="monitor-import-overview">Monitor / Import Overview</h1>
-<p>The <strong>SoundCode Dolby E Monitor / Import</strong> tool operates as a standalone application, a realtime RTAS plug-in, or a non-realtime AudioSuite plug-in. It implements Dolby E decoding and multi-channel, multi-program audio playback and import.</p>
+<p>The <strong>SoundCode Dolby E Monitor / Import</strong> tool operates as a standalone application, a realtime AAX Native plug-in, or a non-realtime AudioSuite plug-in. It implements Dolby E decoding and multi-channel, multi-program audio playback and import.</p>
 <p>The standalone application can decode and import faster-than-realtime, or decode-and-monitor in realtime, and features hot folder decode-and-import processing. In Pro Tools, the plug-in types are located in the <strong>Sound Field</strong> category.</p>
 <p>The <strong>AUDIO PLAYBACK</strong> section can monitor/import polyphonic / multi-program WAV files. Polyphonic or multi-program means the file contains multiple mixes, similar to a professional video tape — SoundCode can choose which program to monitor. For example, you can monitor a WAV file that has a 5.1 PCM mix and a stereo Dolby E pair.</p>
 <h2 id="plug-in-and-application-windows">Plug-in and application windows</h2>
-<h3 id="rtas-window">RTAS Window</h3>
-<p>The Dolby E Monitor operates as these realtime types: <strong>stereo-to-stereo</strong>, <strong>stereo-to-5.1</strong>, and <strong>stereo to 8-outputs</strong> (auxiliary output stems in Pro Tools). In Pro Tools, open them by clicking a channel insert on a stereo track and navigating the RTAS multichannel popup menu.</p>
+<h3 id="aax-native-window">AAX Native Window</h3>
+<p>The Dolby E Monitor operates as these realtime types: <strong>stereo-to-stereo</strong>, <strong>stereo-to-5.1</strong>, and <strong>stereo to 8-outputs</strong> (auxiliary output stems in Pro Tools). In Pro Tools, open them by clicking a channel insert on a stereo track and navigating the AAX Native multichannel popup menu.</p>
 <p>The user interface is divided into three sections:</p>
 <ul>
-<li><strong>INPUT</strong> — selects the input to be decoded and monitored. The RTAS plug-in can decode-and-monitor a file using Direct File Monitor technology, controlling which file is played and what time code it synchronizes to.</li>
+<li><strong>INPUT</strong> — selects the input to be decoded and monitored. The AAX Native plug-in can decode-and-monitor a file using Direct File Monitor technology, controlling which file is played and what time code it synchronizes to.</li>
 <li><strong>AUDIO PLAYBACK</strong> — controls which program(s) should play.</li>
 <li><strong>STATUS</strong> — displays information about the file and metadata, plus output meters.</li>
 </ul>
 <h3 id="audiosuite-window">AudioSuite Window</h3>
-<p>Open the AudioSuite plug-in window from the AudioSuite menu in Pro Tools. It has the same <strong>INPUT</strong>, <strong>AUDIO PLAYBACK</strong>, and <strong>STATUS</strong> sections as the RTAS interface, plus an additional popup at the top for choosing the output order (<strong>Film</strong> or <strong>SMPTE</strong>) used when importing files into the session.</p>
+<p>Open the AudioSuite plug-in window from the AudioSuite menu in Pro Tools. It has the same <strong>INPUT</strong>, <strong>AUDIO PLAYBACK</strong>, and <strong>STATUS</strong> sections as the AAX Native interface, plus an additional popup at the top for choosing the output order (<strong>Film</strong> or <strong>SMPTE</strong>) used when importing files into the session.</p>
 <h3 id="standalone-app-window">Standalone App Window</h3>
-<p>The standalone application has the same <strong>INPUT</strong>, <strong>AUDIO PLAYBACK</strong>, and <strong>STATUS</strong> sections as the RTAS interface. It also has an <strong>IMPORT</strong> section that lets you perform a faster-than-realtime operation and set up hot folder processing.</p>
+<p>The standalone application has the same <strong>INPUT</strong>, <strong>AUDIO PLAYBACK</strong>, and <strong>STATUS</strong> sections as the AAX Native interface. It also has an <strong>IMPORT</strong> section that lets you perform a faster-than-realtime operation and set up hot folder processing.</p>
 <h2 id="hot-folder-processing">Hot Folder Processing</h2>
 <p>The standalone application features hot folder importing. Drop Dolby E stream files (for example) into a folder, and SoundCode automatically detects and decodes them to a consistent location.</p>
 <p>SoundCode looks for a special file named <code>SoundCodeProcessTemplate.xml</code> in the hot folder to tell it how to perform the import process. The easiest way to create one:</p>
