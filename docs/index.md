@@ -8,6 +8,12 @@
 ## Spill
 [User Guide](https://docs.neyrinck.com/spill/)
 
+## PT Peek
+[User Guide](https://docs.neyrinck.com/pt-peek/)
+
+## SoundCode For Dolby E
+[User Guide](https://docs.neyrinck.com/soundcode-dolby-e/)
+
 ## Neyrinck Store
 [Neyrinck Store](https://neyrinck.com/store/)
 
