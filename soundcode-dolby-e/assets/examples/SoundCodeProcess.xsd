@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  SoundCodeProcess.xsd
+
+  XML Schema for SoundCode Dolby E "Run XML Process" files (encoder Export and
+  decoder Import sessions). See README.md for prose documentation and examples.
+
+  NOTE: This schema is for authoring/editing tools only. The application's own
+  parser (xmlParser) does NOT validate against this XSD, and it matches element
+  and attribute names case-INSENSITIVELY. This schema documents the canonical
+  (as-saved) casing. Most elements are optional: omitting one leaves that setting
+  unchanged. Enumerations marked "open" below are modeled as xs:string so that
+  build-specific extra options do not fail validation; refer to README §5 for the
+  authoritative value lists.
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="unqualified"
+           attributeFormDefault="unqualified">
+
+  <!-- ============================================================= -->
+  <!-- Root: one of Process, Process_Set, or ProcessList             -->
+  <!-- ============================================================= -->
+
+  <xs:element name="Neyrinck_SoundCode_Process"      type="ProcessType"/>
+  <xs:element name="Neyrinck_SoundCode_Process_Set"  type="ProcessSetType"/>
+  <xs:element name="Neyrinck_SoundCode_ProcessList"  type="ProcessListType"/>
+
+  <!-- ============================================================= -->
+  <!-- Batch set                                                     -->
+  <!-- ============================================================= -->
+
+  <xs:complexType name="ProcessSetType">
+    <xs:sequence>
+      <xs:element name="Neyrinck_SoundCode_Process" type="ProcessType"
+                  minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="version" type="xs:string" use="optional"/>
+  </xs:complexType>
+
+  <!-- ============================================================= -->
+  <!-- Hot-folder template list                                      -->
+  <!-- ============================================================= -->
+
+  <xs:complexType name="ProcessListType">
+    <xs:sequence>
+      <xs:element name="Template" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="File" type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- ============================================================= -->
+  <!-- Process: superset of Export and Import children.              -->
+  <!-- Routing is by @type: Export -> encoder, Import -> decoder,    -->
+  <!-- absent -> encoder (legacy). Export uses version="1.0",        -->
+  <!-- Import uses version="2.0".                                    -->
+  <!-- ============================================================= -->
+
+  <xs:complexType name="ProcessType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <!-- Export (encoder) children -->
+      <xs:element name="Neyrinck_SoundCode_Settings" type="SettingsType"/>
+      <xs:element name="Input"                        type="InputType"/>
+      <xs:element name="OutputName"                   type="ValueAttrType"/>
+      <xs:element name="OutputPath"                   type="ValueAttrType"/>
+      <xs:element name="OutputFileType"               type="ValueAttrType"/>
+      <xs:element name="AutoRateAndTimeCode"          type="ValueAttrType"/>
+      <xs:element name="FrameRate"                    type="ValueAttrType"/>
+      <xs:element name="Hours"                        type="ValueAttrType"/>
+      <xs:element name="Minutes"                      type="ValueAttrType"/>
+      <xs:element name="Seconds"                      type="ValueAttrType"/>
+      <xs:element name="Frames"                       type="ValueAttrType"/>
+      <xs:element name="ForceDateTime"                type="ValueAttrType"/>
+      <!-- Import (decoder) children -->
+      <xs:element name="Playback"                     type="PlaybackType"/>
+      <xs:element name="Import"                        type="ImportType"/>
+    </xs:choice>
+    <xs:attribute name="type"     type="ProcessKind" use="optional"/>
+    <xs:attribute name="version"  type="xs:string"   use="optional"/>
+    <!-- Optional delegation to an external process file -->
+    <xs:attribute name="filepath" type="xs:string"   use="optional"/>
+  </xs:complexType>
+
+  <xs:simpleType name="ProcessKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Export"/>
+      <xs:enumeration value="Import"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- ============================================================= -->
+  <!-- Shared helper types                                           -->
+  <!-- ============================================================= -->
+
+  <!-- An element carrying its value in a "value" attribute (legacy v1.0
+       controls and the process-level fields all use this form). -->
+  <xs:complexType name="ValueAttrType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="value" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <!-- On/Off valued text element -->
+  <xs:simpleType name="OnOff">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="On"/>
+      <xs:enumeration value="Off"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- ============================================================= -->
+  <!-- Export: Input                                                 -->
+  <!-- ============================================================= -->
+
+  <!-- "Input" is used by BOTH encoder and decoder processes:
+        - Export: one or more <InputFile path="" channel=""/> (and FinalCutInput)
+        - Import: text-valued <Source> and <File>
+       Both are permitted here so either process kind validates. -->
+  <xs:complexType name="InputType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="InputFile"     type="InputFileType"/>
+      <xs:element name="FinalCutInput" type="FinalCutInputType"/>
+      <xs:element name="Source"        type="xs:string"/>
+      <xs:element name="File"          type="xs:string"/>
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="InputFileType">
+    <xs:attribute name="path"    type="xs:string" use="required"/>
+    <!-- 1-based channel number, or "v1" to denote an MXF video reference -->
+    <xs:attribute name="channel" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="FinalCutInputType">
+    <xs:attribute name="output"  type="xs:string" use="optional"/>
+    <xs:attribute name="channel" type="xs:string" use="optional"/>
+  </xs:complexType>
+
+  <!-- ============================================================= -->
+  <!-- Export: Settings                                              -->
+  <!-- ============================================================= -->
+
+  <xs:complexType name="SettingsType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="Type"                  type="xs:string"/>
+      <xs:element name="Dolby_E_Configuration" type="xs:string"/>
+      <xs:element name="AudioOffset"           type="xs:string"/>
+      <xs:element name="TimecodeEnable"        type="xs:string"/>
+      <xs:element name="Program"               type="ProgramType"/>
+      <xs:element name="Neyrinck_BEXT_Metadata" type="BextMetadataType"/>
+    </xs:choice>
+    <xs:attribute name="version"  type="xs:string" use="optional"/>
+    <!-- Optional delegation to an external .xml settings file or .tfx preset -->
+    <xs:attribute name="filepath" type="xs:string" use="optional"/>
+  </xs:complexType>
+
+  <xs:complexType name="ProgramType">
+    <xs:sequence>
+      <xs:element name="Neyrinck_DolbyDigital_Metadata" type="DolbyDigitalMetadataType"
+                  minOccurs="0"/>
+    </xs:sequence>
+    <!-- 1-based program number "1".."8" -->
+    <xs:attribute name="value" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <!-- Per-program Dolby Digital metadata. All children optional; each carries
+       its value as element text in version 2.0 (or @value in legacy 1.0).
+       See README §5 for value lists. -->
+  <xs:complexType name="DolbyDigitalMetadataType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="bitrate"                type="xs:string"/>
+      <xs:element name="mode"                   type="xs:string"/>
+      <xs:element name="lfe"                    type="xs:string"/>
+      <xs:element name="bsmode"                 type="xs:string"/>
+      <xs:element name="dialnorm"               type="xs:string"/>
+      <xs:element name="surround_mode"          type="xs:string"/>
+      <xs:element name="center_downmix"         type="xs:string"/>
+      <xs:element name="surround_downmix"       type="xs:string"/>
+      <xs:element name="production_info_exists" type="xs:string"/>
+      <xs:element name="mix_room_level"         type="xs:string"/>
+      <xs:element name="mix_room_type"          type="xs:string"/>
+      <xs:element name="copyright"              type="xs:string"/>
+      <xs:element name="original_bitstream"     type="xs:string"/>
+      <xs:element name="dc_highpass"            type="xs:string"/>
+      <xs:element name="lowpass"                type="xs:string"/>
+      <xs:element name="lfe_lowpass"            type="xs:string"/>
+      <xs:element name="phase_shift"            type="xs:string"/>
+      <xs:element name="attenuate_rear"         type="xs:string"/>
+      <xs:element name="line_drc_profile"       type="xs:string"/>
+      <xs:element name="rf_drc_profile"         type="xs:string"/>
+      <xs:element name="ltrt_center_downmix"    type="xs:string"/>
+      <xs:element name="ltrt_surround_downmix"  type="xs:string"/>
+      <xs:element name="loro_center_downmix"    type="xs:string"/>
+      <xs:element name="loro_surround_downmix"  type="xs:string"/>
+      <xs:element name="surround_ex"            type="xs:string"/>
+      <xs:element name="recommended_downmix"    type="xs:string"/>
+      <xs:element name="enable_bsi_extension"   type="xs:string"/>
+      <xs:element name="description"            type="xs:string"/>
+    </xs:choice>
+    <xs:attribute name="version" type="xs:string" use="optional"/>
+  </xs:complexType>
+
+  <xs:complexType name="BextMetadataType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="DescriptionEnable"   type="xs:string"/>
+      <xs:element name="ProjectTitle"        type="xs:string"/>
+      <xs:element name="EpisodeTitle"        type="xs:string"/>
+      <xs:element name="ProductID"           type="xs:string"/>
+      <xs:element name="ProgramDescription1" type="xs:string"/>
+      <xs:element name="ProgramDescription2" type="xs:string"/>
+      <xs:element name="ProgramDescription3" type="xs:string"/>
+      <xs:element name="ProgramDescription4" type="xs:string"/>
+      <xs:element name="ProgramDescription5" type="xs:string"/>
+      <xs:element name="ProgramDescription6" type="xs:string"/>
+      <xs:element name="ProgramDescription7" type="xs:string"/>
+      <xs:element name="ProgramDescription8" type="xs:string"/>
+      <xs:element name="DurationHours"       type="xs:string"/>
+      <xs:element name="DurationMinutes"     type="xs:string"/>
+      <xs:element name="DurationSeconds"     type="xs:string"/>
+      <xs:element name="DurationFrames"      type="xs:string"/>
+      <xs:element name="Originator"          type="xs:string"/>
+      <xs:element name="Organization"        type="xs:string"/>
+    </xs:choice>
+    <xs:attribute name="version" type="xs:string" use="optional"/>
+  </xs:complexType>
+
+  <!-- ============================================================= -->
+  <!-- Import (decoder)                                              -->
+  <!-- ============================================================= -->
+
+  <xs:complexType name="PlaybackType">
+    <xs:all>
+      <xs:element name="Audio"     type="PlaybackAudioType" minOccurs="0"/>
+      <xs:element name="Listening" type="ListeningType"     minOccurs="0"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="PlaybackAudioType">
+    <xs:all>
+      <xs:element name="Configuration" type="xs:string"   minOccurs="0"/>
+      <xs:element name="Program"       type="xs:string"   minOccurs="0"/>
+      <xs:element name="DolbyE"        type="DolbyEType"  minOccurs="0"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="DolbyEType">
+    <xs:all>
+      <xs:element name="DefaultConfig" type="xs:string" minOccurs="0"/>
+      <xs:element name="Enable"        type="xs:string" minOccurs="0"/>
+      <xs:element name="EnablePCM"     type="xs:string" minOccurs="0"/>
+      <xs:element name="Program"       type="xs:string" minOccurs="0"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="ListeningType">
+    <xs:all>
+      <xs:element name="Downmix" type="xs:string" minOccurs="0"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="ImportType">
+    <xs:all>
+      <xs:element name="Audio" type="ImportAudioType" minOccurs="0"/>
+      <xs:element name="Video" type="ImportVideoType" minOccurs="0"/>
+      <xs:element name="Type"  type="xs:string"       minOccurs="0"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="ImportAudioType">
+    <xs:all>
+      <xs:element name="AutoName" type="xs:string" minOccurs="0"/>
+      <xs:element name="Name"     type="xs:string" minOccurs="0"/>
+      <xs:element name="Type"     type="xs:string" minOccurs="0"/>
+      <xs:element name="Path"     type="xs:string" minOccurs="0"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="ImportVideoType">
+    <xs:all>
+      <xs:element name="AutoName" type="xs:string" minOccurs="0"/>
+      <xs:element name="Name"     type="xs:string" minOccurs="0"/>
+      <xs:element name="Path"     type="xs:string" minOccurs="0"/>
+    </xs:all>
+  </xs:complexType>
+
+</xs:schema>

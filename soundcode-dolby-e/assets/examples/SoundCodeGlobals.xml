@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Example: SoundCodeGlobals.xml
+
+  Place this file in the SAME DIRECTORY as the process (.xml) file. The application
+  automatically loads it and substitutes each $(NAME) token found in a process
+  file's path attributes/values with the matching variable's "value".
+
+  Variable names are arbitrary; these are the ones the encoder/decoder recognize.
+  Any $(NAME) with no matching variable here is left unchanged.
+-->
+<Neyrinck_SoundCode_Globals>
+    <!-- Encoder (Export) -->
+    <INPUTROOT       value="/Volumes/Media/incoming"/>
+    <OUTPUTROOT      value="/Volumes/Media/encoded"/>
+    <SETTINGSROOT    value="/Volumes/Media/presets"/>
+    <PROCESSROOT     value="/Volumes/Media/jobs"/>
+
+    <!-- Decoder (Import) -->
+    <IMPORTFILEROOT  value="/Volumes/Media/decode/in"/>
+    <IMPORTAUDIOROOT value="/Volumes/Media/decode/out"/>
+</Neyrinck_SoundCode_Globals>

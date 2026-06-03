@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Example: single Dolby E ENCODE (Export) process.
+
+  Encodes six mono input files into a 20-bit Dolby E "5.1 + Stereo" stream,
+  written as an interleaved WAV. Demonstrates inline settings, two programs of
+  Dolby Digital metadata, BEXT metadata, and $(...) path variables resolved from
+  a SoundCodeGlobals.xml placed alongside this file.
+
+  Run non-interactively:
+    "SoundCode Dolby E Encoder.app/Contents/MacOS/SoundCode Dolby E Encoder" \
+        "encoder-process.xml" -q
+-->
+<Neyrinck_SoundCode_Process type="Export" version="1.0">
+
+    <Neyrinck_SoundCode_Settings version="2.0">
+        <Type>Dolby E 20 bit</Type>
+        <Dolby_E_Configuration>5.1 + Stereo</Dolby_E_Configuration>
+        <AudioOffset>0</AudioOffset>
+        <TimecodeEnable>On</TimecodeEnable>
+
+        <!-- Program 1: the 5.1 program -->
+        <Program value="1">
+            <Neyrinck_DolbyDigital_Metadata version="2.0">
+                <bitrate>448 kbps</bitrate>
+                <mode>3/2 LCRLsRs</mode>
+                <lfe>On</lfe>
+                <bsmode>Complete Main</bsmode>
+                <dialnorm>-27 dB</dialnorm>
+                <surround_mode>Not Indicated</surround_mode>
+                <center_downmix>-3.0 dB</center_downmix>
+                <surround_downmix>-3.0 dB</surround_downmix>
+                <production_info_exists>On</production_info_exists>
+                <mix_room_level>85 dB</mix_room_level>
+                <mix_room_type>Not Indicated</mix_room_type>
+                <copyright>On</copyright>
+                <original_bitstream>On</original_bitstream>
+                <dc_highpass>On</dc_highpass>
+                <lowpass>On</lowpass>
+                <lfe_lowpass>On</lfe_lowpass>
+                <phase_shift>On</phase_shift>
+                <attenuate_rear>Off</attenuate_rear>
+                <line_drc_profile>Film: Standard</line_drc_profile>
+                <rf_drc_profile>Film: Light</rf_drc_profile>
+                <description>Main 5.1 program</description>
+            </Neyrinck_DolbyDigital_Metadata>
+        </Program>
+
+        <!-- Program 2: the stereo program -->
+        <Program value="2">
+            <Neyrinck_DolbyDigital_Metadata version="2.0">
+                <bitrate>192 kbps</bitrate>
+                <mode>2/0 Stereo</mode>
+                <lfe>Off</lfe>
+                <bsmode>Complete Main</bsmode>
+                <dialnorm>-27 dB</dialnorm>
+                <surround_mode>Not Indicated</surround_mode>
+                <line_drc_profile>Music: Standard</line_drc_profile>
+                <rf_drc_profile>Music: Light</rf_drc_profile>
+                <description>Stereo program</description>
+            </Neyrinck_DolbyDigital_Metadata>
+        </Program>
+
+        <!-- BEXT / broadcast-wave metadata (WAV output only) -->
+        <Neyrinck_BEXT_Metadata version="2.0">
+            <DescriptionEnable>On</DescriptionEnable>
+            <ProjectTitle>Demo Project</ProjectTitle>
+            <EpisodeTitle>Episode 1</EpisodeTitle>
+            <ProductID>SKU-0001</ProductID>
+            <ProgramDescription1>5.1 Main</ProgramDescription1>
+            <ProgramDescription2>Stereo</ProgramDescription2>
+            <Originator>Neyrinck</Originator>
+            <Organization>Neyrinck Audio</Organization>
+        </Neyrinck_BEXT_Metadata>
+    </Neyrinck_SoundCode_Settings>
+
+    <!-- Six mono inputs, one per channel (1-based channel numbers) -->
+    <Input>
+        <InputFile path="$(INPUTROOT)/prog_L.wav"  channel="1"/>
+        <InputFile path="$(INPUTROOT)/prog_R.wav"  channel="2"/>
+        <InputFile path="$(INPUTROOT)/prog_C.wav"  channel="3"/>
+        <InputFile path="$(INPUTROOT)/prog_LFE.wav" channel="4"/>
+        <InputFile path="$(INPUTROOT)/prog_Ls.wav" channel="5"/>
+        <InputFile path="$(INPUTROOT)/prog_Rs.wav" channel="6"/>
+    </Input>
+
+    <OutputName value="demo_dolbye"/>
+    <OutputPath value="$(OUTPUTROOT)"/>
+    <OutputFileType value="Interleaved WAV"/>
+
+    <!-- Standalone-only frame rate / start timecode -->
+    <AutoRateAndTimeCode value="off"/>
+    <FrameRate value="29.97"/>
+    <Hours value="01"/>
+    <Minutes value="00"/>
+    <Seconds value="00"/>
+    <Frames value="00"/>
+
+</Neyrinck_SoundCode_Process>

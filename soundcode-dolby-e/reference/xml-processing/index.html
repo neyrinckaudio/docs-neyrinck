@@ -1,0 +1,1473 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="User guide for SoundCode For Dolby E — encode, decode, export, import, and monitor Dolby E, BWF, and MXF OP1a audio for broadcast">
+      
+      
+      
+        <link rel="canonical" href="https://neyrinck.com/soundcode-dolby-e/docs/reference/xml-processing/">
+      
+      
+        <link rel="prev" href="../settings/">
+      
+      
+        <link rel="next" href="../final-cut/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>XML Processing & Automation - SoundCode For Dolby E User Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#xml-processing-automation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="SoundCode For Dolby E User Guide" class="md-header__button md-logo" aria-label="SoundCode For Dolby E User Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m22 12-2 1-1 1-1-1-1 3-1-3-1 8-1-8-1 2-1-2-1 4-1-4-1 9-1-9-1 6-1-6-1 1-1-1-2-1 2-1 1-1 1 1 1-6 1 6 1-9 1 9 1-4 1 4 1-2 1 2 1-8 1 8 1-3 1 3 1-1 1 1z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SoundCode For Dolby E User Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              XML Processing & Automation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SoundCode For Dolby E User Guide" class="md-nav__button md-logo" aria-label="SoundCode For Dolby E User Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m22 12-2 1-1 1-1-1-1 3-1-3-1 8-1-8-1 2-1-2-1 4-1-4-1 9-1-9-1 6-1-6-1 1-1-1-2-1 2-1 1-1 1 1 1-6 1 6 1-9 1 9 1-4 1 4 1-2 1 2 1-8 1 8 1-3 1 3 1-1 1 1z"/></svg>
+
+    </a>
+    SoundCode For Dolby E User Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/authorization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Authorization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/system-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System Requirements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Concepts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/technologies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Technologies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Encode / Export
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Encode / Export
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../encode-export/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../encode-export/controls/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controls Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../encode-export/metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Metadata Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Monitor / Import
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Monitor / Import
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../monitor-import/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../monitor-import/controls/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controls Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Settings & Menu Commands
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    XML Processing & Automation
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    XML Processing & Automation
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-process-file-from-the-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a process file from the app
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-a-process-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running a process file
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running a process file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-the-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      From the application
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-the-command-line-automated-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      From the command line (automated systems)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process-file-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process file types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-encode-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: encode (Export)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-decode-import" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: decode (Import)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batching-deliverables-with-a-process-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Batching deliverables with a Process Set
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reusable-templates-with-path-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reusable templates with path variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hot-folders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hot folders
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#good-to-know" class="md-nav__link">
+    <span class="md-ellipsis">
+      Good to know
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../final-cut/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Final Cut
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Workflows
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-process-file-from-the-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a process file from the app
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-a-process-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running a process file
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running a process file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-the-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      From the application
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-the-command-line-automated-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      From the command line (automated systems)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process-file-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process file types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-encode-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: encode (Export)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-decode-import" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: decode (Import)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batching-deliverables-with-a-process-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Batching deliverables with a Process Set
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reusable-templates-with-path-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reusable templates with path variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hot-folders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hot folders
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#good-to-know" class="md-nav__link">
+    <span class="md-ellipsis">
+      Good to know
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="xml-processing-automation">XML Processing &amp; Automation</h1>
+<p>SoundCode Dolby E can save a complete encode or decode job — inputs, output destination, Dolby E configuration, and all per-program metadata — into a single <strong>XML process file</strong>. Think of it as a portable "process preset."</p>
+<p>Once you have a process file you can:</p>
+<ul>
+<li><strong>Re-run a known-good job</strong> at any time without re-entering settings.</li>
+<li><strong>Manage a library of deliverables</strong> — keep one process file per delivery spec (network A, network B, archive, etc.).</li>
+<li><strong>Drive SoundCode from an automated system</strong> by passing the file on the command line — no dialogs, no clicking.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Full field reference</p>
+<p>This page is a practical guide to creating and running process files. For the complete element-by-element specification (every metadata field and its allowed values), see the <strong>SoundCode Dolby E — XML Process File Reference</strong> and the formal schema, <a href="../../assets/examples/SoundCodeProcess.xsd">SoundCodeProcess.xsd</a>. The Dolby Digital metadata elements map one-to-one to the controls described in the <a href="../../encode-export/metadata/">Metadata Reference</a>.</p>
+</div>
+<h2 id="creating-a-process-file-from-the-app">Creating a process file from the app</h2>
+<p>The easiest way to author a process file is to let the application write it for you:</p>
+<ol>
+<li>Open the <strong>Encode / Export</strong> (or <strong>Monitor / Import</strong>) tool.</li>
+<li>Set up the job exactly as you want it — inputs, configuration, metadata, output name and location.</li>
+<li>Choose <strong>File → Export XML Process…</strong> and save the <code>.xml</code> file.</li>
+</ol>
+<p>The saved file captures everything in the <strong>CONFIGURATION</strong>, <strong>METADATA</strong>, and <strong>OUTPUT</strong> sections. You can re-open it later with <strong>File → Import XML Process…</strong>, or run it as described below.</p>
+<div class="admonition tip">
+<p class="admonition-title">Edit by hand</p>
+<p>Process files are plain UTF-8 text. Once the app has written one, you can duplicate it and edit values in any text editor to spin up variations — the values are the exact strings shown in the app's popups (for example <code>448 kbps</code>, <code>3/2 LCRLsRs</code>, <code>5.1 + Stereo</code>).</p>
+</div>
+<h2 id="running-a-process-file">Running a process file</h2>
+<h3 id="from-the-application">From the application</h3>
+<p><strong>File → Run XML Process…</strong> opens a file picker, then runs the selected file. This is the same engine used by automation, so a file that runs here will run identically from the command line.</p>
+<h3 id="from-the-command-line-automated-systems">From the command line (automated systems)</h3>
+<p>Both the macOS and Windows builds accept a process file path as a launch argument and feed it straight into the processor, skipping all dialogs. This is how you wire SoundCode into a render farm, watch-folder service, or build script.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">macOS</label><label for="__tabbed_1_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1"># Run the binary inside the .app bundle; blocks until the job finishes</span>
+<span class="s2">&quot;/Applications/SoundCode Dolby E Encoder.app/Contents/MacOS/SoundCode Dolby E Encoder&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s2">&quot;/path/to/session.xml&quot;</span><span class="w"> </span>-q
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;SoundCode Dolby E.exe&quot;</span> <span class="s2">&quot;C:\path\to\session.xml&quot;</span> -q
+</code></pre></div>
+</div>
+</div>
+</div>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>*.xml</code></td>
+<td>Path to the process file to run.</td>
+</tr>
+<tr>
+<td><code>-q</code></td>
+<td>Quit the application automatically when the job finishes (recommended for automation).</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">One file per launch</p>
+<p>The command-line parser forwards a <strong>single</strong> <code>.xml</code> file per launch. To process several jobs non-interactively, either launch the app once per file, or place several jobs inside one <strong>Process Set</strong> file (see below).</p>
+</div>
+<h2 id="process-file-types">Process file types</h2>
+<p>A process file's root element is one of three things:</p>
+<table>
+<thead>
+<tr>
+<th>Root element</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Neyrinck_SoundCode_Process</code></td>
+<td>A single job — one encode (<strong>Export</strong>) or one decode (<strong>Import</strong>).</td>
+</tr>
+<tr>
+<td><code>Neyrinck_SoundCode_Process_Set</code></td>
+<td>A <strong>batch</strong> — an ordered list of jobs run in sequence.</td>
+</tr>
+<tr>
+<td><code>Neyrinck_SoundCode_ProcessList</code></td>
+<td>A <strong>hot-folder template</strong> that points at a process template file.</td>
+</tr>
+</tbody>
+</table>
+<p>The application routes the file to the encoder or decoder by reading the <code>type</code> attribute of the process node:</p>
+<table>
+<thead>
+<tr>
+<th><code>type</code></th>
+<th>Routed to</th>
+<th><code>version</code> to use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Export</code></td>
+<td>Encoder</td>
+<td><code>1.0</code></td>
+</tr>
+<tr>
+<td><code>Import</code></td>
+<td>Decoder / Player</td>
+<td><code>2.0</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="example-encode-export">Example: encode (Export)</h2>
+<p>This encodes six mono inputs into a 20-bit Dolby E <strong>5.1 + Stereo</strong> stream as an interleaved WAV, with two programs of Dolby Digital metadata and BEXT metadata. (Abbreviated — see the full file linked below.)</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;Neyrinck_SoundCode_Process</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;Export&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;Neyrinck_SoundCode_Settings</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;2.0&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Type&gt;</span>Dolby<span class="w"> </span>E<span class="w"> </span>20<span class="w"> </span>bit<span class="nt">&lt;/Type&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Dolby_E_Configuration&gt;</span>5.1<span class="w"> </span>+<span class="w"> </span>Stereo<span class="nt">&lt;/Dolby_E_Configuration&gt;</span>
+<span class="w">        </span><span class="nt">&lt;TimecodeEnable&gt;</span>On<span class="nt">&lt;/TimecodeEnable&gt;</span>
+
+<span class="w">        </span><span class="nt">&lt;Program</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span><span class="w">           </span><span class="cm">&lt;!-- the 5.1 program --&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Neyrinck_DolbyDigital_Metadata</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;2.0&quot;</span><span class="nt">&gt;</span>
+<span class="w">                </span><span class="nt">&lt;bitrate&gt;</span>448<span class="w"> </span>kbps<span class="nt">&lt;/bitrate&gt;</span>
+<span class="w">                </span><span class="nt">&lt;mode&gt;</span>3/2<span class="w"> </span>LCRLsRs<span class="nt">&lt;/mode&gt;</span>
+<span class="w">                </span><span class="nt">&lt;lfe&gt;</span>On<span class="nt">&lt;/lfe&gt;</span>
+<span class="w">                </span><span class="nt">&lt;dialnorm&gt;</span>-27<span class="w"> </span>dB<span class="nt">&lt;/dialnorm&gt;</span>
+<span class="w">                </span><span class="nt">&lt;description&gt;</span>Main<span class="w"> </span>5.1<span class="w"> </span>program<span class="nt">&lt;/description&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/Neyrinck_DolbyDigital_Metadata&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/Program&gt;</span>
+
+<span class="w">        </span><span class="nt">&lt;Program</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span><span class="w">           </span><span class="cm">&lt;!-- the stereo program --&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Neyrinck_DolbyDigital_Metadata</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;2.0&quot;</span><span class="nt">&gt;</span>
+<span class="w">                </span><span class="nt">&lt;bitrate&gt;</span>192<span class="w"> </span>kbps<span class="nt">&lt;/bitrate&gt;</span>
+<span class="w">                </span><span class="nt">&lt;mode&gt;</span>2/0<span class="w"> </span>Stereo<span class="nt">&lt;/mode&gt;</span>
+<span class="w">                </span><span class="nt">&lt;dialnorm&gt;</span>-27<span class="w"> </span>dB<span class="nt">&lt;/dialnorm&gt;</span>
+<span class="w">                </span><span class="nt">&lt;description&gt;</span>Stereo<span class="w"> </span>program<span class="nt">&lt;/description&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/Neyrinck_DolbyDigital_Metadata&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/Program&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/Neyrinck_SoundCode_Settings&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;Input&gt;</span>
+<span class="w">        </span><span class="nt">&lt;InputFile</span><span class="w"> </span><span class="na">path=</span><span class="s">&quot;$(INPUTROOT)/prog_L.wav&quot;</span><span class="w">   </span><span class="na">channel=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;InputFile</span><span class="w"> </span><span class="na">path=</span><span class="s">&quot;$(INPUTROOT)/prog_R.wav&quot;</span><span class="w">   </span><span class="na">channel=</span><span class="s">&quot;2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;InputFile</span><span class="w"> </span><span class="na">path=</span><span class="s">&quot;$(INPUTROOT)/prog_C.wav&quot;</span><span class="w">   </span><span class="na">channel=</span><span class="s">&quot;3&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;InputFile</span><span class="w"> </span><span class="na">path=</span><span class="s">&quot;$(INPUTROOT)/prog_LFE.wav&quot;</span><span class="w"> </span><span class="na">channel=</span><span class="s">&quot;4&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;InputFile</span><span class="w"> </span><span class="na">path=</span><span class="s">&quot;$(INPUTROOT)/prog_Ls.wav&quot;</span><span class="w">  </span><span class="na">channel=</span><span class="s">&quot;5&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;InputFile</span><span class="w"> </span><span class="na">path=</span><span class="s">&quot;$(INPUTROOT)/prog_Rs.wav&quot;</span><span class="w">  </span><span class="na">channel=</span><span class="s">&quot;6&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/Input&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;OutputName</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;demo_dolbye&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;OutputPath</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;$(OUTPUTROOT)&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;OutputFileType</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;Interleaved WAV&quot;</span><span class="nt">/&gt;</span>
+
+<span class="nt">&lt;/Neyrinck_SoundCode_Process&gt;</span>
+</code></pre></div>
+<p>A few rules worth knowing:</p>
+<ul>
+<li><strong>Only what you specify is changed.</strong> Any element you omit keeps its current/default value.</li>
+<li><strong>Program numbers are 1-based</strong> (<code>1</code>–<code>8</code>) and must match the chosen <code>Dolby_E_Configuration</code>.</li>
+<li>Input audio is typically one mono file per channel, assigned with the <code>channel</code> attribute. For MXF output, a video reference uses <code>channel="v1"</code>.</li>
+</ul>
+<p>📎 Download the full working file: <a href="../../assets/examples/encoder-process.xml">encoder-process.xml</a></p>
+<h2 id="example-decode-import">Example: decode (Import)</h2>
+<p>An Import job uses the same root element name, but <code>type="Import"</code> and <code>version="2.0"</code> route it to the decoder.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;Neyrinck_SoundCode_Process</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;Import&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;2.0&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Input&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Source&gt;</span>File<span class="nt">&lt;/Source&gt;</span>
+<span class="w">        </span><span class="nt">&lt;File&gt;</span>$(IMPORTFILEROOT)/demo_dolbye.wav<span class="nt">&lt;/File&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/Input&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Playback&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Audio&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Configuration&gt;</span>5.1<span class="w"> </span>+<span class="w"> </span>Stereo<span class="nt">&lt;/Configuration&gt;</span>
+<span class="w">            </span><span class="nt">&lt;DolbyE&gt;</span>
+<span class="w">                </span><span class="nt">&lt;Enable&gt;</span>On<span class="nt">&lt;/Enable&gt;</span>
+<span class="w">                </span><span class="nt">&lt;EnablePCM&gt;</span>Off<span class="nt">&lt;/EnablePCM&gt;</span>
+<span class="w">                </span><span class="nt">&lt;Program&gt;</span>1<span class="nt">&lt;/Program&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/DolbyE&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/Audio&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/Playback&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Import&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Audio&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Name&gt;</span>demo_decoded<span class="nt">&lt;/Name&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Type&gt;</span>WAV<span class="nt">&lt;/Type&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Path&gt;</span>$(IMPORTAUDIOROOT)/out<span class="nt">&lt;/Path&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/Audio&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Type&gt;</span>Audio<span class="nt">&lt;/Type&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/Import&gt;</span>
+<span class="nt">&lt;/Neyrinck_SoundCode_Process&gt;</span>
+</code></pre></div>
+<p>📎 Download: <a href="../../assets/examples/decoder-process.xml">decoder-process.xml</a></p>
+<h2 id="batching-deliverables-with-a-process-set">Batching deliverables with a Process Set</h2>
+<p>To produce several deliverables from one launch — for example, encoding multiple reels in sequence — wrap the jobs in a <strong>Process Set</strong>. All jobs in a Set are treated as the same kind (Export or Import) as the first.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;Neyrinck_SoundCode_Process_Set</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Neyrinck_SoundCode_Process</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;Export&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span><span class="w"> </span>…<span class="w"> </span>reel<span class="w"> </span>1<span class="w"> </span>…<span class="w"> </span><span class="nt">&lt;/Neyrinck_SoundCode_Process&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Neyrinck_SoundCode_Process</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;Export&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span><span class="w"> </span>…<span class="w"> </span>reel<span class="w"> </span>2<span class="w"> </span>…<span class="w"> </span><span class="nt">&lt;/Neyrinck_SoundCode_Process&gt;</span>
+<span class="nt">&lt;/Neyrinck_SoundCode_Process_Set&gt;</span>
+</code></pre></div>
+<p>📎 Download: <a href="../../assets/examples/process-set.xml">process-set.xml</a></p>
+<h2 id="reusable-templates-with-path-variables">Reusable templates with path variables</h2>
+<p>Hard-coding absolute paths makes a process file specific to one machine. Instead, any path can contain a single <strong>root variable</strong> of the form <code>$(NAME)</code>, resolved at run time from a globals file. This lets you reuse the same process file across machines or jobs by changing only the variable definitions.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Used in</th>
+<th>Job type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$(INPUTROOT)</code></td>
+<td><code>Input/InputFile/@path</code></td>
+<td>Export</td>
+</tr>
+<tr>
+<td><code>$(OUTPUTROOT)</code></td>
+<td><code>OutputPath/@value</code></td>
+<td>Export</td>
+</tr>
+<tr>
+<td><code>$(SETTINGSROOT)</code></td>
+<td>external settings <code>@filepath</code></td>
+<td>Export</td>
+</tr>
+<tr>
+<td><code>$(PROCESSROOT)</code></td>
+<td>external process <code>@filepath</code></td>
+<td>Export / Import</td>
+</tr>
+<tr>
+<td><code>$(IMPORTFILEROOT)</code></td>
+<td><code>Input/File</code></td>
+<td>Import</td>
+</tr>
+<tr>
+<td><code>$(IMPORTAUDIOROOT)</code></td>
+<td><code>Import/Audio/Path</code>, <code>Import/Video/Path</code></td>
+<td>Import</td>
+</tr>
+</tbody>
+</table>
+<p>Define the values in a file named exactly <strong><code>SoundCodeGlobals.xml</code></strong>, placed in the <strong>same directory</strong> as the process file. The app loads it automatically and substitutes each token.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;Neyrinck_SoundCode_Globals&gt;</span>
+<span class="w">    </span><span class="nt">&lt;INPUTROOT</span><span class="w">       </span><span class="na">value=</span><span class="s">&quot;/Volumes/Media/incoming&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;OUTPUTROOT</span><span class="w">      </span><span class="na">value=</span><span class="s">&quot;/Volumes/Media/encoded&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;IMPORTFILEROOT</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;/Volumes/Media/decode/in&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;IMPORTAUDIOROOT</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;/Volumes/Media/decode/out&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/Neyrinck_SoundCode_Globals&gt;</span>
+</code></pre></div>
+<p>If a <code>$(NAME)</code> token has no matching variable (or no globals file is present), the token is left unchanged in the path. Paths may use forward slashes on both platforms.</p>
+<p>📎 Download: <a href="../../assets/examples/SoundCodeGlobals.xml">SoundCodeGlobals.xml</a></p>
+<h2 id="hot-folders">Hot folders</h2>
+<p>The hot-folder feature uses the same engine: drop media into a watched folder and SoundCode applies a process <strong>template</strong> automatically. See <a href="../../monitor-import/overview/#hot-folder-processing">Hot Folder Processing</a> for setup. A <code>Neyrinck_SoundCode_ProcessList</code> file (or a <code>SoundCodeProcessTemplate.xml</code> placed next to the dropped media) names the template to apply.</p>
+<h2 id="good-to-know">Good to know</h2>
+<ul>
+<li><strong>Files are UTF-8.</strong> A leading <code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</code> declaration is accepted but optional.</li>
+<li><strong>Element and attribute names are case-insensitive;</strong> text <em>values</em> (such as <code>448 kbps</code>) are matched case-sensitively against the app's UI strings.</li>
+<li><strong>Unknown elements are ignored,</strong> so extra notes or attributes won't break a file — but they have no effect.</li>
+<li><strong>Settings version 2.0</strong> carries each value as element text (<code>&lt;bitrate&gt;448 kbps&lt;/bitrate&gt;</code>). Legacy version 1.0 used a <code>value</code> attribute; the loader accepts both, but new files should use 2.0.</li>
+<li>The application does <strong>not</strong> validate against the <a href="../../assets/examples/SoundCodeProcess.xsd">XSD</a> at run time — it is provided for authoring tools and editors.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; Neyrinck. Manufactured under license from Dolby Laboratories.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.expand", "content.tabs.link", "search.highlight"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>

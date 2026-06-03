@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Example: a SET (batch) of two encode processes run in sequence.
+
+  A Set wraps multiple <Neyrinck_SoundCode_Process> nodes. All are treated as the
+  same kind (Export here) as the first. Settings are abbreviated for clarity;
+  see encoder-process.xml for the full set of options.
+-->
+<Neyrinck_SoundCode_Process_Set version="1.0">
+
+    <Neyrinck_SoundCode_Process type="Export" version="1.0">
+        <Neyrinck_SoundCode_Settings version="2.0">
+            <Type>Dolby E 20 bit</Type>
+            <Dolby_E_Configuration>5.1 + Stereo</Dolby_E_Configuration>
+            <Program value="1">
+                <Neyrinck_DolbyDigital_Metadata version="2.0">
+                    <bitrate>448 kbps</bitrate>
+                    <mode>3/2 LCRLsRs</mode>
+                    <lfe>On</lfe>
+                    <dialnorm>-27 dB</dialnorm>
+                </Neyrinck_DolbyDigital_Metadata>
+            </Program>
+            <Program value="2">
+                <Neyrinck_DolbyDigital_Metadata version="2.0">
+                    <bitrate>192 kbps</bitrate>
+                    <mode>2/0 Stereo</mode>
+                    <dialnorm>-27 dB</dialnorm>
+                </Neyrinck_DolbyDigital_Metadata>
+            </Program>
+        </Neyrinck_SoundCode_Settings>
+        <Input>
+            <InputFile path="$(INPUTROOT)/reel1_L.wav"   channel="1"/>
+            <InputFile path="$(INPUTROOT)/reel1_R.wav"   channel="2"/>
+            <InputFile path="$(INPUTROOT)/reel1_C.wav"   channel="3"/>
+            <InputFile path="$(INPUTROOT)/reel1_LFE.wav" channel="4"/>
+            <InputFile path="$(INPUTROOT)/reel1_Ls.wav"  channel="5"/>
+            <InputFile path="$(INPUTROOT)/reel1_Rs.wav"  channel="6"/>
+        </Input>
+        <OutputName value="reel1_dolbye"/>
+        <OutputPath value="$(OUTPUTROOT)"/>
+        <OutputFileType value="Interleaved WAV"/>
+    </Neyrinck_SoundCode_Process>
+
+    <Neyrinck_SoundCode_Process type="Export" version="1.0">
+        <Neyrinck_SoundCode_Settings version="2.0">
+            <Type>Dolby E 20 bit</Type>
+            <Dolby_E_Configuration>5.1 + Stereo</Dolby_E_Configuration>
+            <Program value="1">
+                <Neyrinck_DolbyDigital_Metadata version="2.0">
+                    <bitrate>448 kbps</bitrate>
+                    <mode>3/2 LCRLsRs</mode>
+                    <lfe>On</lfe>
+                    <dialnorm>-27 dB</dialnorm>
+                </Neyrinck_DolbyDigital_Metadata>
+            </Program>
+            <Program value="2">
+                <Neyrinck_DolbyDigital_Metadata version="2.0">
+                    <bitrate>192 kbps</bitrate>
+                    <mode>2/0 Stereo</mode>
+                    <dialnorm>-27 dB</dialnorm>
+                </Neyrinck_DolbyDigital_Metadata>
+            </Program>
+        </Neyrinck_SoundCode_Settings>
+        <Input>
+            <InputFile path="$(INPUTROOT)/reel2_L.wav"   channel="1"/>
+            <InputFile path="$(INPUTROOT)/reel2_R.wav"   channel="2"/>
+            <InputFile path="$(INPUTROOT)/reel2_C.wav"   channel="3"/>
+            <InputFile path="$(INPUTROOT)/reel2_LFE.wav" channel="4"/>
+            <InputFile path="$(INPUTROOT)/reel2_Ls.wav"  channel="5"/>
+            <InputFile path="$(INPUTROOT)/reel2_Rs.wav"  channel="6"/>
+        </Input>
+        <OutputName value="reel2_dolbye"/>
+        <OutputPath value="$(OUTPUTROOT)"/>
+        <OutputFileType value="Interleaved WAV"/>
+    </Neyrinck_SoundCode_Process>
+
+</Neyrinck_SoundCode_Process_Set>

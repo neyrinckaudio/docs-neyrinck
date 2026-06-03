@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Example: single Dolby E DECODE (Import) process.
+
+  Decodes an encoded Dolby E WAV back to PCM. Note that an Import process uses the
+  same root element name as an encode, but is routed to the decoder by
+  type="Import" and version="2.0".
+
+  Run non-interactively:
+    "SoundCode Dolby E Decoder.app/Contents/MacOS/SoundCode Dolby E Decoder" \
+        "decoder-process.xml" -q
+-->
+<Neyrinck_SoundCode_Process type="Import" version="2.0">
+
+    <Input>
+        <Source>File</Source>
+        <File>$(IMPORTFILEROOT)/demo_dolbye.wav</File>
+    </Input>
+
+    <Playback>
+        <Audio>
+            <Configuration>5.1 + Stereo</Configuration>
+            <Program>1</Program>
+            <DolbyE>
+                <Enable>On</Enable>
+                <EnablePCM>Off</EnablePCM>
+                <DefaultConfig>5.1 + Stereo</DefaultConfig>
+                <Program>1</Program>
+            </DolbyE>
+        </Audio>
+        <Listening>
+            <Downmix>Stereo</Downmix>
+        </Listening>
+    </Playback>
+
+    <Import>
+        <Audio>
+            <AutoName>Off</AutoName>
+            <Name>demo_decoded</Name>
+            <Type>WAV</Type>
+            <Path>$(IMPORTAUDIOROOT)/out</Path>
+        </Audio>
+        <Video>
+            <AutoName>On</AutoName>
+            <Name>demo_video</Name>
+            <Path>$(IMPORTAUDIOROOT)/out</Path>
+        </Video>
+        <Type>Audio</Type>
+    </Import>
+
+</Neyrinck_SoundCode_Process>

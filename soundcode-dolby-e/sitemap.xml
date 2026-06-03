@@ -2,62 +2,66 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://neyrinck.com/soundcode-dolby-e/docs/</loc>
-         <lastmod>2026-06-02</lastmod>
+         <lastmod>2026-06-03</lastmod>
     </url>
     <url>
          <loc>https://neyrinck.com/soundcode-dolby-e/docs/concepts/technologies/</loc>
-         <lastmod>2026-06-02</lastmod>
+         <lastmod>2026-06-03</lastmod>
     </url>
     <url>
          <loc>https://neyrinck.com/soundcode-dolby-e/docs/encode-export/controls/</loc>
-         <lastmod>2026-06-02</lastmod>
+         <lastmod>2026-06-03</lastmod>
     </url>
     <url>
          <loc>https://neyrinck.com/soundcode-dolby-e/docs/encode-export/metadata/</loc>
-         <lastmod>2026-06-02</lastmod>
+         <lastmod>2026-06-03</lastmod>
     </url>
     <url>
          <loc>https://neyrinck.com/soundcode-dolby-e/docs/encode-export/overview/</loc>
-         <lastmod>2026-06-02</lastmod>
+         <lastmod>2026-06-03</lastmod>
     </url>
     <url>
          <loc>https://neyrinck.com/soundcode-dolby-e/docs/getting-started/authorization/</loc>
-         <lastmod>2026-06-02</lastmod>
+         <lastmod>2026-06-03</lastmod>
     </url>
     <url>
          <loc>https://neyrinck.com/soundcode-dolby-e/docs/getting-started/installation/</loc>
-         <lastmod>2026-06-02</lastmod>
+         <lastmod>2026-06-03</lastmod>
     </url>
     <url>
          <loc>https://neyrinck.com/soundcode-dolby-e/docs/getting-started/system-requirements/</loc>
-         <lastmod>2026-06-02</lastmod>
+         <lastmod>2026-06-03</lastmod>
     </url>
     <url>
          <loc>https://neyrinck.com/soundcode-dolby-e/docs/monitor-import/controls/</loc>
-         <lastmod>2026-06-02</lastmod>
+         <lastmod>2026-06-03</lastmod>
     </url>
     <url>
          <loc>https://neyrinck.com/soundcode-dolby-e/docs/monitor-import/overview/</loc>
-         <lastmod>2026-06-02</lastmod>
+         <lastmod>2026-06-03</lastmod>
     </url>
     <url>
          <loc>https://neyrinck.com/soundcode-dolby-e/docs/reference/final-cut/</loc>
-         <lastmod>2026-06-02</lastmod>
+         <lastmod>2026-06-03</lastmod>
     </url>
     <url>
          <loc>https://neyrinck.com/soundcode-dolby-e/docs/reference/settings/</loc>
-         <lastmod>2026-06-02</lastmod>
+         <lastmod>2026-06-03</lastmod>
     </url>
     <url>
          <loc>https://neyrinck.com/soundcode-dolby-e/docs/reference/support/</loc>
-         <lastmod>2026-06-02</lastmod>
+         <lastmod>2026-06-03</lastmod>
     </url>
     <url>
          <loc>https://neyrinck.com/soundcode-dolby-e/docs/reference/troubleshooting/</loc>
-         <lastmod>2026-06-02</lastmod>
+         <lastmod>2026-06-03</lastmod>
     </url>
     <url>
          <loc>https://neyrinck.com/soundcode-dolby-e/docs/reference/workflows/</loc>
-         <lastmod>2026-06-02</lastmod>
+         <lastmod>2026-06-03</lastmod>
+    </url>
+    <url>
+         <loc>https://neyrinck.com/soundcode-dolby-e/docs/reference/xml-processing/</loc>
+         <lastmod>2026-06-03</lastmod>
     </url>
 </urlset>
