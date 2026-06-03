@@ -119,13 +119,12 @@
   <!-- ============================================================= -->
 
   <!-- "Input" is used by BOTH encoder and decoder processes:
-        - Export: one or more <InputFile path="" channel=""/> (and FinalCutInput)
+        - Export: one or more <InputFile path="" channel=""/>
         - Import: text-valued <Source> and <File>
        Both are permitted here so either process kind validates. -->
   <xs:complexType name="InputType">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:element name="InputFile"     type="InputFileType"/>
-      <xs:element name="FinalCutInput" type="FinalCutInputType"/>
       <xs:element name="Source"        type="xs:string"/>
       <xs:element name="File"          type="xs:string"/>
     </xs:choice>
@@ -133,13 +132,8 @@
 
   <xs:complexType name="InputFileType">
     <xs:attribute name="path"    type="xs:string" use="required"/>
-    <!-- 1-based channel number, or "v1" to denote an MXF video reference -->
+    <!-- 1-based channel number -->
     <xs:attribute name="channel" type="xs:string" use="required"/>
-  </xs:complexType>
-
-  <xs:complexType name="FinalCutInputType">
-    <xs:attribute name="output"  type="xs:string" use="optional"/>
-    <xs:attribute name="channel" type="xs:string" use="optional"/>
   </xs:complexType>
 
   <!-- ============================================================= -->

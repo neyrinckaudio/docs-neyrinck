@@ -1313,7 +1313,7 @@
 
 <h1 id="monitor-import-controls-reference">Monitor / Import Controls Reference</h1>
 <h2 id="input-controls">INPUT Controls</h2>
-<p>The INPUT section controls the source BWF or MXF file to be imported (AudioSuite / Standalone) or played (RTAS). These settings cannot be saved as Pro Tools presets — they are persistent and saved in a preferences file that is read when the plug-in window opens.</p>
+<p>The INPUT section controls the source BWF file to be imported (AudioSuite / Standalone) or played (RTAS). These settings cannot be saved as Pro Tools presets — they are persistent and saved in a preferences file that is read when the plug-in window opens.</p>
 <h3 id="source">Source</h3>
 <p>Selects whether a WAV file is the source audio, a live audio stream is the source audio, or <strong>off</strong> to output only zeros.</p>
 <div class="admonition note">
@@ -1344,10 +1344,10 @@
 <h3 id="counter-rtas">Counter (RTAS)</h3>
 <p>Shows the running timecode counter when playback is engaged. Shows <strong>waiting</strong> when the timecode has not yet reached the start of the file (if the file did not start at the beginning of the timeline), and <strong>finished</strong> if the running timecode has gone beyond the end time of the file.</p>
 <h3 id="play-standalone">Play (Standalone)</h3>
-<p>Plays back the selected WAV or MXF file. Adjust the slider position to change the playback location.</p>
+<p>Plays back the selected WAV file. Adjust the slider position to change the playback location.</p>
 <h2 id="audio-playback-controls">AUDIO PLAYBACK Controls</h2>
 <h3 id="configuration">Configuration</h3>
-<p>Selects the audio channel layout of the BWF or MXF file. If the file already contains layout information, this is set automatically. But many MXF files are just eight channels of audio with no layout information — this control lets you set it (as <strong>5.1 + Stereo</strong>, for example).</p>
+<p>Selects the audio channel layout of the BWF file. If the file already contains layout information, this is set automatically. For files that do not specify a channel layout, this control lets you set it (as <strong>5.1 + Stereo</strong>, for example).</p>
 <h3 id="program">Program</h3>
 <p>Selects the audio program to be imported (AudioSuite) or played (RTAS). If the file contains more than one audio program, each program is shown as a choice here, including <strong>all programs</strong> at the end of the list.</p>
 <h3 id="dolby-e-decode-enable">Dolby E Decode Enable</h3>
