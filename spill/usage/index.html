@@ -17,8 +17,11 @@
       
       
       
+        
+      
+      
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -26,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -49,7 +52,6 @@
     
       
 
-    
     
     
   </head>
@@ -213,9 +215,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Spill
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -224,7 +231,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
-            Spill
+            
+  
+    Spill
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -240,9 +251,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Welcome To Spill
+  
+
     
   </span>
+  
   
 
       </a>
@@ -263,9 +279,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Quick Start Guide
+  
+
     
   </span>
+  
   
 
       </a>
@@ -286,9 +307,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Installation And Setup
+  
+
     
   </span>
+  
   
 
       </a>
@@ -309,9 +335,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Activating the License
+  
+
     
   </span>
+  
   
 
       </a>
@@ -336,17 +367,70 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using the spill/guide Plug-In
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
+    
+  
     Using the spill/guide Plug-In
+  
+
     
   </span>
   
+  
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#supported-track-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supported Track Formats
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -370,6 +454,7 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
@@ -379,7 +464,7 @@
 <h1 id="using-the-spill-plug-in">Using the Spill Plug-In</h1>
 <p>Here is how to use the Spill Plug-in in Pro Tools.</p>
 <ul>
-<li>Create a multi-channel track. Spill can be used on a stereo track up to a 7.1 multi-channel track.</li>
+<li>Create a multi-channel track. Spill can be used on any track from stereo up to a 16-channel immersive format.</li>
 <li>Click on the insert slot for the track and select multichannel plug-in-&gt;Sound Field-&gt;Spill.</li>
 </ul>
 <p><img alt="Spill Insert" src="../images/spill_insert.png" /></p>
@@ -390,6 +475,165 @@
 <li>The meters display the input levels coming in to the plug-in.</li>
 <li>Click on the (i) button to view info about the Spill Plug-in</li>
 </ul>
+<h2 id="supported-track-formats">Supported Track Formats</h2>
+<p>Spill matches the stem format of the track it is inserted on. Every supported format runs as an AAX Native plug-in and as an AudioSuite plug-in. The formats marked <strong>Yes</strong> under DSP also run on Pro Tools | HDX DSP hardware.</p>
+<table>
+<thead>
+<tr>
+<th>Track Format</th>
+<th>Channels</th>
+<th>HDX DSP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stereo</td>
+<td>2</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>LCR</td>
+<td>3</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>LCRS</td>
+<td>4</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Quad</td>
+<td>4</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>5.0</td>
+<td>5</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>5.1</td>
+<td>6</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>6.0</td>
+<td>6</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>6.1</td>
+<td>7</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>7.0 (DTS)</td>
+<td>7</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>7.1 (DTS)</td>
+<td>8</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>7.0 (SDDS)</td>
+<td>7</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>7.1 (SDDS)</td>
+<td>8</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>7.0.2</td>
+<td>9</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>7.1.2</td>
+<td>10</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>1st Order Ambisonics</td>
+<td>4</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>2nd Order Ambisonics</td>
+<td>9</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>5.0.2</td>
+<td>7</td>
+<td>No</td>
+</tr>
+<tr>
+<td>5.1.2</td>
+<td>8</td>
+<td>No</td>
+</tr>
+<tr>
+<td>5.0.4</td>
+<td>9</td>
+<td>No</td>
+</tr>
+<tr>
+<td>5.1.4</td>
+<td>10</td>
+<td>No</td>
+</tr>
+<tr>
+<td>7.0.4</td>
+<td>11</td>
+<td>No</td>
+</tr>
+<tr>
+<td>7.1.4</td>
+<td>12</td>
+<td>No</td>
+</tr>
+<tr>
+<td>7.0.6</td>
+<td>13</td>
+<td>No</td>
+</tr>
+<tr>
+<td>7.1.6</td>
+<td>14</td>
+<td>No</td>
+</tr>
+<tr>
+<td>9.0.4</td>
+<td>13</td>
+<td>No</td>
+</tr>
+<tr>
+<td>9.1.4</td>
+<td>14</td>
+<td>No</td>
+</tr>
+<tr>
+<td>9.0.6</td>
+<td>15</td>
+<td>No</td>
+</tr>
+<tr>
+<td>9.1.6</td>
+<td>16</td>
+<td>No</td>
+</tr>
+<tr>
+<td>3rd Order Ambisonics</td>
+<td>16</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p>The immersive formats listed as <strong>No</strong> are available as AAX Native and AudioSuite plug-ins only. On an HDX system, insert Spill on those tracks in Native mode.</p>
 
 
 
@@ -438,10 +682,11 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "toc.integrate"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "toc.integrate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
