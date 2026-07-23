@@ -683,6 +683,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#split-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Split View
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#search-and-filter" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1198,6 +1209,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#split-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Split View
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#search-and-filter" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1282,9 +1304,9 @@
 <h3 id="overview">Overview</h3>
 <p>This represents the top area of the timeline:</p>
 <ul>
-<li>A <strong>timeline view</strong> — each clip is drawn as a colored rectangle matching its Pro Tools color, with tracks stacked vertically. Clips that are selected elsewhere in the browser are highlighted in the Overview so you can see at a glance where they sit in the session.</li>
-<li>A <strong>ruler</strong> above the Overview with selectable display modes: <strong>Min:Sec</strong>, <strong>Timecode</strong>, <strong>Bars|Beats</strong>, <strong>Feet+Frames</strong>, and <strong>Samples</strong>. The ruler defaults to the session's Main Counter format.</li>
-<li><strong>Tempo</strong> and <strong>Meter</strong> (including change indicators)</li>
+<li>A <strong>timeline view</strong> — each clip is drawn as a colored rectangle matching its Pro Tools color, with tracks stacked vertically. Lanes are zebra-striped for easier scanning, and faint vertical <strong>gridlines</strong> align with the ruler. Clips that are selected elsewhere in the browser are highlighted in the Overview so you can see at a glance where they sit in the session.</li>
+<li>A pinned <strong>track-name column</strong> beside the timeline lanes — names stay in place as you pan or zoom the timeline horizontally and follow their lanes vertically. The column sizes itself to the lane height.</li>
+<li><strong>Tempo</strong>, <strong>Meter</strong> (with change indicators), and a <strong>ruler</strong> — all shown above the timeline. The ruler supports display modes <strong>Min:Sec</strong>, <strong>Timecode</strong>, <strong>Bars|Beats</strong>, <strong>Feet+Frames</strong>, and <strong>Samples</strong>, defaulting to the session's Main Counter format.</li>
 </ul>
 <p>The Session Setup and Overview sections are <strong>pinned at the top</strong> of the window. Only the lower sections (Tracks, Audio Files, Clips, Plugins, Memory Locations) scroll, so the Overview and ruler stay visible while you work below.</p>
 <h4 id="overview-zoom-and-pan">Overview Zoom and Pan</h4>
@@ -1298,12 +1320,13 @@
 </ul>
 <p>Zoom recenters around the active selection (selected clips, selected tracks, or the rectangle area). With no selection, it recenters around the middle of the visible Overview. The ruler beneath the Overview follows the zoom and pan in lockstep.</p>
 <h4 id="overview-height">Overview Height</h4>
-<p>Drag the bottom edge of the Overview to grow or shrink it. Dragging down past the intrinsic full-tracks height makes the Overview taller; dragging up past it auto-zooms vertically so each visible row keeps its natural pixel pitch.</p>
+<p>The Overview opens at a consistent height — up to 12 tracks tall — regardless of the session's track count. Drag the bottom edge to resize it; resizing changes <strong>how many tracks are visible</strong> rather than stretching the tracks themselves. Vertical zoom steps through fixed track heights so lane sizes stay predictable. Small sessions never leave empty space below the tracks.</p>
 <h4 id="selecting-in-the-overview">Selecting in the Overview</h4>
 <ul>
 <li><strong>Click a clip</strong> in the Overview to select it (matches the row's behavior in the Clips section). <span class="keys"><kbd class="key-command">Cmd</kbd></span>-click toggles, <span class="keys"><kbd class="key-shift">Shift</kbd></span>-click extends from the anchor.</li>
 <li><strong>Drag a rectangle</strong> in the Overview to define an <strong>Overview rectangle</strong> — see <a href="#filter-by-overview-rectangle">Filter by Overview Rectangle</a> below.</li>
 <li>When tracks are selected in the Tracks section, a light frame is drawn around their lanes in the Overview.</li>
+<li><strong>Auto-scroll to selection</strong> — selecting a track (or one of its clips) in the Tracks section automatically scrolls the Overview to bring that track's lane into view.</li>
 <li>While a clip is playing inline, a thin accent-colored vertical line marks the playback position in the Overview.</li>
 </ul>
 <h3 id="tracks">Tracks</h3>
@@ -1339,9 +1362,18 @@
 <ul>
 <li><strong>Open with Pro Tools</strong> — opens the <code>.ptx</code> file directly in Pro Tools</li>
 <li><strong>Refresh</strong> (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-r">R</kbd></span>) — re-reads the session file from disk</li>
+<li><strong>Split View toggle</strong> — see <a href="#split-view">Split View</a> below</li>
 <li><strong>Search field</strong> — see <a href="#search-and-filter">Search and Filter</a> below</li>
 <li><strong>Scope picker</strong> — limits the search to a single section</li>
 </ul>
+<h2 id="split-view">Split View</h2>
+<p>Split View shows the Overview and the session lists side by side instead of stacked. Toggle it any of these ways:</p>
+<ul>
+<li><strong>View → Switch to Split/Single Column</strong> (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-option">Option</kbd><span>+</span><kbd class="key-l">L</kbd></span>)</li>
+<li>The <strong>Split View button</strong> in the window's toolbar</li>
+<li>The <strong>button in the Quick Look preview's header</strong> (for the Quick Look version)</li>
+</ul>
+<p>A draggable divider between the two panes lets you pick how much room each side gets. Each window remembers its own layout choice, and the setting persists per file.</p>
 <h2 id="search-and-filter">Search and Filter</h2>
 <p>A search field in the toolbar filters the <strong>Tracks</strong>, <strong>Audio Files</strong>, and <strong>Clips</strong> sections by name. Press <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-f">F</kbd></span> to focus the field.</p>
 <ul>
