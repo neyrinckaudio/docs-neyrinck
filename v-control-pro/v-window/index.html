@@ -2006,6 +2006,56 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#macos-privacy-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        macOS Privacy Permissions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="macOS Privacy Permissions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accessibility-remote-mouse-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessibility — Remote Mouse Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-recording-viewing-a-window-on-the-ipad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen Recording — Viewing A Window On The iPad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifying-and-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verifying And Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2124,6 +2174,84 @@
 <li>Remotely adjust a plug-in parameter with an iPad using V-Console.</li>
 <li>Focus on any window in the media application.</li>
 </ul>
+<h2 id="macos-privacy-permissions">macOS Privacy Permissions</h2>
+<p>V-Window works by moving the mouse pointer inside a plug-in window for you, and — for the iPad apps — by capturing a picture of that window and sending it to the iPad. macOS treats both of those as privacy-protected actions and blocks them until you allow them, so <strong>V-Window will not work on macOS until V-Control Pro is granted permission</strong>.</p>
+<p>Grant these permissions to the <strong>V-Control Pro</strong> application, on the Mac that runs your DAW:</p>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Needed for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Accessibility</strong></td>
+<td>Remote mouse and keyboard control — required for all V-Window use, including a hardware fader</td>
+</tr>
+<tr>
+<td><strong>Screen &amp; System Audio Recording</strong> (called <strong>Screen Recording</strong> before macOS Sequoia)</td>
+<td>Viewing a plug-in window on the iPad with <a href="../v-console/">V-Console</a> or the legacy <a href="../v-control-pro-ipad/">V-Control Pro iPad App</a></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Windows</p>
+<p>Windows has no equivalent permission. This setup applies to macOS only.</p>
+</div>
+<h3 id="accessibility-remote-mouse-control">Accessibility — Remote Mouse Control</h3>
+<p>When you move a fader or touch a control on the iPad, V-Control Pro moves the Mac's pointer and clicks inside the plug-in window on your behalf. macOS blocks one application from controlling another that way until you grant Accessibility permission.</p>
+<p><strong>macOS Ventura, Sonoma, Sequoia, and newer:</strong></p>
+<ol>
+<li>Open <strong>System Settings</strong> from the Apple menu or the Dock.</li>
+<li>Click <strong>Privacy &amp; Security</strong> in the left sidebar.</li>
+<li>Scroll down and select <strong>Accessibility</strong> from the list on the right.</li>
+<li>Locate <strong>V-Control Pro</strong> in the list and turn the switch <strong>ON</strong>.</li>
+<li>If V-Control Pro isn't listed, click the <strong>+</strong> button at the bottom of the list, authenticate with your administrator password or Touch ID, and select <strong>V-Control Pro</strong> from your Applications folder.</li>
+<li>Quit and relaunch V-Control Pro.</li>
+</ol>
+<p><strong>macOS Monterey and earlier:</strong></p>
+<ol>
+<li>Open <strong>System Preferences → Security &amp; Privacy</strong> and click the <strong>Privacy</strong> tab.</li>
+<li>Select <strong>Accessibility</strong> in the list on the left.</li>
+<li>Click the lock at the bottom and authenticate.</li>
+<li>Check the box next to <strong>V-Control Pro</strong>, adding it with <strong>+</strong> if it isn't listed.</li>
+<li>Quit and relaunch V-Control Pro.</li>
+</ol>
+<h3 id="screen-recording-viewing-a-window-on-the-ipad">Screen Recording — Viewing A Window On The iPad</h3>
+<p>To show a plug-in window on the iPad, V-Control Pro captures the picture of that window and streams it to the iPad app. Capturing any window belonging to another application requires screen recording permission.</p>
+<p><strong>macOS Ventura, Sonoma, Sequoia, and newer:</strong></p>
+<ol>
+<li>Open <strong>System Settings → Privacy &amp; Security</strong>.</li>
+<li>Click <strong>Screen &amp; System Audio Recording</strong> (<strong>Screen Recording</strong> on macOS Sonoma and earlier).</li>
+<li>Turn the switch <strong>ON</strong> for <strong>V-Control Pro</strong>, adding it with <strong>+</strong> if it isn't listed.</li>
+<li>Relaunch V-Control Pro when prompted — the change does not take effect until it restarts.</li>
+</ol>
+<p><strong>macOS Catalina through Monterey:</strong></p>
+<ol>
+<li>Open <strong>System Preferences → Security &amp; Privacy</strong> and click the <strong>Privacy</strong> tab.</li>
+<li>Select <strong>Screen Recording</strong> in the list on the left.</li>
+<li>Click the lock at the bottom and authenticate.</li>
+<li>Check the box next to <strong>V-Control Pro</strong>.</li>
+<li>Quit and relaunch V-Control Pro.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">macOS Mojave and earlier</p>
+<p>Screen recording permission was introduced in macOS Catalina. Earlier versions do not need it.</p>
+</div>
+<p>This permission is only needed to see a window on the iPad. Controlling a plug-in parameter with a hardware fader needs Accessibility only.</p>
+<h3 id="verifying-and-troubleshooting">Verifying And Troubleshooting</h3>
+<p>V-Control Pro reports a missing permission itself the first time V-Window needs it. Use what you see to tell which permission is missing:</p>
+<ul>
+<li><strong>The iPad's list of applications shows "Privacy - Not Allowed"</strong>, and V-Control Pro displays <em>"A V-Window device is trying to access the screen..."</em> — screen recording permission is missing.</li>
+<li><strong>The iPad shows an empty, black, or frozen V-Window</strong> — screen recording permission is missing or was granted without relaunching V-Control Pro.</li>
+<li><strong>The window appears on the iPad, or a fader is moved, but nothing responds</strong>, and V-Control Pro displays <em>"A V-Window device is trying to control your screen..."</em> — Accessibility permission is missing.</li>
+<li><strong>It worked before and stopped after an update</strong> — macOS sometimes invalidates a permission when the application changes. Turn the switch <strong>OFF</strong> and back <strong>ON</strong> for V-Control Pro (or remove it with <strong>−</strong> and add it again with <strong>+</strong>), then relaunch.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Relaunch after granting permission</p>
+<p>macOS applies screen recording permission only when the application launches, and V-Control Pro checks both permissions once per session. Always quit V-Control Pro completely and start it again after changing either switch — otherwise the setting looks correct in System Settings while V-Window still fails.</p>
+</div>
 
 
 
