@@ -27,7 +27,7 @@
     
     
       
-        <title>Avid D-Control - V-Control Pro User Guide</title>
+        <title>Avid D-Control Basic - V-Control Pro User Guide</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#avid-d-control-preliminary" class="md-skip">
+        <a href="#avid-d-control-basic" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Avid D-Control
+              Avid D-Control Basic
             
           </span>
         </div>
@@ -929,7 +929,7 @@
   <span class="md-ellipsis">
     
   
-    Avid D-Control
+    Avid D-Control Basic
   
 
     
@@ -947,7 +947,7 @@
   <span class="md-ellipsis">
     
   
-    Avid D-Control
+    Avid D-Control Basic
   
 
     
@@ -973,6 +973,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#what-to-expect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What To Expect
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What To Expect">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#setup" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -992,6 +1004,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2123,16 +2140,29 @@
 
 
 
-<h1 id="avid-d-control-preliminary">Avid D-Control (Preliminary)</h1>
-<div class="admonition warning">
-<p class="admonition-title">D-Control Not Officially Supported</p>
-<p>This section is for users testing alpha versions.</p>
+<h1 id="avid-d-control-basic">Avid D-Control Basic</h1>
+<p>V-Control Pro supports D-Control consoles with a feature set called D-Control Basic. It provides the same features V-Control Pro provides for <a href="../d-command/">D-Command</a> with Pro Tools.</p>
+<p>The goal is a practical one. If you are running Pro Tools on an Apple Silicon computer, D-Control Basic gets you basic Pro Tools control from the console instead of a dark desk.</p>
+<div class="admonition info">
+<p class="admonition-title">Pro Tools Only</p>
+<p>At this time, D-Control Basic is for Pro Tools. Other DAWs and media applications are not supported with a D-Control console.</p>
 </div>
-<p>V-Control Pro supports D-Control Main and Fader Module devices. Up to one main device and two fader module devices can be used for 32 channels of control First, you must add the D-Control devices as controllers in the V-Control Pro Setups window as described in <a href="../ethernet-controllers/">Setting Up Ethernet Controllers</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">D-Control Basic Is Not Full Console Integration</p>
+<p>The name says so on purpose. V-Control Pro communicates using the HUI protocol, and HUI sets the ceiling on how much of a console this size can be reached. As a result, a large part of a D-Control frame stays inactive.</p>
+</div>
+<h2 id="what-to-expect">What To Expect</h2>
+<ul>
+<li>The available features are the same ones V-Control Pro provides for a D-Command console with Pro Tools.</li>
+<li>Channel strip control, transport, navigation, automation modes, sends, plug-in editing, and <a href="../v-window/">V-Window</a> work as they do on D-Command. See the feature chart for the complete list.</li>
+<li>Only two rows of encoders are active. They are the bottom two rows of a D-Control channel strip, and they provide what the two rows of a D-Command channel strip provide. In the feature chart they are the <code>Upper Edit Row</code> and the <code>Lower Edit Row</code>. The top four encoder rows are inactive.</li>
+<li>Controls that the HUI protocol does not reach do not respond, and their displays and indicators stay dark. This is a limit of the protocol, not a setup problem.</li>
+</ul>
 <div class="admonition info">
 <p class="admonition-title">Control Features</p>
-<p>Please see the D-Control feature charts online at <a href="../feature-charts/#d-control">Feature Charts – D-Control</a>.</p>
+<p>Please see the D-Control Basic feature chart online at <a href="../feature-charts/#d-control-basic">Feature Charts – D-Control Basic</a>.</p>
 </div>
+<p>V-Control Pro supports D-Control Main and Fader Module devices. Up to one main device and two fader module devices can be used for 32 channels of control. First, you must add the D-Control devices as controllers in the V-Control Pro Setups window as described in <a href="../ethernet-controllers/">Setting Up Ethernet Controllers</a>.</p>
 <h3 id="setup">Setup</h3>
 <h4 id="pro-tools">Pro Tools</h4>
 <p>Set up Pro Tools for 2 or 4 HUI banks as described in <a href="../pro-tools/">Setting Up Pro Tools</a>. A D-Control Fader Module device counts as two 8-channel banks.</p>
