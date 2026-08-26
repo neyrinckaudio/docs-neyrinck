@@ -2286,6 +2286,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#command8-driver-blocked" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command 8 Not Detected On Windows 11
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#v-control-pro-wont-launch" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2694,6 +2705,13 @@
 8. Install latest <a href="https://neyrinck.com/download/v-control-pro/">V-Control Pro</a>
 9. Restart computer
 10. Launch V-Control Pro and add your surface</p>
+<h4 id="command8-driver-blocked">Command 8 Not Detected On Windows 11</h4>
+<p>The April 2026 Windows security update removed default trust for cross-signed kernel drivers on Windows 11 24H2, 25H2, 26H1, and Windows Server 2025. The Avid/Digidesign Command 8 driver, <code>c8usb_vistacomp.sys</code>, is signed that way, so Windows can block it and the Command 8 never appears as a MIDI device.</p>
+<ul>
+<li>Check <code>Applications and Services Logs / Microsoft / Windows / CodeIntegrity / Operational</code> in Event Viewer for Event ID 3077 or 3076 naming <code>c8usb_vistacomp.sys</code></li>
+<li>Turning off memory integrity, the vulnerable driver blocklist, or Secure Boot does not help — this is a separate trust check</li>
+<li>See <a href="../command8/#windows-11-driver-signing">Command 8 on Windows 11</a> for symptoms and a user-reported workaround</li>
+</ul>
 <h4 id="v-control-pro-wont-launch">V-Control Pro Won't Launch</h4>
 <p>If V-Control Pro fails to launch on Windows, try these solutions:</p>
 <p><strong>Check Startup Items:</strong></p>

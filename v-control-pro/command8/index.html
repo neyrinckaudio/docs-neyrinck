@@ -1108,6 +1108,34 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#windows-11-driver-signing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows 11 Blocks The Command 8 Driver
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Windows 11 Blocks The Command 8 Driver">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-reported-workaround" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User-Reported Workaround
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#add-command-8-to-the-setups-window" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2186,6 +2214,54 @@
 <h3 id="setup">Setup</h3>
 <h4 id="command-8-driver-for-windows">Command 8 Driver For Windows</h4>
 <p>Windows systems require a Command 8 driver to be installed. A driver can be downloaded from <a href="http://akmedia.digidesign.com/support/compressed/Command8_Driver_Pro_Tools%20v90_69592.zip">HERE</a>.</p>
+<h4 id="windows-11-driver-signing">Windows 11 Blocks The Command 8 Driver</h4>
+<p>The April 2026 Windows security update removed default trust for kernel drivers signed through the old cross-signed driver program. It applies to Windows 11 24H2, Windows 11 25H2, Windows 11 26H1, and Windows Server 2025. The Command 8 driver, <code>c8usb_vistacomp.sys</code>, is a cross-signed driver from that era, so Windows can now refuse to load it.</p>
+<p>Symptoms:</p>
+<ul>
+<li>The Command 8 does not appear as a MIDI device, or appears with a warning triangle in Device Manager.</li>
+<li>V-Control Pro cannot communicate with the Command 8.</li>
+<li>The <code>Code Integrity / Operational</code> event log contains Event ID 3077 (driver blocked) or Event ID 3076 (driver audited) for <code>c8usb_vistacomp.sys</code>.</li>
+</ul>
+<p>To check the log, open Event Viewer and go to <code>Applications and Services Logs / Microsoft / Windows / CodeIntegrity / Operational</code>.</p>
+<div class="admonition info">
+<p class="admonition-title">This Is Not A V-Control Pro Problem</p>
+<p>The Command 8 driver is an Avid/Digidesign driver. V-Control Pro communicates with the Command 8 using the MIDI ports that driver creates, so V-Control Pro cannot load the driver or change how Windows trusts it. Neyrinck cannot re-sign a driver it does not own. Disabling the memory integrity setting, the vulnerable driver blocklist, or Secure Boot does not help, because this is a separate trust check.</p>
+</div>
+<h5 id="user-reported-workaround">User-Reported Workaround</h5>
+<p>A V-Control Pro user restored Command 8 operation by removing the Windows Code Integrity policy that enforces the new rule. Please read the warning below before you decide to do this.</p>
+<div class="admonition warning">
+<p class="admonition-title">This Weakens A Windows Security Protection</p>
+<p>Removing this policy turns off the new kernel driver trust check for the entire system, not only for the Command 8. Every other cross-signed driver becomes loadable again. Neyrinck and Microsoft do not support this procedure and you perform it at your own risk. Back up the policy file first so you can put it back, and do not delete any other Code Integrity policy.</p>
+</div>
+<ol>
+<li>Open PowerShell as an Administrator.</li>
+<li>
+<p>List the active policies and locate <code>Microsoft Windows Cross Certificates for Code Integrity Exceptions Policy</code>. Note its policy ID.</p>
+<pre><code>CiTool --list-policies
+</code></pre>
+<p>The reported ID is <code>8f9cb695-5d48-48d6-a329-7202b44607e3</code>. <code>CiTool --remove-policy</code> fails on this policy with error <code>0x80070005</code>, even from an elevated PowerShell, which is why the file is removed by hand.</p>
+</li>
+<li>
+<p>Mount the EFI System Partition so you can reach the policy file.</p>
+<pre><code>mountvol S: /S
+</code></pre>
+</li>
+<li>
+<p><strong>Back up the policy file.</strong> Copy the <code>.cip</code> file that matches the policy ID from <code>S:\EFI\Microsoft\Boot\CiPolicies\Active\</code> to a safe location such as your Documents folder.</p>
+</li>
+<li>
+<p>Delete that same <code>.cip</code> file from <code>S:\EFI\Microsoft\Boot\CiPolicies\Active\</code>. Leave every other file in the folder alone.</p>
+</li>
+<li>
+<p>Restart the computer.</p>
+</li>
+</ol>
+<p>After the restart, the <code>command8</code> driver reports <code>Running</code> and <code>OK</code> with the driver file <code>C:\Windows\System32\drivers\c8usb_vistacomp.sys</code>, the Command 8 appears under MIDI devices with no warning triangle, and V-Control Pro communicates with it.</p>
+<p>To undo the change, copy the backed up <code>.cip</code> file back into <code>S:\EFI\Microsoft\Boot\CiPolicies\Active\</code> and restart the computer.</p>
+<div class="admonition note">
+<p class="admonition-title">A Windows Update May Restore The Policy</p>
+<p>A later Windows update can install the policy again and block the driver again. Keep your backup copy and check this section again if the Command 8 stops working after an update.</p>
+</div>
 <h4 id="add-command-8-to-the-setups-window">Add Command 8 To The Setups Window</h4>
 <p>First, you must add Command 8 as a controller in the V-Control Pro Setups window as described in <a href="../midi-controllers/">Setting Up MIDI Controllers</a>.</p>
 <h4 id="pro-tools">Pro Tools</h4>
