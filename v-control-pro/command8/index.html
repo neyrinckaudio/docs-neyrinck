@@ -1147,6 +1147,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#midi-ports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Select Port1 For MIDI Input And Output
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pro-tools" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2264,6 +2275,17 @@
 </div>
 <h4 id="add-command-8-to-the-setups-window">Add Command 8 To The Setups Window</h4>
 <p>First, you must add Command 8 as a controller in the V-Control Pro Setups window as described in <a href="../midi-controllers/">Setting Up MIDI Controllers</a>.</p>
+<h4 id="midi-ports">Select Port1 For MIDI Input And Output</h4>
+<p>The Command 8 driver creates three MIDI ports: Port1, Port2, and Port3. V-Control Pro controls the Command 8 only through Port1.</p>
+<ol>
+<li>Click on the Command 8 in the <code>Controllers</code> section of the Setups window.</li>
+<li>Set the MIDI input port to the Command 8 <strong>Port1</strong>.</li>
+<li>Set the MIDI output port to the Command 8 <strong>Port1</strong>.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Port2 And Port3 Do Not Work</p>
+<p>Port2 and Port3 appear in the MIDI port menus, and V-Control Pro lets you select them, but the Command 8 does not respond on those ports. If the faders, buttons, and displays do not respond, check that both the input and output ports are set to Port1.</p>
+</div>
 <h4 id="pro-tools">Pro Tools</h4>
 <p>Set up Pro Tools for one HUI bank as described in <a href="../pro-tools/">Setting Up Pro Tools</a>.</p>
 <h4 id="logic-pro-x">Logic Pro X</h4>
