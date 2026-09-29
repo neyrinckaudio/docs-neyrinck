@@ -723,6 +723,39 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#automatic-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Automatic Updates
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activate-and-deactivate-licenses-in-the-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Activate And Deactivate Licenses In The App
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-new-look" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A New Look
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#troubleshooting-and-support" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -730,6 +763,45 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting And Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-customer-support-ticket" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create Customer Support Ticket
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-system-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create System Report
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-help-menu-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other Help Menu Items
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2356,7 +2428,7 @@
 
 
 <h1 id="whats-new-in-version-33">What's New In Version 3.3</h1>
-<p>Version 3.3 adds D-Control Basic, so you can use an Avid D-Control console with Pro Tools. It lets you use more than one Command 8 with Pro Tools, and it makes V-Control Pro easier to start, set up, and troubleshoot.</p>
+<p>Version 3.3 adds D-Control Basic, so you can use an Avid D-Control console with Pro Tools. It also brings automatic updates, license activation and deactivation in the app, a new look, and a one-step way to create a customer support ticket.</p>
 <div class="admonition warning">
 <p class="admonition-title">macOS 12.0 Or Later Required</p>
 <p>Version 3.3 requires macOS 12.0 (Monterey) or later. The installer will not install on earlier macOS versions.</p>
@@ -2379,7 +2451,7 @@
 <h2 id="more-than-one-command-8-with-pro-tools">More Than One Command 8 With Pro Tools</h2>
 <p>Command 8 now has bank choices with Pro Tools: <code>Bank 1-8</code>, <code>Bank 9-16</code>, <code>Bank 17-24</code>, and <code>Bank 25-32</code>. Previously every Command 8 controlled Pro Tools tracks 1-8. See <a href="../../command8/">Command 8</a> and <a href="../../hui-device/">Multiple HUI Controllers With Pro Tools</a>.</p>
 <h2 id="reliable-launch-at-login">Reliable Launch At Login</h2>
-<p>V-Control Pro could fail to launch, or start up unlicensed, when it was set to open automatically at login. It now waits for the iLok licensing service to be ready before checking your license.</p>
+<p>V-Control Pro could fail to launch, or start up unlicensed, when it was set to open automatically at login. It now waits for the iLok licensing service to be ready before checking your license, and it is added to your login items correctly. See <a href="../../install-and-run-v-control-pro/#launch-at-login">Launch At Login</a> to set it up.</p>
 <div class="admonition tip">
 <p class="admonition-title">Removed V-Control Pro From Login Items?</p>
 <p>If you removed V-Control Pro from your Login Items to work around this problem, as described in <a href="../../troubleshooting/#macos-troubleshooting">V-Control Pro Won't Launch</a>, you can add it back after updating.</p>
@@ -2389,7 +2461,7 @@
 <ul>
 <li>The <code>User Guide</code> button replaces the built-in <code>Setup Guide</code> tab, which could not display modern pages.</li>
 <li>Guide links go to the current online documentation. Setups saved with earlier versions are updated to the new links automatically.</li>
-<li>C24, Control 24, D-Command, and D-Control open their own guides.</li>
+<li>C24, Control 24, D-Command, and D-Control open their own guides, and V-Window and V-Control MIDI Mode now have a <code>User Guide</code> button too.</li>
 </ul>
 <h2 id="offline-items-in-the-setups-window">Offline Items In The Setups Window</h2>
 <p>Surfaces, DAWs, and setups that are not connected are marked <code>(offline)</code> in the Setups window, so you can see at a glance what is not connected.</p>
@@ -2398,10 +2470,35 @@
 <li>Some D-Control Main units were shown as <code>Unknown</code> in <code>Add Ethernet Device</code> and were not found again after a restart. They are now recognized.</li>
 <li><code>Add Ethernet Device</code> shows the type of unrecognized devices, for example <code>Unknown (0x1f)</code>, and discovery is written to the log file to help customer support diagnose them.</li>
 </ul>
-<h2 id="troubleshooting-and-support">Troubleshooting And Support</h2>
+<h2 id="automatic-updates">Automatic Updates</h2>
+<p>V-Control Pro now checks for a new version once a day and can install it for you, so you no longer need to watch for releases.</p>
 <ul>
-<li><code>Open Troubleshooting Guide</code> now opens the <a href="../../troubleshooting/">Troubleshooting Guide</a>. Previously it opened the log file.</li>
-<li>A new <code>Show Log File</code> menu item on macOS and Windows reveals the log file so you can send it to customer support.</li>
+<li>Select <code>Check for Updates...</code> in the V-Control Pro menu to check right away.</li>
+<li>After an update, a <code>What's New</code> window describes what changed. Its <code>Read More</code> button opens the full release notes. You can open it any time with <code>What's New...</code></li>
+</ul>
+<h2 id="activate-and-deactivate-licenses-in-the-app">Activate And Deactivate Licenses In The App</h2>
+<p>A new <code>License</code> menu activates and deactivates your V-Control Pro license without leaving the app. The About box has Activate and Deactivate buttons as well.</p>
+<ul>
+<li>Select <code>License / Activate License...</code> and sign in to iLok in your browser. Then activate your license to this computer or to an iLok key.</li>
+<li>Select <code>License / Deactivate License...</code> to release an activation so you can move it to another computer.</li>
+</ul>
+<h2 id="a-new-look">A New Look</h2>
+<p>The Setups window, Preferences, About box, and dialogs have a new design with updated colors and controls, roomier detail pages, and the <code>User Guide</code> button at the top right.</p>
+<h2 id="troubleshooting-and-support">Troubleshooting And Support</h2>
+<p>The V-Control Pro menu now has a <code>Help</code> menu with everything you need to get help.</p>
+<h3 id="create-customer-support-ticket">Create Customer Support Ticket</h3>
+<p><code>Help / Create Customer Support Ticket...</code> opens a support request in your web browser that is already filled in with your computer details, with a system report attached. Add your name, email, and a description of the problem, then send it. No more gathering version numbers and log files by hand.</p>
+<ul>
+<li>V-Control Pro asks before it sends anything.</li>
+<li>The report contains your V-Control Pro and computer details, license status, setups, Pro Tools MIDI settings, and recent log messages.</li>
+<li>If you do not send the request, the report is deleted after 7 days.</li>
+</ul>
+<h3 id="create-system-report">Create System Report</h3>
+<p><code>Help / Create System Report...</code> saves the same report to your Desktop instead of sending it, so you can attach it to a support ticket yourself or look it over first.</p>
+<h3 id="other-help-menu-items">Other Help Menu Items</h3>
+<ul>
+<li><code>Open User Guide</code> opens this documentation.</li>
+<li><code>Open Troubleshooting Guide</code> opens the <a href="../../troubleshooting/">Troubleshooting Guide</a>. Previously it opened the log file.</li>
 <li>The log file no longer grows without limit.</li>
 </ul>
 <h2 id="startup-notice">Startup Notice</h2>

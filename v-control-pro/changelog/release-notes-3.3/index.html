@@ -2201,51 +2201,37 @@
   <h1>Release notes 3.3</h1>
 
 <h2 id="version-33">Version 3.3</h2>
-<h3 id="33015-upcoming">[3.3.0.15] - Upcoming</h3>
-<p>Version 3.3.0.15 is the first public release of version 3.3. It includes D-Control Basic and all the changes from version 3.2.</p>
+<p>Version 3.3 is the first public release of version 3.3. It includes D-Control Basic and all the changes from version 3.2.</p>
 <h4 id="added">Added</h4>
 <ul>
-<li>Added a <code>User Guide</code> button to the details for each surface, DAW, and setup. It opens the guide in your default web browser, replacing the built-in <code>Setup Guide</code> tab, which could not display modern pages.</li>
-<li>Added a <code>Show Log File</code> menu item on macOS and Windows to reveal the log file for customer support.</li>
+<li>Added <a href="./d-control.md">D-Control Basic</a> for Pro Tools. A D-Control Main and up to two D-Control Fader Modules provide up to 32 channels of control. See the 3.3.0.14 notes below for details.</li>
+<li>Added automatic updates. V-Control Pro checks for a new version once a day and can install it for you. A new <code>Check for Updates...</code> menu item checks immediately.</li>
+<li>Added a <code>What's New</code> window that describes what changed in the version you just installed, with a <code>Read More</code> button that opens the online release notes. It opens once after an update, and any time from the <code>What's New...</code> menu item.</li>
+<li>Added <code>Help / Create Customer Support Ticket...</code> on macOS and Windows. It sends a system report to Neyrinck and opens a support request in your web browser, filled in with your computer details and with the report attached. Add your name, email, and a description, then send it. If you do not send the request, the report is deleted after 7 days.</li>
+<li>Added <code>Help / Create System Report...</code> on macOS and Windows. It saves the same report to your Desktop to attach to a support ticket yourself. The report contains your V-Control Pro and computer details, license status, setups, Pro Tools MIDI settings, and the last two days of the log. It replaces the <code>Show Log File</code> item.</li>
+<li>Added a <code>License</code> menu with <code>Activate License...</code> and <code>Deactivate License...</code>, and Activate and Deactivate buttons in the About box. Sign in to iLok in your browser, then activate a license to this computer or to an iLok key, or deactivate it to move it to another computer.</li>
+<li>Added a <code>Help</code> menu with <code>Open User Guide</code>, <code>Open Troubleshooting Guide</code>, <code>Create Customer Support Ticket...</code>, and <code>Create System Report...</code>.</li>
+<li>Added a <code>User Guide</code> button to the details for each surface, DAW, and setup. It opens the guide in your default web browser, replacing the built-in <code>Setup Guide</code> tab, which could not display modern pages. V-Window and V-Control MIDI Mode now have a <code>User Guide</code> button as well.</li>
 <li>The Setups window now marks surfaces, DAWs, and setups that are offline with <code>(offline)</code>.</li>
-<li>FaderPort V2 with Pro Tools: holding <code>Rewind</code> or <code>Fast Forward</code> now rewinds or fast forwards until you release the button.</li>
+<li>The Windows installer now offers to launch V-Control Pro when it finishes.</li>
 </ul>
 <h4 id="changed">Changed</h4>
 <ul>
+<li>V-Control Pro has a new look. The Setups window, Preferences, About box, and dialogs use a new design with updated colors and controls, roomier detail pages, and the <code>User Guide</code> button at the top right.</li>
+<li>The V-Control Pro menu is reordered: Setups, Preferences, About, License, Help, Check for Updates, What's New.</li>
 <li>V-Control Pro now requires macOS 12.0 (Monterey) or later. The installer will not install on earlier macOS versions.</li>
 <li>Help and setup guide links now open the current online documentation. Setups saved with earlier versions are updated to the new links.</li>
 <li>The startup notice that V-Control Pro runs in the menu bar now appears on every launch until you select <code>Don't show this again</code>.</li>
-<li>The log file no longer grows without limit.</li>
 </ul>
 <h4 id="fixed">Fixed</h4>
 <ul>
-<li>Fixed an issue where V-Control Pro could fail to launch, or start up unlicensed, when set to open automatically at login. It now waits for the iLok licensing service to be ready before checking your license.</li>
-<li>C24, Control 24, D-Command, and D-Control help now open their own guides.</li>
-<li>FaderPort 8 and FaderPort 16 with Pro Tools: holding <code>Rewind</code> or <code>Fast-Forward</code> did not rewind or fast-forward.</li>
-<li>Includes all fixes from version 3.2.1.18.</li>
-</ul>
-<h3 id="33014-2026-09-08-beta">[3.3.0.14] - 2026-09-08 (Beta)</h3>
-<h4 id="added_1">Added</h4>
-<ul>
-<li>Added <a href="./d-control.md">D-Control Basic</a> for Pro Tools. D-Control Main and up to two D-Control Fader Modules can be added as Ethernet devices for up to 32 channels of control.<ul>
-<li>Each Fader Module provides 16 channel strips. Choose <code>Bank 1-16</code> or <code>Bank 17-32</code> for each Fader Module.</li>
-<li>Channel strips provide faders, mute, solo, record, select, scribble strips, meters, and the bottom two encoder rows for pan, sends, inserts, and plug-in editing.</li>
-<li>The D-Control Main provides transport, scrub/shuttle, counter, automation modes, window buttons, bank/nudge navigation, zoom, global keys, save, undo, and redo.</li>
-<li>The Main Focus Strip provides a fader, select, solo, mute, record, name display, meters, and a pan/send encoder.</li>
-<li>Fader Module <code>Shift</code>, <code>Control</code>, <code>Option</code>, and <code>Command</code> keys act as Pro Tools keyboard modifiers.</li>
-<li>See the <a href="./feature-charts.md">D-Control Basic feature chart</a> for the complete list.</li>
-</ul>
-</li>
-<li>Added bank choices for Command 8 with Pro Tools: <code>Bank 1-8</code>, <code>Bank 9-16</code>, <code>Bank 17-24</code>, and <code>Bank 25-32</code>. Previously every bank controlled Pro Tools tracks 1-8.</li>
-<li><code>Add Ethernet Device</code> shows the type of unrecognized devices, for example <code>Unknown (0x1f)</code>, and discovery packets are written to the log file to help diagnose them.</li>
-</ul>
-<h4 id="changed_1">Changed</h4>
-<ul>
-<li>Help and setup guide links now open the current online documentation. <code>Open Troubleshooting Guide</code> opens the troubleshooting guide, and a new <code>Show Log File</code> menu item reveals the log file.</li>
-</ul>
-<h4 id="fixed_1">Fixed</h4>
-<ul>
-<li>Some D-Control Main units were shown as <code>Unknown</code> in <code>Add Ethernet Device</code> and were not found again after a restart.</li>
+<li>Fixed an issue where V-Control Pro could fail to launch, or start up unlicensed, when set to open automatically at login.</li>
+<li>FaderPort 8, FaderPort 16, FaderPort V2, and ioStation 24c with Pro Tools: holding <code>Rewind</code> or <code>Fast Forward</code> did not rewind or fast forward. Pressing <code>Rewind</code> and <code>Fast Forward</code> together still returns to zero.</li>
+<li>ProControl Fader Pack with Cubase and Nuendo: the fader pack now releases properly to MIDI Mode. Previously controls drove both MIDI Mode and the Cubase mixer, and faders and displays were left stale when leaving MIDI Mode.</li>
+<li>macOS: V-Control Pro could quit unexpectedly when an Ethernet controller's network adapter was removed, such as unplugging a USB or Thunderbolt Ethernet adapter. This affects ProControl, D-Command, D-Control, and C24.</li>
+<li>macOS and Windows: installers could leave files locked by a V-Control Pro that did not quit. They now wait for it to exit.</li>
+<li>Windows: fixed a crash when quitting V-Control Pro.</li>
+<li>C24, Control 24, D-Command, and D-Control help now open their own guides, and the V-Control MIDI Mode guide link works for setups saved with earlier versions.</li>
 </ul>
 
 

@@ -803,6 +803,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install And Run V-Control Pro
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -819,6 +837,36 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#launch-at-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Launch At Login
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2238,6 +2286,44 @@
 <div class="admonition note">
 <p class="admonition-title">macOS Privacy Permissions</p>
 <p>Basic surface control does not require any macOS privacy permissions. The <a href="../v-window/#macos-privacy-permissions">V-Window</a> feature does — macOS blocks it until V-Control Pro is enabled in <code>System Settings / Privacy &amp; Security</code>.</p>
+</div>
+<h2 id="launch-at-login">Launch At Login</h2>
+<p>V-Control Pro can start automatically when you log in to your computer, so your surfaces are ready without launching it by hand. This is set up in the operating system, not in V-Control Pro.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="macos" name="__tabbed_1" type="radio" /><input id="windows" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="macos">macOS</label><label for="windows">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>V-Control Pro runs in the menu bar and has no Dock icon, so add it from System Settings.</p>
+<p>To add it:</p>
+<ul>
+<li>Open <code>System Settings / General / Login Items</code> (named <code>Login Items &amp; Extensions</code> in macOS Sequoia and later).</li>
+<li>Under <code>Open at Login</code>, click the <code>+</code> button.</li>
+<li>Select <code>V-Control Pro</code> in the <code>Applications</code> folder and click <code>Open</code>.</li>
+</ul>
+<p>To remove it:</p>
+<ul>
+<li>Select <code>V-Control Pro</code> in the <code>Open at Login</code> list.</li>
+<li>Click the <code>-</code> button.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>To add it:</p>
+<ul>
+<li>Press <code>Windows</code> + <code>R</code>, type <code>shell:startup</code>, and press <code>Enter</code>. The Startup folder opens.</li>
+<li>Right-click <code>V-Control Pro</code> in the Start menu and select <code>Open file location</code>.</li>
+<li>Right-click the V-Control Pro shortcut, drag it into the Startup folder, and select <code>Create shortcuts here</code>.</li>
+</ul>
+<p>To remove it:</p>
+<ul>
+<li>Press <code>Windows</code> + <code>R</code>, type <code>shell:startup</code>, and press <code>Enter</code>.</li>
+<li>Delete the V-Control Pro shortcut.</li>
+</ul>
+<p>You can also turn it off in <code>Task Manager / Startup apps</code>.</p>
+</div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Use Version 3.3 Or Later For Launch At Login</p>
+<p>Earlier versions could fail to launch, or start up unlicensed, when set to open at login. If you see this, see <a href="../troubleshooting/#macos-troubleshooting">V-Control Pro Won't Launch</a>.</p>
 </div>
 
 
