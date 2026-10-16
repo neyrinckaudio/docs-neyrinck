@@ -4232,6 +4232,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#windows-midi-ports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pro Tools Is Not Receiving On A V-Control Pro MIDI Port
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#command8-driver-blocked" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4651,6 +4662,35 @@
 8. Install latest <a href="https://neyrinck.com/downloads/v-control-pro/">V-Control Pro</a>
 9. Restart computer
 10. Launch V-Control Pro and add your surface</p>
+<h4 id="windows-midi-ports">Pro Tools Is Not Receiving On A V-Control Pro MIDI Port</h4>
+<p>Your surface is connected in V-Control Pro, the MIDI ports are enabled and the peripherals are configured, but Pro Tools does not respond on one or more ports.</p>
+<div class="admonition warning">
+<p class="admonition-title">Known Issue Under Investigation</p>
+<p>An <code>emulated</code> port means Windows could not give Pro Tools direct access to it and fell back to legacy Windows MIDI services. On Windows 11 it is normal for every V-Control Pro port to be listed as <code>emulated</code>, and that by itself is not a problem. The sign of this problem is inconsistency: some V-Control Pro ports are listed as <code>emulated</code> and others are not.</p>
+</div>
+<p><strong>Check The Ports:</strong></p>
+<ul>
+<li>In Pro Tools, select <code>Setup / MIDI / MIDI Input Devices</code></li>
+<li>Look at how the <code>V-Control</code>, <code>V-Control XT-2</code>, <code>V-Control XT-3</code>, <code>V-Control XT-4</code> and <code>V-Pan</code> ports are listed</li>
+<li>If some are marked <code>emulated</code> and others are not, use the clean reinstall below</li>
+</ul>
+<p><strong>Clean Reinstall:</strong></p>
+<ol>
+<li>Quit Pro Tools</li>
+<li><a href="https://www.sweetwater.com/sweetcare/articles/how-do-i-trash-my-pro-tools-preferences/#Trash-Pro-Tools-Preferences-for-PC">Delete Pro Tools preferences</a></li>
+<li>In Windows <code>Settings / Apps / Installed apps</code>, uninstall V-Control Pro</li>
+<li>In the same window, uninstall Bome Virtual MIDI</li>
+<li>Restart the computer</li>
+<li>Install the latest <a href="https://neyrinck.com/downloads/v-control-pro/">V-Control Pro</a> and launch it</li>
+<li>Launch Pro Tools and open a session</li>
+<li><a href="../pro-tools/#enable-v-control-pro-virtual-midi-ports">Enable the V-Control Pro virtual MIDI ports</a></li>
+<li><a href="../pro-tools/#setting-the-midi-peripherals">Set the MIDI Peripherals</a> for your surface</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Other DAWs</p>
+<p>Other Windows applications use the same V-Control Pro MIDI ports. If a DAW stops responding on a port, the same clean reinstall applies. Set up the DAW again afterwards using its <a href="../controllers-overview/">setup guide</a>.</p>
+</div>
+<p>If the ports are still not working after a clean reinstall, select <code>Help / Create Customer Support Ticket...</code> in the V-Control Pro menu so we can see your MIDI configuration.</p>
 <h4 id="command8-driver-blocked">Command 8 Not Detected On Windows 11</h4>
 <p>The April 2026 Windows security update removed default trust for cross-signed kernel drivers on Windows 11 24H2, 25H2, 26H1, and Windows Server 2025. The Avid/Digidesign Command 8 driver, <code>c8usb_vistacomp.sys</code>, is signed that way, so Windows can block it and the Command 8 never appears as a MIDI device.</p>
 <ul>
