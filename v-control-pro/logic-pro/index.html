@@ -1528,6 +1528,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#grouping-multiple-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grouping Multiple Devices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Grouping Multiple Devices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#logic-pro-protocol-settings-new-in-v-3022" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1547,6 +1559,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -4102,6 +4119,27 @@
 </ul>
 </li>
 </ul>
+<p><a id="grouping-devices"></a></p>
+<h3 id="grouping-multiple-devices">Grouping Multiple Devices</h3>
+<p>Some surfaces use more than one device and need extra setup in Logic:</p>
+<ul>
+<li><strong>D-Command</strong> Main with a Fader Module</li>
+<li><strong>ProControl</strong> Main with a Fader Pack</li>
+</ul>
+<p>Logic adds each device in its own row as an independent controller, so each device banks and scrolls on its own. To make the devices bank together as one surface, put them in the same row in Logic's Control Surfaces Setup window.</p>
+<div class="admonition note">
+<p class="admonition-title">Single-Device Surfaces</p>
+<p>C|24, Control 24, Command|8, and Digi 003 are each a single device. They do not need grouping.</p>
+</div>
+<ol>
+<li>Connect all devices to Logic as described above.</li>
+<li>In Logic, choose <code>Logic Pro &gt; Control Surfaces &gt; Setup...</code>.</li>
+<li>Each device appears in its own row. Drag the device icons into a single row.</li>
+<li>Arrange the icons left to right in the same order as the hardware on your desk. For example, if the Fader Module is to the left of the D-Command Main, place its icon to the left of the Main's icon.</li>
+<li>Close the Setup window. Banking now moves all of the devices together.</li>
+</ol>
+<!-- TODO: add screenshots of the Control Surfaces Setup window before and after grouping -->
+
 <p><a id="ipv6-setting"></a></p>
 <h4 id="logic-pro-protocol-settings-new-in-v-3022">Logic Pro Protocol Settings (new in v 3.0.22)</h4>
 <p>V-Control Pro uses UDP networking to communicate with Logic Pro. Users sometime see an issue where communication operates in one direction only. Typically, Logic Pro operates perfectly using IPv4 protocol with the Localhost IP address. Other times it works perfectly using IPv6 protocol with the Localhost IP address. With macOS Tahoe, it typically works perfectly using IPv4 protocol with the WiFi IP address. We have contacted Apple about this but they have not responded.</p>
