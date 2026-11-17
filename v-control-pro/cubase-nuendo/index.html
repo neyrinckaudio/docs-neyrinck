@@ -1556,10 +1556,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#setup" class="md-nav__link">
+  <a href="#add-your-surface" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Setup
+        Add Your Surface
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v-control-pro-19-ipad-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        V-Control Pro 1.9 iPad App
       
     </span>
   </a>
@@ -4249,31 +4260,72 @@
 
 
 <h1 id="setting-up-cubase-nuendo">Setting Up Cubase / Nuendo</h1>
-<p>V-Control Pro provides Steinberg control surface plug-ins for high performance control with all surfaces except the V-Control Pro 1.9 iPad App</p>
+<p>V-Control Pro provides Steinberg control surface plug-ins for high performance control with all surfaces except the V-Control Pro 1.9 iPad App.</p>
 <div class="admonition warning">
 <p class="admonition-title">Legacy V-Control Pro 1.9 iPad App</p>
-<p>The legacy iPad app, V-Control Pro 1.9, must be set up as a HUI control surface in Cubase / Nuendo.</p>
+<p>The legacy iPad app, V-Control Pro 1.9, must be set up as a HUI control surface in Cubase / Nuendo. See <a href="#legacy-ipad-app">V-Control Pro 1.9 iPad App</a> below.</p>
 </div>
-<h3 id="setup">Setup</h3>
-<ul>
-<li>In the Steinberg top menu bar go to: <code>Studio / Studio Setup...</code></li>
-<li>In the Studio Setup window, click on the <code>+</code> sign.</li>
-<li>Select the Control surface from the dropdown list.<ul>
-<li>For D-Command, C24, Control 24, ProControl, Command 8, Digi 003, V-Console, V-Console 16<ul>
-<li>Select the item that matches your surface.</li>
-<li>Do not configure any MIDI ports.</li>
-<li>Set up and customizable functions.</li>
-</ul>
+<h3 id="add-your-surface">Add Your Surface</h3>
+<ol>
+<li>Open the V-Control Pro Setups window and make sure your surface has been added to the <code>Controllers...</code> section and is actively detected.</li>
+<li>Launch Cubase or Nuendo.</li>
+<li>From the top menu bar, choose <code>Studio &gt; Studio Setup...</code>.</li>
+<li>Click <code>Add Device</code> (the <code>+</code> button) and select the item that matches your surface: D-Command, ProControl, C24, Control 24, Command 8, Digi 003, V-Console, or V-Console 16.</li>
+<li>The surface appears under <code>Remote Devices (Legacy)</code>. Select it to show its settings.</li>
+<li>Leave <code>MIDI Input</code> and <code>MIDI Output</code> set to <code>Not Connected</code>. V-Control Pro connects to Cubase / Nuendo directly and does not use MIDI ports.</li>
+<li>
+<p><a id="bank-width"></a><strong>D-Command and ProControl only:</strong> set the <code>Bank</code> popup menu to the total number of faders on your system, counting the Main unit plus every Fader Module or Fader Pack. This lets all of the faders work and bank together as one surface.</p>
+<table>
+<thead>
+<tr>
+<th>Your System</th>
+<th>Bank</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Main only</td>
+<td>8 Tracks</td>
+</tr>
+<tr>
+<td>Main + 1 Fader Module / Fader Pack</td>
+<td>16 Tracks</td>
+</tr>
+<tr>
+<td>Main + 2 Fader Modules / Fader Packs</td>
+<td>24 Tracks</td>
+</tr>
+<tr>
+<td>Main + 3 Fader Modules / Fader Packs</td>
+<td>32 Tracks</td>
+</tr>
+</tbody>
+</table>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="d-command" name="__tabbed_1" type="radio" /><input id="procontrol" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="d-command">D-Command</label><label for="procontrol">ProControl</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="Studio Setup - D-Command with Bank set to 32 Tracks" src="../images/cubase-dcommand-bank.png" title="Studio Setup - D-Command with Bank set to 32 Tracks" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="Studio Setup - ProControl with Bank set to 16 Tracks" src="../images/cubase-procontrol-bank.png" title="Studio Setup - ProControl with Bank set to 16 Tracks" /></p>
+</div>
+</div>
+</div>
+<p>Other surfaces have a fixed number of faders and do not show a <code>Bank</code> setting.</p>
 </li>
-<li>For the V-Control Pro 1.9 iPad App<ul>
-<li>Select <code>Mackie HUI</code>.</li>
-<li>Set the MIDI ports to be <code>V-Control</code></li>
-</ul>
+<li>
+<p>Optionally, assign commands to the surface's buttons in the <code>User Commands</code> list.</p>
 </li>
-</ul>
-</li>
-<li>Click <code>Ok</code> to close the Studio Setup Window.</li>
-</ul>
+<li>Click <code>OK</code> to close the Studio Setup window.</li>
+</ol>
+<p><a id="legacy-ipad-app"></a></p>
+<h3 id="v-control-pro-19-ipad-app">V-Control Pro 1.9 iPad App</h3>
+<ol>
+<li>From the top menu bar, choose <code>Studio &gt; Studio Setup...</code>.</li>
+<li>Click <code>Add Device</code> (the <code>+</code> button) and select <code>Mackie HUI</code>.</li>
+<li>Set <code>MIDI Input</code> and <code>MIDI Output</code> to <code>V-Control</code>.</li>
+<li>Click <code>OK</code> to close the Studio Setup window.</li>
+</ol>
 
 
 
